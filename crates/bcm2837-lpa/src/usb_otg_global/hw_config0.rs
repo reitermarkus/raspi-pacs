@@ -1,412 +1,375 @@
 #[doc = "Register `HW_CONFIG0` reader"]
-pub type R = crate::R<HW_CONFIG0_SPEC>;
-#[doc = "Field `OPERATING_MODE` reader - Operating Mode"]
-pub type OPERATING_MODE_R = crate::FieldReader<OPERATING_MODE_A>;
+pub type R = crate::R<HwConfig0Spec>;
 #[doc = "Operating Mode"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum OPERATING_MODE_A {
+pub enum OperatingMode {
     #[doc = "0: `0`"]
-    HNP_SRP_CAPABLE = 0,
+    HnpSrpCapable = 0,
     #[doc = "1: `1`"]
-    SRP_ONLY_CAPABLE = 1,
+    SrpOnlyCapable = 1,
     #[doc = "2: `10`"]
-    NO_HNP_SRP_CAPABLE = 2,
+    NoHnpSrpCapable = 2,
     #[doc = "3: `11`"]
-    SRP_CAPABLE_DEVICE = 3,
+    SrpCapableDevice = 3,
     #[doc = "4: `100`"]
-    NO_SRP_CAPABLE_DEVICE = 4,
+    NoSrpCapableDevice = 4,
     #[doc = "5: `101`"]
-    SRP_CAPABLE_HOST = 5,
+    SrpCapableHost = 5,
     #[doc = "6: `110`"]
-    NO_SRP_CAPABLE_HOST = 6,
+    NoSrpCapableHost = 6,
 }
-impl From<OPERATING_MODE_A> for u8 {
+impl From<OperatingMode> for u8 {
     #[inline(always)]
-    fn from(variant: OPERATING_MODE_A) -> Self {
+    fn from(variant: OperatingMode) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for OPERATING_MODE_A {
+impl crate::FieldSpec for OperatingMode {
     type Ux = u8;
 }
-impl OPERATING_MODE_R {
+impl crate::IsEnum for OperatingMode {}
+#[doc = "Field `OPERATING_MODE` reader - Operating Mode"]
+pub type OperatingModeR = crate::FieldReader<OperatingMode>;
+impl OperatingModeR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<OPERATING_MODE_A> {
+    pub const fn variant(&self) -> Option<OperatingMode> {
         match self.bits {
-            0 => Some(OPERATING_MODE_A::HNP_SRP_CAPABLE),
-            1 => Some(OPERATING_MODE_A::SRP_ONLY_CAPABLE),
-            2 => Some(OPERATING_MODE_A::NO_HNP_SRP_CAPABLE),
-            3 => Some(OPERATING_MODE_A::SRP_CAPABLE_DEVICE),
-            4 => Some(OPERATING_MODE_A::NO_SRP_CAPABLE_DEVICE),
-            5 => Some(OPERATING_MODE_A::SRP_CAPABLE_HOST),
-            6 => Some(OPERATING_MODE_A::NO_SRP_CAPABLE_HOST),
+            0 => Some(OperatingMode::HnpSrpCapable),
+            1 => Some(OperatingMode::SrpOnlyCapable),
+            2 => Some(OperatingMode::NoHnpSrpCapable),
+            3 => Some(OperatingMode::SrpCapableDevice),
+            4 => Some(OperatingMode::NoSrpCapableDevice),
+            5 => Some(OperatingMode::SrpCapableHost),
+            6 => Some(OperatingMode::NoSrpCapableHost),
             _ => None,
         }
     }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn is_hnp_srp_capable(&self) -> bool {
-        *self == OPERATING_MODE_A::HNP_SRP_CAPABLE
+        *self == OperatingMode::HnpSrpCapable
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn is_srp_only_capable(&self) -> bool {
-        *self == OPERATING_MODE_A::SRP_ONLY_CAPABLE
+        *self == OperatingMode::SrpOnlyCapable
     }
     #[doc = "`10`"]
     #[inline(always)]
     pub fn is_no_hnp_srp_capable(&self) -> bool {
-        *self == OPERATING_MODE_A::NO_HNP_SRP_CAPABLE
+        *self == OperatingMode::NoHnpSrpCapable
     }
     #[doc = "`11`"]
     #[inline(always)]
     pub fn is_srp_capable_device(&self) -> bool {
-        *self == OPERATING_MODE_A::SRP_CAPABLE_DEVICE
+        *self == OperatingMode::SrpCapableDevice
     }
     #[doc = "`100`"]
     #[inline(always)]
     pub fn is_no_srp_capable_device(&self) -> bool {
-        *self == OPERATING_MODE_A::NO_SRP_CAPABLE_DEVICE
+        *self == OperatingMode::NoSrpCapableDevice
     }
     #[doc = "`101`"]
     #[inline(always)]
     pub fn is_srp_capable_host(&self) -> bool {
-        *self == OPERATING_MODE_A::SRP_CAPABLE_HOST
+        *self == OperatingMode::SrpCapableHost
     }
     #[doc = "`110`"]
     #[inline(always)]
     pub fn is_no_srp_capable_host(&self) -> bool {
-        *self == OPERATING_MODE_A::NO_SRP_CAPABLE_HOST
+        *self == OperatingMode::NoSrpCapableHost
     }
 }
-#[doc = "Field `ARCHITECTURE` reader - Architecture"]
-pub type ARCHITECTURE_R = crate::FieldReader<ARCHITECTURE_A>;
 #[doc = "Architecture"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum ARCHITECTURE_A {
+pub enum Architecture {
     #[doc = "0: `0`"]
-    SLAVE_ONLY = 0,
+    SlaveOnly = 0,
     #[doc = "1: `1`"]
-    EXTERNAL_DMA = 1,
+    ExternalDma = 1,
     #[doc = "2: `10`"]
-    INTERNAL_DMA = 2,
+    InternalDma = 2,
 }
-impl From<ARCHITECTURE_A> for u8 {
+impl From<Architecture> for u8 {
     #[inline(always)]
-    fn from(variant: ARCHITECTURE_A) -> Self {
+    fn from(variant: Architecture) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for ARCHITECTURE_A {
+impl crate::FieldSpec for Architecture {
     type Ux = u8;
 }
-impl ARCHITECTURE_R {
+impl crate::IsEnum for Architecture {}
+#[doc = "Field `ARCHITECTURE` reader - Architecture"]
+pub type ArchitectureR = crate::FieldReader<Architecture>;
+impl ArchitectureR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<ARCHITECTURE_A> {
+    pub const fn variant(&self) -> Option<Architecture> {
         match self.bits {
-            0 => Some(ARCHITECTURE_A::SLAVE_ONLY),
-            1 => Some(ARCHITECTURE_A::EXTERNAL_DMA),
-            2 => Some(ARCHITECTURE_A::INTERNAL_DMA),
+            0 => Some(Architecture::SlaveOnly),
+            1 => Some(Architecture::ExternalDma),
+            2 => Some(Architecture::InternalDma),
             _ => None,
         }
     }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn is_slave_only(&self) -> bool {
-        *self == ARCHITECTURE_A::SLAVE_ONLY
+        *self == Architecture::SlaveOnly
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn is_external_dma(&self) -> bool {
-        *self == ARCHITECTURE_A::EXTERNAL_DMA
+        *self == Architecture::ExternalDma
     }
     #[doc = "`10`"]
     #[inline(always)]
     pub fn is_internal_dma(&self) -> bool {
-        *self == ARCHITECTURE_A::INTERNAL_DMA
+        *self == Architecture::InternalDma
     }
 }
 #[doc = "Field `POINT_TO_POINT` reader - Point to Point"]
-pub type POINT_TO_POINT_R = crate::BitReader;
-#[doc = "Field `HIGH_SPEED_PHY` reader - High Speed Physical"]
-pub type HIGH_SPEED_PHY_R = crate::FieldReader<HIGH_SPEED_PHY_A>;
+pub type PointToPointR = crate::BitReader;
 #[doc = "High Speed Physical"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum HIGH_SPEED_PHY_A {
+pub enum HighSpeedPhy {
     #[doc = "0: `0`"]
-    NOT_SUPPORTED = 0,
+    NotSupported = 0,
     #[doc = "1: `1`"]
-    UTMI = 1,
+    Utmi = 1,
     #[doc = "2: `10`"]
-    ULPI = 2,
+    Ulpi = 2,
     #[doc = "3: `11`"]
-    UTMI_ULPI = 3,
+    UtmiUlpi = 3,
 }
-impl From<HIGH_SPEED_PHY_A> for u8 {
+impl From<HighSpeedPhy> for u8 {
     #[inline(always)]
-    fn from(variant: HIGH_SPEED_PHY_A) -> Self {
+    fn from(variant: HighSpeedPhy) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for HIGH_SPEED_PHY_A {
+impl crate::FieldSpec for HighSpeedPhy {
     type Ux = u8;
 }
-impl HIGH_SPEED_PHY_R {
+impl crate::IsEnum for HighSpeedPhy {}
+#[doc = "Field `HIGH_SPEED_PHY` reader - High Speed Physical"]
+pub type HighSpeedPhyR = crate::FieldReader<HighSpeedPhy>;
+impl HighSpeedPhyR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> HIGH_SPEED_PHY_A {
+    pub const fn variant(&self) -> HighSpeedPhy {
         match self.bits {
-            0 => HIGH_SPEED_PHY_A::NOT_SUPPORTED,
-            1 => HIGH_SPEED_PHY_A::UTMI,
-            2 => HIGH_SPEED_PHY_A::ULPI,
-            3 => HIGH_SPEED_PHY_A::UTMI_ULPI,
+            0 => HighSpeedPhy::NotSupported,
+            1 => HighSpeedPhy::Utmi,
+            2 => HighSpeedPhy::Ulpi,
+            3 => HighSpeedPhy::UtmiUlpi,
             _ => unreachable!(),
         }
     }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn is_not_supported(&self) -> bool {
-        *self == HIGH_SPEED_PHY_A::NOT_SUPPORTED
+        *self == HighSpeedPhy::NotSupported
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn is_utmi(&self) -> bool {
-        *self == HIGH_SPEED_PHY_A::UTMI
+        *self == HighSpeedPhy::Utmi
     }
     #[doc = "`10`"]
     #[inline(always)]
     pub fn is_ulpi(&self) -> bool {
-        *self == HIGH_SPEED_PHY_A::ULPI
+        *self == HighSpeedPhy::Ulpi
     }
     #[doc = "`11`"]
     #[inline(always)]
     pub fn is_utmi_ulpi(&self) -> bool {
-        *self == HIGH_SPEED_PHY_A::UTMI_ULPI
+        *self == HighSpeedPhy::UtmiUlpi
     }
 }
-#[doc = "Field `FULL_SPEED_PHY` reader - Full Speed Physical"]
-pub type FULL_SPEED_PHY_R = crate::FieldReader<FULL_SPEED_PHY_A>;
 #[doc = "Full Speed Physical"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FULL_SPEED_PHY_A {
+pub enum FullSpeedPhy {
     #[doc = "0: `0`"]
-    PHY0 = 0,
+    Phy0 = 0,
     #[doc = "1: `1`"]
-    DEDICATED = 1,
+    Dedicated = 1,
     #[doc = "2: `10`"]
-    PHY2 = 2,
+    Phy2 = 2,
     #[doc = "3: `11`"]
-    PHY3 = 3,
+    Phy3 = 3,
 }
-impl From<FULL_SPEED_PHY_A> for u8 {
+impl From<FullSpeedPhy> for u8 {
     #[inline(always)]
-    fn from(variant: FULL_SPEED_PHY_A) -> Self {
+    fn from(variant: FullSpeedPhy) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FULL_SPEED_PHY_A {
+impl crate::FieldSpec for FullSpeedPhy {
     type Ux = u8;
 }
-impl FULL_SPEED_PHY_R {
+impl crate::IsEnum for FullSpeedPhy {}
+#[doc = "Field `FULL_SPEED_PHY` reader - Full Speed Physical"]
+pub type FullSpeedPhyR = crate::FieldReader<FullSpeedPhy>;
+impl FullSpeedPhyR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FULL_SPEED_PHY_A {
+    pub const fn variant(&self) -> FullSpeedPhy {
         match self.bits {
-            0 => FULL_SPEED_PHY_A::PHY0,
-            1 => FULL_SPEED_PHY_A::DEDICATED,
-            2 => FULL_SPEED_PHY_A::PHY2,
-            3 => FULL_SPEED_PHY_A::PHY3,
+            0 => FullSpeedPhy::Phy0,
+            1 => FullSpeedPhy::Dedicated,
+            2 => FullSpeedPhy::Phy2,
+            3 => FullSpeedPhy::Phy3,
             _ => unreachable!(),
         }
     }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn is_phy0(&self) -> bool {
-        *self == FULL_SPEED_PHY_A::PHY0
+        *self == FullSpeedPhy::Phy0
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn is_dedicated(&self) -> bool {
-        *self == FULL_SPEED_PHY_A::DEDICATED
+        *self == FullSpeedPhy::Dedicated
     }
     #[doc = "`10`"]
     #[inline(always)]
     pub fn is_phy2(&self) -> bool {
-        *self == FULL_SPEED_PHY_A::PHY2
+        *self == FullSpeedPhy::Phy2
     }
     #[doc = "`11`"]
     #[inline(always)]
     pub fn is_phy3(&self) -> bool {
-        *self == FULL_SPEED_PHY_A::PHY3
+        *self == FullSpeedPhy::Phy3
     }
 }
 #[doc = "Field `DEVICE_END_POINT_COUNT` reader - Device end point count"]
-pub type DEVICE_END_POINT_COUNT_R = crate::FieldReader;
+pub type DeviceEndPointCountR = crate::FieldReader;
 #[doc = "Field `HOST_CHANNEL_COUNT` reader - Host channel count"]
-pub type HOST_CHANNEL_COUNT_R = crate::FieldReader;
+pub type HostChannelCountR = crate::FieldReader;
 #[doc = "Field `SUPPORTS_PERIODIC_ENDPOINTS` reader - Supports periodic endpoints"]
-pub type SUPPORTS_PERIODIC_ENDPOINTS_R = crate::BitReader;
+pub type SupportsPeriodicEndpointsR = crate::BitReader;
 #[doc = "Field `DYNAMIC_FIFO` reader - Dynamic FIFO"]
-pub type DYNAMIC_FIFO_R = crate::BitReader;
+pub type DynamicFifoR = crate::BitReader;
 #[doc = "Field `MULTI_PROC_INT` reader - Multi proc int"]
-pub type MULTI_PROC_INT_R = crate::BitReader;
+pub type MultiProcIntR = crate::BitReader;
 #[doc = "Field `NON_PERIODIC_QUEUE_DEPTH` reader - Non periodic queue depth"]
-pub type NON_PERIODIC_QUEUE_DEPTH_R = crate::FieldReader;
+pub type NonPeriodicQueueDepthR = crate::FieldReader;
 #[doc = "Field `HOST_PERIODIC_QUEUE_DEPTH` reader - Host periodic queue depth"]
-pub type HOST_PERIODIC_QUEUE_DEPTH_R = crate::FieldReader;
+pub type HostPeriodicQueueDepthR = crate::FieldReader;
 #[doc = "Field `DEVICE_TOKEN_QUEUE_DEPTH` reader - Device token queue depth"]
-pub type DEVICE_TOKEN_QUEUE_DEPTH_R = crate::FieldReader;
+pub type DeviceTokenQueueDepthR = crate::FieldReader;
 #[doc = "Field `ENABLE_IC_USB` reader - Enable IC USB"]
-pub type ENABLE_IC_USB_R = crate::BitReader;
+pub type EnableIcUsbR = crate::BitReader;
 impl R {
     #[doc = "Bits 0:2 - Operating Mode"]
     #[inline(always)]
-    pub fn operating_mode(&self) -> OPERATING_MODE_R {
-        OPERATING_MODE_R::new((self.bits & 7) as u8)
+    pub fn operating_mode(&self) -> OperatingModeR {
+        OperatingModeR::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:4 - Architecture"]
     #[inline(always)]
-    pub fn architecture(&self) -> ARCHITECTURE_R {
-        ARCHITECTURE_R::new(((self.bits >> 3) & 3) as u8)
+    pub fn architecture(&self) -> ArchitectureR {
+        ArchitectureR::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bit 5 - Point to Point"]
     #[inline(always)]
-    pub fn point_to_point(&self) -> POINT_TO_POINT_R {
-        POINT_TO_POINT_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn point_to_point(&self) -> PointToPointR {
+        PointToPointR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - High Speed Physical"]
     #[inline(always)]
-    pub fn high_speed_phy(&self) -> HIGH_SPEED_PHY_R {
-        HIGH_SPEED_PHY_R::new(((self.bits >> 6) & 3) as u8)
+    pub fn high_speed_phy(&self) -> HighSpeedPhyR {
+        HighSpeedPhyR::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Full Speed Physical"]
     #[inline(always)]
-    pub fn full_speed_phy(&self) -> FULL_SPEED_PHY_R {
-        FULL_SPEED_PHY_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn full_speed_phy(&self) -> FullSpeedPhyR {
+        FullSpeedPhyR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:13 - Device end point count"]
     #[inline(always)]
-    pub fn device_end_point_count(&self) -> DEVICE_END_POINT_COUNT_R {
-        DEVICE_END_POINT_COUNT_R::new(((self.bits >> 10) & 0x0f) as u8)
+    pub fn device_end_point_count(&self) -> DeviceEndPointCountR {
+        DeviceEndPointCountR::new(((self.bits >> 10) & 0x0f) as u8)
     }
     #[doc = "Bits 14:17 - Host channel count"]
     #[inline(always)]
-    pub fn host_channel_count(&self) -> HOST_CHANNEL_COUNT_R {
-        HOST_CHANNEL_COUNT_R::new(((self.bits >> 14) & 0x0f) as u8)
+    pub fn host_channel_count(&self) -> HostChannelCountR {
+        HostChannelCountR::new(((self.bits >> 14) & 0x0f) as u8)
     }
     #[doc = "Bit 18 - Supports periodic endpoints"]
     #[inline(always)]
-    pub fn supports_periodic_endpoints(&self) -> SUPPORTS_PERIODIC_ENDPOINTS_R {
-        SUPPORTS_PERIODIC_ENDPOINTS_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn supports_periodic_endpoints(&self) -> SupportsPeriodicEndpointsR {
+        SupportsPeriodicEndpointsR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Dynamic FIFO"]
     #[inline(always)]
-    pub fn dynamic_fifo(&self) -> DYNAMIC_FIFO_R {
-        DYNAMIC_FIFO_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn dynamic_fifo(&self) -> DynamicFifoR {
+        DynamicFifoR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Multi proc int"]
     #[inline(always)]
-    pub fn multi_proc_int(&self) -> MULTI_PROC_INT_R {
-        MULTI_PROC_INT_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn multi_proc_int(&self) -> MultiProcIntR {
+        MultiProcIntR::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 22:23 - Non periodic queue depth"]
     #[inline(always)]
-    pub fn non_periodic_queue_depth(&self) -> NON_PERIODIC_QUEUE_DEPTH_R {
-        NON_PERIODIC_QUEUE_DEPTH_R::new(((self.bits >> 22) & 3) as u8)
+    pub fn non_periodic_queue_depth(&self) -> NonPeriodicQueueDepthR {
+        NonPeriodicQueueDepthR::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:25 - Host periodic queue depth"]
     #[inline(always)]
-    pub fn host_periodic_queue_depth(&self) -> HOST_PERIODIC_QUEUE_DEPTH_R {
-        HOST_PERIODIC_QUEUE_DEPTH_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn host_periodic_queue_depth(&self) -> HostPeriodicQueueDepthR {
+        HostPeriodicQueueDepthR::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:30 - Device token queue depth"]
     #[inline(always)]
-    pub fn device_token_queue_depth(&self) -> DEVICE_TOKEN_QUEUE_DEPTH_R {
-        DEVICE_TOKEN_QUEUE_DEPTH_R::new(((self.bits >> 26) & 0x1f) as u8)
+    pub fn device_token_queue_depth(&self) -> DeviceTokenQueueDepthR {
+        DeviceTokenQueueDepthR::new(((self.bits >> 26) & 0x1f) as u8)
     }
     #[doc = "Bit 31 - Enable IC USB"]
     #[inline(always)]
-    pub fn enable_ic_usb(&self) -> ENABLE_IC_USB_R {
-        ENABLE_IC_USB_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn enable_ic_usb(&self) -> EnableIcUsbR {
+        EnableIcUsbR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HW_CONFIG0")
-            .field(
-                "operating_mode",
-                &format_args!("{}", self.operating_mode().bits()),
-            )
-            .field(
-                "architecture",
-                &format_args!("{}", self.architecture().bits()),
-            )
-            .field(
-                "point_to_point",
-                &format_args!("{}", self.point_to_point().bit()),
-            )
-            .field(
-                "high_speed_phy",
-                &format_args!("{}", self.high_speed_phy().bits()),
-            )
-            .field(
-                "full_speed_phy",
-                &format_args!("{}", self.full_speed_phy().bits()),
-            )
-            .field(
-                "device_end_point_count",
-                &format_args!("{}", self.device_end_point_count().bits()),
-            )
-            .field(
-                "host_channel_count",
-                &format_args!("{}", self.host_channel_count().bits()),
-            )
+            .field("operating_mode", &self.operating_mode())
+            .field("architecture", &self.architecture())
+            .field("point_to_point", &self.point_to_point())
+            .field("high_speed_phy", &self.high_speed_phy())
+            .field("full_speed_phy", &self.full_speed_phy())
+            .field("device_end_point_count", &self.device_end_point_count())
+            .field("host_channel_count", &self.host_channel_count())
             .field(
                 "supports_periodic_endpoints",
-                &format_args!("{}", self.supports_periodic_endpoints().bit()),
+                &self.supports_periodic_endpoints(),
             )
-            .field(
-                "dynamic_fifo",
-                &format_args!("{}", self.dynamic_fifo().bit()),
-            )
-            .field(
-                "multi_proc_int",
-                &format_args!("{}", self.multi_proc_int().bit()),
-            )
-            .field(
-                "non_periodic_queue_depth",
-                &format_args!("{}", self.non_periodic_queue_depth().bits()),
-            )
+            .field("dynamic_fifo", &self.dynamic_fifo())
+            .field("multi_proc_int", &self.multi_proc_int())
+            .field("non_periodic_queue_depth", &self.non_periodic_queue_depth())
             .field(
                 "host_periodic_queue_depth",
-                &format_args!("{}", self.host_periodic_queue_depth().bits()),
+                &self.host_periodic_queue_depth(),
             )
-            .field(
-                "device_token_queue_depth",
-                &format_args!("{}", self.device_token_queue_depth().bits()),
-            )
-            .field(
-                "enable_ic_usb",
-                &format_args!("{}", self.enable_ic_usb().bit()),
-            )
+            .field("device_token_queue_depth", &self.device_token_queue_depth())
+            .field("enable_ic_usb", &self.enable_ic_usb())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<HW_CONFIG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Hardware Config 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hw_config0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct HW_CONFIG0_SPEC;
-impl crate::RegisterSpec for HW_CONFIG0_SPEC {
+#[doc = "Hardware Config 0\n\nYou can [`read`](crate::Reg::read) this register and get [`hw_config0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HwConfig0Spec;
+impl crate::RegisterSpec for HwConfig0Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`hw_config0::R`](R) reader structure"]
-impl crate::Readable for HW_CONFIG0_SPEC {}
+impl crate::Readable for HwConfig0Spec {}

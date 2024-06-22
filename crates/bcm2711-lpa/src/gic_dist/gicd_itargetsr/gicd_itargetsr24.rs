@@ -1,109 +1,95 @@
 #[doc = "Register `GICD_ITARGETSR24` reader"]
-pub type R = crate::R<GICD_ITARGETSR24_SPEC>;
+pub type R = crate::R<GicdItargetsr24Spec>;
 #[doc = "Register `GICD_ITARGETSR24` writer"]
-pub type W = crate::W<GICD_ITARGETSR24_SPEC>;
+pub type W = crate::W<GicdItargetsr24Spec>;
 #[doc = "Field `TIMER_0` reader - Timer 0"]
-pub type TIMER_0_R = crate::FieldReader;
+pub type Timer0R = crate::FieldReader;
 #[doc = "Field `TIMER_0` writer - Timer 0"]
-pub type TIMER_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Timer0W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TIMER_1` reader - Timer 1"]
-pub type TIMER_1_R = crate::FieldReader;
+pub type Timer1R = crate::FieldReader;
 #[doc = "Field `TIMER_1` writer - Timer 1"]
-pub type TIMER_1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Timer1W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TIMER_2` reader - Timer 2"]
-pub type TIMER_2_R = crate::FieldReader;
+pub type Timer2R = crate::FieldReader;
 #[doc = "Field `TIMER_2` writer - Timer 2"]
-pub type TIMER_2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Timer2W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TIMER_3` reader - Timer 3"]
-pub type TIMER_3_R = crate::FieldReader;
+pub type Timer3R = crate::FieldReader;
 #[doc = "Field `TIMER_3` writer - Timer 3"]
-pub type TIMER_3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Timer3W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Timer 0"]
     #[inline(always)]
-    pub fn timer_0(&self) -> TIMER_0_R {
-        TIMER_0_R::new((self.bits & 0xff) as u8)
+    pub fn timer_0(&self) -> Timer0R {
+        Timer0R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Timer 1"]
     #[inline(always)]
-    pub fn timer_1(&self) -> TIMER_1_R {
-        TIMER_1_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn timer_1(&self) -> Timer1R {
+        Timer1R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Timer 2"]
     #[inline(always)]
-    pub fn timer_2(&self) -> TIMER_2_R {
-        TIMER_2_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn timer_2(&self) -> Timer2R {
+        Timer2R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bits 24:31 - Timer 3"]
     #[inline(always)]
-    pub fn timer_3(&self) -> TIMER_3_R {
-        TIMER_3_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn timer_3(&self) -> Timer3R {
+        Timer3R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GICD_ITARGETSR24")
-            .field("timer_0", &format_args!("{}", self.timer_0().bits()))
-            .field("timer_1", &format_args!("{}", self.timer_1().bits()))
-            .field("timer_2", &format_args!("{}", self.timer_2().bits()))
-            .field("timer_3", &format_args!("{}", self.timer_3().bits()))
+            .field("timer_0", &self.timer_0())
+            .field("timer_1", &self.timer_1())
+            .field("timer_2", &self.timer_2())
+            .field("timer_3", &self.timer_3())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR24_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Timer 0"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_0(&mut self) -> TIMER_0_W<GICD_ITARGETSR24_SPEC> {
-        TIMER_0_W::new(self, 0)
+    pub fn timer_0(&mut self) -> Timer0W<GicdItargetsr24Spec> {
+        Timer0W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Timer 1"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_1(&mut self) -> TIMER_1_W<GICD_ITARGETSR24_SPEC> {
-        TIMER_1_W::new(self, 8)
+    pub fn timer_1(&mut self) -> Timer1W<GicdItargetsr24Spec> {
+        Timer1W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Timer 2"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_2(&mut self) -> TIMER_2_W<GICD_ITARGETSR24_SPEC> {
-        TIMER_2_W::new(self, 16)
+    pub fn timer_2(&mut self) -> Timer2W<GicdItargetsr24Spec> {
+        Timer2W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Timer 3"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_3(&mut self) -> TIMER_3_W<GICD_ITARGETSR24_SPEC> {
-        TIMER_3_W::new(self, 24)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn timer_3(&mut self) -> Timer3W<GicdItargetsr24Spec> {
+        Timer3W::new(self, 24)
     }
 }
-#[doc = "Interrupt Processor Target 96 - 99\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_itargetsr24::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_itargetsr24::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GICD_ITARGETSR24_SPEC;
-impl crate::RegisterSpec for GICD_ITARGETSR24_SPEC {
+#[doc = "Interrupt Processor Target 96 - 99\n\nYou can [`read`](crate::Reg::read) this register and get [`gicd_itargetsr24::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gicd_itargetsr24::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GicdItargetsr24Spec;
+impl crate::RegisterSpec for GicdItargetsr24Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gicd_itargetsr24::R`](R) reader structure"]
-impl crate::Readable for GICD_ITARGETSR24_SPEC {}
+impl crate::Readable for GicdItargetsr24Spec {}
 #[doc = "`write(|w| ..)` method takes [`gicd_itargetsr24::W`](W) writer structure"]
-impl crate::Writable for GICD_ITARGETSR24_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for GicdItargetsr24Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GICD_ITARGETSR24 to value 0"]
-impl crate::Resettable for GICD_ITARGETSR24_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for GicdItargetsr24Spec {
+    const RESET_VALUE: u32 = 0;
 }

@@ -1,1088 +1,1071 @@
 #[doc = "Register `GICD_ICFGR36` reader"]
-pub type R = crate::R<GICD_ICFGR36_SPEC>;
+pub type R = crate::R<GicdIcfgr36Spec>;
 #[doc = "Register `GICD_ICFGR36` writer"]
-pub type W = crate::W<GICD_ICFGR36_SPEC>;
-#[doc = "Field `SMI` reader - SMI"]
-pub type SMI_R = crate::BitReader<SMI_A>;
+pub type W = crate::W<GicdIcfgr36Spec>;
 #[doc = "SMI\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum SMI_A {
+pub enum Smi {
     #[doc = "0: Level sensitive"]
-    LEVEL = 0,
+    Level = 0,
     #[doc = "1: Edge triggered"]
-    EDGE = 1,
+    Edge = 1,
 }
-impl From<SMI_A> for bool {
+impl From<Smi> for bool {
     #[inline(always)]
-    fn from(variant: SMI_A) -> Self {
+    fn from(variant: Smi) -> Self {
         variant as u8 != 0
     }
 }
-impl SMI_R {
+#[doc = "Field `SMI` reader - SMI"]
+pub type SmiR = crate::BitReader<Smi>;
+impl SmiR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SMI_A {
+    pub const fn variant(&self) -> Smi {
         match self.bits {
-            false => SMI_A::LEVEL,
-            true => SMI_A::EDGE,
+            false => Smi::Level,
+            true => Smi::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == SMI_A::LEVEL
+        *self == Smi::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == SMI_A::EDGE
+        *self == Smi::Edge
     }
 }
 #[doc = "Field `SMI` writer - SMI"]
-pub type SMI_W<'a, REG> = crate::BitWriter<'a, REG, SMI_A>;
-impl<'a, REG> SMI_W<'a, REG>
+pub type SmiW<'a, REG> = crate::BitWriter<'a, REG, Smi>;
+impl<'a, REG> SmiW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(SMI_A::LEVEL)
+        self.variant(Smi::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(SMI_A::EDGE)
+        self.variant(Smi::Edge)
+    }
+}
+#[doc = "GPIO 0\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Gpio0 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Gpio0> for bool {
+    #[inline(always)]
+    fn from(variant: Gpio0) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `GPIO_0` reader - GPIO 0"]
-pub type GPIO_0_R = crate::BitReader<GPIO_0_A>;
-#[doc = "GPIO 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum GPIO_0_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<GPIO_0_A> for bool {
-    #[inline(always)]
-    fn from(variant: GPIO_0_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl GPIO_0_R {
+pub type Gpio0R = crate::BitReader<Gpio0>;
+impl Gpio0R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> GPIO_0_A {
+    pub const fn variant(&self) -> Gpio0 {
         match self.bits {
-            false => GPIO_0_A::LEVEL,
-            true => GPIO_0_A::EDGE,
+            false => Gpio0::Level,
+            true => Gpio0::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == GPIO_0_A::LEVEL
+        *self == Gpio0::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == GPIO_0_A::EDGE
+        *self == Gpio0::Edge
     }
 }
 #[doc = "Field `GPIO_0` writer - GPIO 0"]
-pub type GPIO_0_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_0_A>;
-impl<'a, REG> GPIO_0_W<'a, REG>
+pub type Gpio0W<'a, REG> = crate::BitWriter<'a, REG, Gpio0>;
+impl<'a, REG> Gpio0W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_0_A::LEVEL)
+        self.variant(Gpio0::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_0_A::EDGE)
+        self.variant(Gpio0::Edge)
+    }
+}
+#[doc = "GPIO 1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Gpio1 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Gpio1> for bool {
+    #[inline(always)]
+    fn from(variant: Gpio1) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `GPIO_1` reader - GPIO 1"]
-pub type GPIO_1_R = crate::BitReader<GPIO_1_A>;
-#[doc = "GPIO 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum GPIO_1_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<GPIO_1_A> for bool {
-    #[inline(always)]
-    fn from(variant: GPIO_1_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl GPIO_1_R {
+pub type Gpio1R = crate::BitReader<Gpio1>;
+impl Gpio1R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> GPIO_1_A {
+    pub const fn variant(&self) -> Gpio1 {
         match self.bits {
-            false => GPIO_1_A::LEVEL,
-            true => GPIO_1_A::EDGE,
+            false => Gpio1::Level,
+            true => Gpio1::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == GPIO_1_A::LEVEL
+        *self == Gpio1::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == GPIO_1_A::EDGE
+        *self == Gpio1::Edge
     }
 }
 #[doc = "Field `GPIO_1` writer - GPIO 1"]
-pub type GPIO_1_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_1_A>;
-impl<'a, REG> GPIO_1_W<'a, REG>
+pub type Gpio1W<'a, REG> = crate::BitWriter<'a, REG, Gpio1>;
+impl<'a, REG> Gpio1W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_1_A::LEVEL)
+        self.variant(Gpio1::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_1_A::EDGE)
+        self.variant(Gpio1::Edge)
+    }
+}
+#[doc = "GPIO 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Gpio2 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Gpio2> for bool {
+    #[inline(always)]
+    fn from(variant: Gpio2) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `GPIO_2` reader - GPIO 2"]
-pub type GPIO_2_R = crate::BitReader<GPIO_2_A>;
-#[doc = "GPIO 2\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum GPIO_2_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<GPIO_2_A> for bool {
-    #[inline(always)]
-    fn from(variant: GPIO_2_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl GPIO_2_R {
+pub type Gpio2R = crate::BitReader<Gpio2>;
+impl Gpio2R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> GPIO_2_A {
+    pub const fn variant(&self) -> Gpio2 {
         match self.bits {
-            false => GPIO_2_A::LEVEL,
-            true => GPIO_2_A::EDGE,
+            false => Gpio2::Level,
+            true => Gpio2::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == GPIO_2_A::LEVEL
+        *self == Gpio2::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == GPIO_2_A::EDGE
+        *self == Gpio2::Edge
     }
 }
 #[doc = "Field `GPIO_2` writer - GPIO 2"]
-pub type GPIO_2_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_2_A>;
-impl<'a, REG> GPIO_2_W<'a, REG>
+pub type Gpio2W<'a, REG> = crate::BitWriter<'a, REG, Gpio2>;
+impl<'a, REG> Gpio2W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_2_A::LEVEL)
+        self.variant(Gpio2::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_2_A::EDGE)
+        self.variant(Gpio2::Edge)
+    }
+}
+#[doc = "GPIO 3\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Gpio3 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Gpio3> for bool {
+    #[inline(always)]
+    fn from(variant: Gpio3) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `GPIO_3` reader - GPIO 3"]
-pub type GPIO_3_R = crate::BitReader<GPIO_3_A>;
-#[doc = "GPIO 3\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum GPIO_3_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<GPIO_3_A> for bool {
-    #[inline(always)]
-    fn from(variant: GPIO_3_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl GPIO_3_R {
+pub type Gpio3R = crate::BitReader<Gpio3>;
+impl Gpio3R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> GPIO_3_A {
+    pub const fn variant(&self) -> Gpio3 {
         match self.bits {
-            false => GPIO_3_A::LEVEL,
-            true => GPIO_3_A::EDGE,
+            false => Gpio3::Level,
+            true => Gpio3::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == GPIO_3_A::LEVEL
+        *self == Gpio3::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == GPIO_3_A::EDGE
+        *self == Gpio3::Edge
     }
 }
 #[doc = "Field `GPIO_3` writer - GPIO 3"]
-pub type GPIO_3_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_3_A>;
-impl<'a, REG> GPIO_3_W<'a, REG>
+pub type Gpio3W<'a, REG> = crate::BitWriter<'a, REG, Gpio3>;
+impl<'a, REG> Gpio3W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_3_A::LEVEL)
+        self.variant(Gpio3::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(GPIO_3_A::EDGE)
+        self.variant(Gpio3::Edge)
+    }
+}
+#[doc = "OR of all I2C\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum I2c {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<I2c> for bool {
+    #[inline(always)]
+    fn from(variant: I2c) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `I2C` reader - OR of all I2C"]
-pub type I2C_R = crate::BitReader<I2C_A>;
-#[doc = "OR of all I2C\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum I2C_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<I2C_A> for bool {
-    #[inline(always)]
-    fn from(variant: I2C_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl I2C_R {
+pub type I2cR = crate::BitReader<I2c>;
+impl I2cR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> I2C_A {
+    pub const fn variant(&self) -> I2c {
         match self.bits {
-            false => I2C_A::LEVEL,
-            true => I2C_A::EDGE,
+            false => I2c::Level,
+            true => I2c::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == I2C_A::LEVEL
+        *self == I2c::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == I2C_A::EDGE
+        *self == I2c::Edge
     }
 }
 #[doc = "Field `I2C` writer - OR of all I2C"]
-pub type I2C_W<'a, REG> = crate::BitWriter<'a, REG, I2C_A>;
-impl<'a, REG> I2C_W<'a, REG>
+pub type I2cW<'a, REG> = crate::BitWriter<'a, REG, I2c>;
+impl<'a, REG> I2cW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(I2C_A::LEVEL)
+        self.variant(I2c::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(I2C_A::EDGE)
+        self.variant(I2c::Edge)
+    }
+}
+#[doc = "OR of all SPI\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Spi {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Spi> for bool {
+    #[inline(always)]
+    fn from(variant: Spi) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `SPI` reader - OR of all SPI"]
-pub type SPI_R = crate::BitReader<SPI_A>;
-#[doc = "OR of all SPI\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum SPI_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<SPI_A> for bool {
-    #[inline(always)]
-    fn from(variant: SPI_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl SPI_R {
+pub type SpiR = crate::BitReader<Spi>;
+impl SpiR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SPI_A {
+    pub const fn variant(&self) -> Spi {
         match self.bits {
-            false => SPI_A::LEVEL,
-            true => SPI_A::EDGE,
+            false => Spi::Level,
+            true => Spi::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == SPI_A::LEVEL
+        *self == Spi::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == SPI_A::EDGE
+        *self == Spi::Edge
     }
 }
 #[doc = "Field `SPI` writer - OR of all SPI"]
-pub type SPI_W<'a, REG> = crate::BitWriter<'a, REG, SPI_A>;
-impl<'a, REG> SPI_W<'a, REG>
+pub type SpiW<'a, REG> = crate::BitWriter<'a, REG, Spi>;
+impl<'a, REG> SpiW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(SPI_A::LEVEL)
+        self.variant(Spi::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(SPI_A::EDGE)
+        self.variant(Spi::Edge)
+    }
+}
+#[doc = "PCM/I2S\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PcmI2s {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<PcmI2s> for bool {
+    #[inline(always)]
+    fn from(variant: PcmI2s) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `PCM_I2S` reader - PCM/I2S"]
-pub type PCM_I2S_R = crate::BitReader<PCM_I2S_A>;
-#[doc = "PCM/I2S\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PCM_I2S_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<PCM_I2S_A> for bool {
-    #[inline(always)]
-    fn from(variant: PCM_I2S_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl PCM_I2S_R {
+pub type PcmI2sR = crate::BitReader<PcmI2s>;
+impl PcmI2sR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PCM_I2S_A {
+    pub const fn variant(&self) -> PcmI2s {
         match self.bits {
-            false => PCM_I2S_A::LEVEL,
-            true => PCM_I2S_A::EDGE,
+            false => PcmI2s::Level,
+            true => PcmI2s::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == PCM_I2S_A::LEVEL
+        *self == PcmI2s::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == PCM_I2S_A::EDGE
+        *self == PcmI2s::Edge
     }
 }
 #[doc = "Field `PCM_I2S` writer - PCM/I2S"]
-pub type PCM_I2S_W<'a, REG> = crate::BitWriter<'a, REG, PCM_I2S_A>;
-impl<'a, REG> PCM_I2S_W<'a, REG>
+pub type PcmI2sW<'a, REG> = crate::BitWriter<'a, REG, PcmI2s>;
+impl<'a, REG> PcmI2sW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(PCM_I2S_A::LEVEL)
+        self.variant(PcmI2s::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(PCM_I2S_A::EDGE)
+        self.variant(PcmI2s::Edge)
+    }
+}
+#[doc = "SDHOST\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Sdhost {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Sdhost> for bool {
+    #[inline(always)]
+    fn from(variant: Sdhost) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `SDHOST` reader - SDHOST"]
-pub type SDHOST_R = crate::BitReader<SDHOST_A>;
-#[doc = "SDHOST\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum SDHOST_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<SDHOST_A> for bool {
-    #[inline(always)]
-    fn from(variant: SDHOST_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl SDHOST_R {
+pub type SdhostR = crate::BitReader<Sdhost>;
+impl SdhostR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SDHOST_A {
+    pub const fn variant(&self) -> Sdhost {
         match self.bits {
-            false => SDHOST_A::LEVEL,
-            true => SDHOST_A::EDGE,
+            false => Sdhost::Level,
+            true => Sdhost::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == SDHOST_A::LEVEL
+        *self == Sdhost::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == SDHOST_A::EDGE
+        *self == Sdhost::Edge
     }
 }
 #[doc = "Field `SDHOST` writer - SDHOST"]
-pub type SDHOST_W<'a, REG> = crate::BitWriter<'a, REG, SDHOST_A>;
-impl<'a, REG> SDHOST_W<'a, REG>
+pub type SdhostW<'a, REG> = crate::BitWriter<'a, REG, Sdhost>;
+impl<'a, REG> SdhostW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(SDHOST_A::LEVEL)
+        self.variant(Sdhost::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(SDHOST_A::EDGE)
+        self.variant(Sdhost::Edge)
+    }
+}
+#[doc = "OR of all PL011 UARTs\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Uart {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Uart> for bool {
+    #[inline(always)]
+    fn from(variant: Uart) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `UART` reader - OR of all PL011 UARTs"]
-pub type UART_R = crate::BitReader<UART_A>;
-#[doc = "OR of all PL011 UARTs\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum UART_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<UART_A> for bool {
-    #[inline(always)]
-    fn from(variant: UART_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl UART_R {
+pub type UartR = crate::BitReader<Uart>;
+impl UartR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> UART_A {
+    pub const fn variant(&self) -> Uart {
         match self.bits {
-            false => UART_A::LEVEL,
-            true => UART_A::EDGE,
+            false => Uart::Level,
+            true => Uart::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == UART_A::LEVEL
+        *self == Uart::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == UART_A::EDGE
+        *self == Uart::Edge
     }
 }
 #[doc = "Field `UART` writer - OR of all PL011 UARTs"]
-pub type UART_W<'a, REG> = crate::BitWriter<'a, REG, UART_A>;
-impl<'a, REG> UART_W<'a, REG>
+pub type UartW<'a, REG> = crate::BitWriter<'a, REG, Uart>;
+impl<'a, REG> UartW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(UART_A::LEVEL)
+        self.variant(Uart::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(UART_A::EDGE)
+        self.variant(Uart::Edge)
+    }
+}
+#[doc = "OR of all ETH_PCIe L2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum EthPcie {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<EthPcie> for bool {
+    #[inline(always)]
+    fn from(variant: EthPcie) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `ETH_PCIE` reader - OR of all ETH_PCIe L2"]
-pub type ETH_PCIE_R = crate::BitReader<ETH_PCIE_A>;
-#[doc = "OR of all ETH_PCIe L2\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ETH_PCIE_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<ETH_PCIE_A> for bool {
-    #[inline(always)]
-    fn from(variant: ETH_PCIE_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl ETH_PCIE_R {
+pub type EthPcieR = crate::BitReader<EthPcie>;
+impl EthPcieR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ETH_PCIE_A {
+    pub const fn variant(&self) -> EthPcie {
         match self.bits {
-            false => ETH_PCIE_A::LEVEL,
-            true => ETH_PCIE_A::EDGE,
+            false => EthPcie::Level,
+            true => EthPcie::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == ETH_PCIE_A::LEVEL
+        *self == EthPcie::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == ETH_PCIE_A::EDGE
+        *self == EthPcie::Edge
     }
 }
 #[doc = "Field `ETH_PCIE` writer - OR of all ETH_PCIe L2"]
-pub type ETH_PCIE_W<'a, REG> = crate::BitWriter<'a, REG, ETH_PCIE_A>;
-impl<'a, REG> ETH_PCIE_W<'a, REG>
+pub type EthPcieW<'a, REG> = crate::BitWriter<'a, REG, EthPcie>;
+impl<'a, REG> EthPcieW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(ETH_PCIE_A::LEVEL)
+        self.variant(EthPcie::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(ETH_PCIE_A::EDGE)
+        self.variant(EthPcie::Edge)
+    }
+}
+#[doc = "VEC\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Vec {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Vec> for bool {
+    #[inline(always)]
+    fn from(variant: Vec) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `VEC` reader - VEC"]
-pub type VEC_R = crate::BitReader<VEC_A>;
-#[doc = "VEC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum VEC_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<VEC_A> for bool {
-    #[inline(always)]
-    fn from(variant: VEC_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl VEC_R {
+pub type VecR = crate::BitReader<Vec>;
+impl VecR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> VEC_A {
+    pub const fn variant(&self) -> Vec {
         match self.bits {
-            false => VEC_A::LEVEL,
-            true => VEC_A::EDGE,
+            false => Vec::Level,
+            true => Vec::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == VEC_A::LEVEL
+        *self == Vec::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == VEC_A::EDGE
+        *self == Vec::Edge
     }
 }
 #[doc = "Field `VEC` writer - VEC"]
-pub type VEC_W<'a, REG> = crate::BitWriter<'a, REG, VEC_A>;
-impl<'a, REG> VEC_W<'a, REG>
+pub type VecW<'a, REG> = crate::BitWriter<'a, REG, Vec>;
+impl<'a, REG> VecW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(VEC_A::LEVEL)
+        self.variant(Vec::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(VEC_A::EDGE)
+        self.variant(Vec::Edge)
+    }
+}
+#[doc = "CPG\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Cpg {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Cpg> for bool {
+    #[inline(always)]
+    fn from(variant: Cpg) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `CPG` reader - CPG"]
-pub type CPG_R = crate::BitReader<CPG_A>;
-#[doc = "CPG\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CPG_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<CPG_A> for bool {
-    #[inline(always)]
-    fn from(variant: CPG_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl CPG_R {
+pub type CpgR = crate::BitReader<Cpg>;
+impl CpgR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CPG_A {
+    pub const fn variant(&self) -> Cpg {
         match self.bits {
-            false => CPG_A::LEVEL,
-            true => CPG_A::EDGE,
+            false => Cpg::Level,
+            true => Cpg::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == CPG_A::LEVEL
+        *self == Cpg::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == CPG_A::EDGE
+        *self == Cpg::Edge
     }
 }
 #[doc = "Field `CPG` writer - CPG"]
-pub type CPG_W<'a, REG> = crate::BitWriter<'a, REG, CPG_A>;
-impl<'a, REG> CPG_W<'a, REG>
+pub type CpgW<'a, REG> = crate::BitWriter<'a, REG, Cpg>;
+impl<'a, REG> CpgW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(CPG_A::LEVEL)
+        self.variant(Cpg::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(CPG_A::EDGE)
+        self.variant(Cpg::Edge)
+    }
+}
+#[doc = "RNG\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Rng {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Rng> for bool {
+    #[inline(always)]
+    fn from(variant: Rng) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `RNG` reader - RNG"]
-pub type RNG_R = crate::BitReader<RNG_A>;
-#[doc = "RNG\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RNG_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<RNG_A> for bool {
-    #[inline(always)]
-    fn from(variant: RNG_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl RNG_R {
+pub type RngR = crate::BitReader<Rng>;
+impl RngR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RNG_A {
+    pub const fn variant(&self) -> Rng {
         match self.bits {
-            false => RNG_A::LEVEL,
-            true => RNG_A::EDGE,
+            false => Rng::Level,
+            true => Rng::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == RNG_A::LEVEL
+        *self == Rng::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == RNG_A::EDGE
+        *self == Rng::Edge
     }
 }
 #[doc = "Field `RNG` writer - RNG"]
-pub type RNG_W<'a, REG> = crate::BitWriter<'a, REG, RNG_A>;
-impl<'a, REG> RNG_W<'a, REG>
+pub type RngW<'a, REG> = crate::BitWriter<'a, REG, Rng>;
+impl<'a, REG> RngW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(RNG_A::LEVEL)
+        self.variant(Rng::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(RNG_A::EDGE)
+        self.variant(Rng::Edge)
+    }
+}
+#[doc = "OR of EMMC and EMMC2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Emmc {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Emmc> for bool {
+    #[inline(always)]
+    fn from(variant: Emmc) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `EMMC` reader - OR of EMMC and EMMC2"]
-pub type EMMC_R = crate::BitReader<EMMC_A>;
-#[doc = "OR of EMMC and EMMC2\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum EMMC_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<EMMC_A> for bool {
-    #[inline(always)]
-    fn from(variant: EMMC_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl EMMC_R {
+pub type EmmcR = crate::BitReader<Emmc>;
+impl EmmcR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> EMMC_A {
+    pub const fn variant(&self) -> Emmc {
         match self.bits {
-            false => EMMC_A::LEVEL,
-            true => EMMC_A::EDGE,
+            false => Emmc::Level,
+            true => Emmc::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == EMMC_A::LEVEL
+        *self == Emmc::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == EMMC_A::EDGE
+        *self == Emmc::Edge
     }
 }
 #[doc = "Field `EMMC` writer - OR of EMMC and EMMC2"]
-pub type EMMC_W<'a, REG> = crate::BitWriter<'a, REG, EMMC_A>;
-impl<'a, REG> EMMC_W<'a, REG>
+pub type EmmcW<'a, REG> = crate::BitWriter<'a, REG, Emmc>;
+impl<'a, REG> EmmcW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(EMMC_A::LEVEL)
+        self.variant(Emmc::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(EMMC_A::EDGE)
+        self.variant(Emmc::Edge)
     }
 }
-#[doc = "Field `ETH_PCIE_SECURE` reader - ETH_PCIe secure"]
-pub type ETH_PCIE_SECURE_R = crate::BitReader<ETH_PCIE_SECURE_A>;
 #[doc = "ETH_PCIe secure\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ETH_PCIE_SECURE_A {
+pub enum EthPcieSecure {
     #[doc = "0: Level sensitive"]
-    LEVEL = 0,
+    Level = 0,
     #[doc = "1: Edge triggered"]
-    EDGE = 1,
+    Edge = 1,
 }
-impl From<ETH_PCIE_SECURE_A> for bool {
+impl From<EthPcieSecure> for bool {
     #[inline(always)]
-    fn from(variant: ETH_PCIE_SECURE_A) -> Self {
+    fn from(variant: EthPcieSecure) -> Self {
         variant as u8 != 0
     }
 }
-impl ETH_PCIE_SECURE_R {
+#[doc = "Field `ETH_PCIE_SECURE` reader - ETH_PCIe secure"]
+pub type EthPcieSecureR = crate::BitReader<EthPcieSecure>;
+impl EthPcieSecureR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ETH_PCIE_SECURE_A {
+    pub const fn variant(&self) -> EthPcieSecure {
         match self.bits {
-            false => ETH_PCIE_SECURE_A::LEVEL,
-            true => ETH_PCIE_SECURE_A::EDGE,
+            false => EthPcieSecure::Level,
+            true => EthPcieSecure::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == ETH_PCIE_SECURE_A::LEVEL
+        *self == EthPcieSecure::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == ETH_PCIE_SECURE_A::EDGE
+        *self == EthPcieSecure::Edge
     }
 }
 #[doc = "Field `ETH_PCIE_SECURE` writer - ETH_PCIe secure"]
-pub type ETH_PCIE_SECURE_W<'a, REG> = crate::BitWriter<'a, REG, ETH_PCIE_SECURE_A>;
-impl<'a, REG> ETH_PCIE_SECURE_W<'a, REG>
+pub type EthPcieSecureW<'a, REG> = crate::BitWriter<'a, REG, EthPcieSecure>;
+impl<'a, REG> EthPcieSecureW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(ETH_PCIE_SECURE_A::LEVEL)
+        self.variant(EthPcieSecure::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(ETH_PCIE_SECURE_A::EDGE)
+        self.variant(EthPcieSecure::Edge)
     }
 }
 impl R {
     #[doc = "Bit 1 - SMI"]
     #[inline(always)]
-    pub fn smi(&self) -> SMI_R {
-        SMI_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn smi(&self) -> SmiR {
+        SmiR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - GPIO 0"]
     #[inline(always)]
-    pub fn gpio_0(&self) -> GPIO_0_R {
-        GPIO_0_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn gpio_0(&self) -> Gpio0R {
+        Gpio0R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - GPIO 1"]
     #[inline(always)]
-    pub fn gpio_1(&self) -> GPIO_1_R {
-        GPIO_1_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn gpio_1(&self) -> Gpio1R {
+        Gpio1R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - GPIO 2"]
     #[inline(always)]
-    pub fn gpio_2(&self) -> GPIO_2_R {
-        GPIO_2_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn gpio_2(&self) -> Gpio2R {
+        Gpio2R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 9 - GPIO 3"]
     #[inline(always)]
-    pub fn gpio_3(&self) -> GPIO_3_R {
-        GPIO_3_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn gpio_3(&self) -> Gpio3R {
+        Gpio3R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 11 - OR of all I2C"]
     #[inline(always)]
-    pub fn i2c(&self) -> I2C_R {
-        I2C_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn i2c(&self) -> I2cR {
+        I2cR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 13 - OR of all SPI"]
     #[inline(always)]
-    pub fn spi(&self) -> SPI_R {
-        SPI_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn spi(&self) -> SpiR {
+        SpiR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 15 - PCM/I2S"]
     #[inline(always)]
-    pub fn pcm_i2s(&self) -> PCM_I2S_R {
-        PCM_I2S_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn pcm_i2s(&self) -> PcmI2sR {
+        PcmI2sR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 17 - SDHOST"]
     #[inline(always)]
-    pub fn sdhost(&self) -> SDHOST_R {
-        SDHOST_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn sdhost(&self) -> SdhostR {
+        SdhostR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 19 - OR of all PL011 UARTs"]
     #[inline(always)]
-    pub fn uart(&self) -> UART_R {
-        UART_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn uart(&self) -> UartR {
+        UartR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 21 - OR of all ETH_PCIe L2"]
     #[inline(always)]
-    pub fn eth_pcie(&self) -> ETH_PCIE_R {
-        ETH_PCIE_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn eth_pcie(&self) -> EthPcieR {
+        EthPcieR::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 23 - VEC"]
     #[inline(always)]
-    pub fn vec(&self) -> VEC_R {
-        VEC_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn vec(&self) -> VecR {
+        VecR::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 25 - CPG"]
     #[inline(always)]
-    pub fn cpg(&self) -> CPG_R {
-        CPG_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn cpg(&self) -> CpgR {
+        CpgR::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 27 - RNG"]
     #[inline(always)]
-    pub fn rng(&self) -> RNG_R {
-        RNG_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn rng(&self) -> RngR {
+        RngR::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 29 - OR of EMMC and EMMC2"]
     #[inline(always)]
-    pub fn emmc(&self) -> EMMC_R {
-        EMMC_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn emmc(&self) -> EmmcR {
+        EmmcR::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 31 - ETH_PCIe secure"]
     #[inline(always)]
-    pub fn eth_pcie_secure(&self) -> ETH_PCIE_SECURE_R {
-        ETH_PCIE_SECURE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn eth_pcie_secure(&self) -> EthPcieSecureR {
+        EthPcieSecureR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GICD_ICFGR36")
-            .field("smi", &format_args!("{}", self.smi().bit()))
-            .field("gpio_0", &format_args!("{}", self.gpio_0().bit()))
-            .field("gpio_1", &format_args!("{}", self.gpio_1().bit()))
-            .field("gpio_2", &format_args!("{}", self.gpio_2().bit()))
-            .field("gpio_3", &format_args!("{}", self.gpio_3().bit()))
-            .field("i2c", &format_args!("{}", self.i2c().bit()))
-            .field("spi", &format_args!("{}", self.spi().bit()))
-            .field("pcm_i2s", &format_args!("{}", self.pcm_i2s().bit()))
-            .field("sdhost", &format_args!("{}", self.sdhost().bit()))
-            .field("uart", &format_args!("{}", self.uart().bit()))
-            .field("eth_pcie", &format_args!("{}", self.eth_pcie().bit()))
-            .field("vec", &format_args!("{}", self.vec().bit()))
-            .field("cpg", &format_args!("{}", self.cpg().bit()))
-            .field("rng", &format_args!("{}", self.rng().bit()))
-            .field("emmc", &format_args!("{}", self.emmc().bit()))
-            .field(
-                "eth_pcie_secure",
-                &format_args!("{}", self.eth_pcie_secure().bit()),
-            )
+            .field("smi", &self.smi())
+            .field("gpio_0", &self.gpio_0())
+            .field("gpio_1", &self.gpio_1())
+            .field("gpio_2", &self.gpio_2())
+            .field("gpio_3", &self.gpio_3())
+            .field("i2c", &self.i2c())
+            .field("spi", &self.spi())
+            .field("pcm_i2s", &self.pcm_i2s())
+            .field("sdhost", &self.sdhost())
+            .field("uart", &self.uart())
+            .field("eth_pcie", &self.eth_pcie())
+            .field("vec", &self.vec())
+            .field("cpg", &self.cpg())
+            .field("rng", &self.rng())
+            .field("emmc", &self.emmc())
+            .field("eth_pcie_secure", &self.eth_pcie_secure())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR36_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - SMI"]
     #[inline(always)]
     #[must_use]
-    pub fn smi(&mut self) -> SMI_W<GICD_ICFGR36_SPEC> {
-        SMI_W::new(self, 1)
+    pub fn smi(&mut self) -> SmiW<GicdIcfgr36Spec> {
+        SmiW::new(self, 1)
     }
     #[doc = "Bit 3 - GPIO 0"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_0(&mut self) -> GPIO_0_W<GICD_ICFGR36_SPEC> {
-        GPIO_0_W::new(self, 3)
+    pub fn gpio_0(&mut self) -> Gpio0W<GicdIcfgr36Spec> {
+        Gpio0W::new(self, 3)
     }
     #[doc = "Bit 5 - GPIO 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_1(&mut self) -> GPIO_1_W<GICD_ICFGR36_SPEC> {
-        GPIO_1_W::new(self, 5)
+    pub fn gpio_1(&mut self) -> Gpio1W<GicdIcfgr36Spec> {
+        Gpio1W::new(self, 5)
     }
     #[doc = "Bit 7 - GPIO 2"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_2(&mut self) -> GPIO_2_W<GICD_ICFGR36_SPEC> {
-        GPIO_2_W::new(self, 7)
+    pub fn gpio_2(&mut self) -> Gpio2W<GicdIcfgr36Spec> {
+        Gpio2W::new(self, 7)
     }
     #[doc = "Bit 9 - GPIO 3"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_3(&mut self) -> GPIO_3_W<GICD_ICFGR36_SPEC> {
-        GPIO_3_W::new(self, 9)
+    pub fn gpio_3(&mut self) -> Gpio3W<GicdIcfgr36Spec> {
+        Gpio3W::new(self, 9)
     }
     #[doc = "Bit 11 - OR of all I2C"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c(&mut self) -> I2C_W<GICD_ICFGR36_SPEC> {
-        I2C_W::new(self, 11)
+    pub fn i2c(&mut self) -> I2cW<GicdIcfgr36Spec> {
+        I2cW::new(self, 11)
     }
     #[doc = "Bit 13 - OR of all SPI"]
     #[inline(always)]
     #[must_use]
-    pub fn spi(&mut self) -> SPI_W<GICD_ICFGR36_SPEC> {
-        SPI_W::new(self, 13)
+    pub fn spi(&mut self) -> SpiW<GicdIcfgr36Spec> {
+        SpiW::new(self, 13)
     }
     #[doc = "Bit 15 - PCM/I2S"]
     #[inline(always)]
     #[must_use]
-    pub fn pcm_i2s(&mut self) -> PCM_I2S_W<GICD_ICFGR36_SPEC> {
-        PCM_I2S_W::new(self, 15)
+    pub fn pcm_i2s(&mut self) -> PcmI2sW<GicdIcfgr36Spec> {
+        PcmI2sW::new(self, 15)
     }
     #[doc = "Bit 17 - SDHOST"]
     #[inline(always)]
     #[must_use]
-    pub fn sdhost(&mut self) -> SDHOST_W<GICD_ICFGR36_SPEC> {
-        SDHOST_W::new(self, 17)
+    pub fn sdhost(&mut self) -> SdhostW<GicdIcfgr36Spec> {
+        SdhostW::new(self, 17)
     }
     #[doc = "Bit 19 - OR of all PL011 UARTs"]
     #[inline(always)]
     #[must_use]
-    pub fn uart(&mut self) -> UART_W<GICD_ICFGR36_SPEC> {
-        UART_W::new(self, 19)
+    pub fn uart(&mut self) -> UartW<GicdIcfgr36Spec> {
+        UartW::new(self, 19)
     }
     #[doc = "Bit 21 - OR of all ETH_PCIe L2"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie(&mut self) -> ETH_PCIE_W<GICD_ICFGR36_SPEC> {
-        ETH_PCIE_W::new(self, 21)
+    pub fn eth_pcie(&mut self) -> EthPcieW<GicdIcfgr36Spec> {
+        EthPcieW::new(self, 21)
     }
     #[doc = "Bit 23 - VEC"]
     #[inline(always)]
     #[must_use]
-    pub fn vec(&mut self) -> VEC_W<GICD_ICFGR36_SPEC> {
-        VEC_W::new(self, 23)
+    pub fn vec(&mut self) -> VecW<GicdIcfgr36Spec> {
+        VecW::new(self, 23)
     }
     #[doc = "Bit 25 - CPG"]
     #[inline(always)]
     #[must_use]
-    pub fn cpg(&mut self) -> CPG_W<GICD_ICFGR36_SPEC> {
-        CPG_W::new(self, 25)
+    pub fn cpg(&mut self) -> CpgW<GicdIcfgr36Spec> {
+        CpgW::new(self, 25)
     }
     #[doc = "Bit 27 - RNG"]
     #[inline(always)]
     #[must_use]
-    pub fn rng(&mut self) -> RNG_W<GICD_ICFGR36_SPEC> {
-        RNG_W::new(self, 27)
+    pub fn rng(&mut self) -> RngW<GicdIcfgr36Spec> {
+        RngW::new(self, 27)
     }
     #[doc = "Bit 29 - OR of EMMC and EMMC2"]
     #[inline(always)]
     #[must_use]
-    pub fn emmc(&mut self) -> EMMC_W<GICD_ICFGR36_SPEC> {
-        EMMC_W::new(self, 29)
+    pub fn emmc(&mut self) -> EmmcW<GicdIcfgr36Spec> {
+        EmmcW::new(self, 29)
     }
     #[doc = "Bit 31 - ETH_PCIe secure"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie_secure(&mut self) -> ETH_PCIE_SECURE_W<GICD_ICFGR36_SPEC> {
-        ETH_PCIE_SECURE_W::new(self, 31)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn eth_pcie_secure(&mut self) -> EthPcieSecureW<GicdIcfgr36Spec> {
+        EthPcieSecureW::new(self, 31)
     }
 }
-#[doc = "Interrupt Configuration 144 - 159\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icfgr36::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icfgr36::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GICD_ICFGR36_SPEC;
-impl crate::RegisterSpec for GICD_ICFGR36_SPEC {
+#[doc = "Interrupt Configuration 144 - 159\n\nYou can [`read`](crate::Reg::read) this register and get [`gicd_icfgr36::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gicd_icfgr36::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GicdIcfgr36Spec;
+impl crate::RegisterSpec for GicdIcfgr36Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gicd_icfgr36::R`](R) reader structure"]
-impl crate::Readable for GICD_ICFGR36_SPEC {}
+impl crate::Readable for GicdIcfgr36Spec {}
 #[doc = "`write(|w| ..)` method takes [`gicd_icfgr36::W`](W) writer structure"]
-impl crate::Writable for GICD_ICFGR36_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for GicdIcfgr36Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GICD_ICFGR36 to value 0"]
-impl crate::Resettable for GICD_ICFGR36_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for GicdIcfgr36Spec {
+    const RESET_VALUE: u32 = 0;
 }

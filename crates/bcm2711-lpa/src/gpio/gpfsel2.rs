@@ -1,99 +1,100 @@
 #[doc = "Register `GPFSEL2` reader"]
-pub type R = crate::R<GPFSEL2_SPEC>;
+pub type R = crate::R<Gpfsel2Spec>;
 #[doc = "Register `GPFSEL2` writer"]
-pub type W = crate::W<GPFSEL2_SPEC>;
-#[doc = "Field `FSEL20` reader - Function Select 20"]
-pub type FSEL20_R = crate::FieldReader<FSEL20_A>;
+pub type W = crate::W<Gpfsel2Spec>;
 #[doc = "Function Select 20"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL20_A {
+pub enum Fsel20 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to PCM_DIN"]
-    PCM_DIN = 4,
+    PcmDin = 4,
     #[doc = "5: Pin is connected to SD12"]
-    SD12 = 5,
+    Sd12 = 5,
     #[doc = "6: Pin is connected to DPI_D16"]
-    DPI_D16 = 6,
+    DpiD16 = 6,
     #[doc = "7: Pin is connected to SPI6_MOSI"]
-    SPI6_MOSI = 7,
+    Spi6Mosi = 7,
     #[doc = "3: Pin is connected to SPI1_MOSI"]
-    SPI1_MOSI = 3,
+    Spi1Mosi = 3,
     #[doc = "2: Pin is connected to GPCLK0"]
-    GPCLK0 = 2,
+    Gpclk0 = 2,
 }
-impl From<FSEL20_A> for u8 {
+impl From<Fsel20> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL20_A) -> Self {
+    fn from(variant: Fsel20) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL20_A {
+impl crate::FieldSpec for Fsel20 {
     type Ux = u8;
 }
-impl FSEL20_R {
+impl crate::IsEnum for Fsel20 {}
+#[doc = "Field `FSEL20` reader - Function Select 20"]
+pub type Fsel20R = crate::FieldReader<Fsel20>;
+impl Fsel20R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL20_A {
+    pub const fn variant(&self) -> Fsel20 {
         match self.bits {
-            0 => FSEL20_A::INPUT,
-            1 => FSEL20_A::OUTPUT,
-            4 => FSEL20_A::PCM_DIN,
-            5 => FSEL20_A::SD12,
-            6 => FSEL20_A::DPI_D16,
-            7 => FSEL20_A::SPI6_MOSI,
-            3 => FSEL20_A::SPI1_MOSI,
-            2 => FSEL20_A::GPCLK0,
+            0 => Fsel20::Input,
+            1 => Fsel20::Output,
+            4 => Fsel20::PcmDin,
+            5 => Fsel20::Sd12,
+            6 => Fsel20::DpiD16,
+            7 => Fsel20::Spi6Mosi,
+            3 => Fsel20::Spi1Mosi,
+            2 => Fsel20::Gpclk0,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL20_A::INPUT
+        *self == Fsel20::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL20_A::OUTPUT
+        *self == Fsel20::Output
     }
     #[doc = "Pin is connected to PCM_DIN"]
     #[inline(always)]
     pub fn is_pcm_din(&self) -> bool {
-        *self == FSEL20_A::PCM_DIN
+        *self == Fsel20::PcmDin
     }
     #[doc = "Pin is connected to SD12"]
     #[inline(always)]
     pub fn is_sd12(&self) -> bool {
-        *self == FSEL20_A::SD12
+        *self == Fsel20::Sd12
     }
     #[doc = "Pin is connected to DPI_D16"]
     #[inline(always)]
     pub fn is_dpi_d16(&self) -> bool {
-        *self == FSEL20_A::DPI_D16
+        *self == Fsel20::DpiD16
     }
     #[doc = "Pin is connected to SPI6_MOSI"]
     #[inline(always)]
     pub fn is_spi6_mosi(&self) -> bool {
-        *self == FSEL20_A::SPI6_MOSI
+        *self == Fsel20::Spi6Mosi
     }
     #[doc = "Pin is connected to SPI1_MOSI"]
     #[inline(always)]
     pub fn is_spi1_mosi(&self) -> bool {
-        *self == FSEL20_A::SPI1_MOSI
+        *self == Fsel20::Spi1Mosi
     }
     #[doc = "Pin is connected to GPCLK0"]
     #[inline(always)]
     pub fn is_gpclk0(&self) -> bool {
-        *self == FSEL20_A::GPCLK0
+        *self == Fsel20::Gpclk0
     }
 }
 #[doc = "Field `FSEL20` writer - Function Select 20"]
-pub type FSEL20_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL20_A>;
-impl<'a, REG> FSEL20_W<'a, REG>
+pub type Fsel20W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel20, crate::Safe>;
+impl<'a, REG> Fsel20W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -101,136 +102,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::INPUT)
+        self.variant(Fsel20::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::OUTPUT)
+        self.variant(Fsel20::Output)
     }
     #[doc = "Pin is connected to PCM_DIN"]
     #[inline(always)]
     pub fn pcm_din(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::PCM_DIN)
+        self.variant(Fsel20::PcmDin)
     }
     #[doc = "Pin is connected to SD12"]
     #[inline(always)]
     pub fn sd12(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::SD12)
+        self.variant(Fsel20::Sd12)
     }
     #[doc = "Pin is connected to DPI_D16"]
     #[inline(always)]
     pub fn dpi_d16(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::DPI_D16)
+        self.variant(Fsel20::DpiD16)
     }
     #[doc = "Pin is connected to SPI6_MOSI"]
     #[inline(always)]
     pub fn spi6_mosi(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::SPI6_MOSI)
+        self.variant(Fsel20::Spi6Mosi)
     }
     #[doc = "Pin is connected to SPI1_MOSI"]
     #[inline(always)]
     pub fn spi1_mosi(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::SPI1_MOSI)
+        self.variant(Fsel20::Spi1Mosi)
     }
     #[doc = "Pin is connected to GPCLK0"]
     #[inline(always)]
     pub fn gpclk0(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL20_A::GPCLK0)
+        self.variant(Fsel20::Gpclk0)
     }
 }
-#[doc = "Field `FSEL21` reader - Function Select 21"]
-pub type FSEL21_R = crate::FieldReader<FSEL21_A>;
 #[doc = "Function Select 21"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL21_A {
+pub enum Fsel21 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to PCM_DOUT"]
-    PCM_DOUT = 4,
+    PcmDout = 4,
     #[doc = "5: Pin is connected to SD13"]
-    SD13 = 5,
+    Sd13 = 5,
     #[doc = "6: Pin is connected to DPI_D17"]
-    DPI_D17 = 6,
+    DpiD17 = 6,
     #[doc = "7: Pin is connected to SPI6_SCLK"]
-    SPI6_SCLK = 7,
+    Spi6Sclk = 7,
     #[doc = "3: Pin is connected to SPI1_SCLK"]
-    SPI1_SCLK = 3,
+    Spi1Sclk = 3,
     #[doc = "2: Pin is connected to GPCLK1"]
-    GPCLK1 = 2,
+    Gpclk1 = 2,
 }
-impl From<FSEL21_A> for u8 {
+impl From<Fsel21> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL21_A) -> Self {
+    fn from(variant: Fsel21) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL21_A {
+impl crate::FieldSpec for Fsel21 {
     type Ux = u8;
 }
-impl FSEL21_R {
+impl crate::IsEnum for Fsel21 {}
+#[doc = "Field `FSEL21` reader - Function Select 21"]
+pub type Fsel21R = crate::FieldReader<Fsel21>;
+impl Fsel21R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL21_A {
+    pub const fn variant(&self) -> Fsel21 {
         match self.bits {
-            0 => FSEL21_A::INPUT,
-            1 => FSEL21_A::OUTPUT,
-            4 => FSEL21_A::PCM_DOUT,
-            5 => FSEL21_A::SD13,
-            6 => FSEL21_A::DPI_D17,
-            7 => FSEL21_A::SPI6_SCLK,
-            3 => FSEL21_A::SPI1_SCLK,
-            2 => FSEL21_A::GPCLK1,
+            0 => Fsel21::Input,
+            1 => Fsel21::Output,
+            4 => Fsel21::PcmDout,
+            5 => Fsel21::Sd13,
+            6 => Fsel21::DpiD17,
+            7 => Fsel21::Spi6Sclk,
+            3 => Fsel21::Spi1Sclk,
+            2 => Fsel21::Gpclk1,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL21_A::INPUT
+        *self == Fsel21::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL21_A::OUTPUT
+        *self == Fsel21::Output
     }
     #[doc = "Pin is connected to PCM_DOUT"]
     #[inline(always)]
     pub fn is_pcm_dout(&self) -> bool {
-        *self == FSEL21_A::PCM_DOUT
+        *self == Fsel21::PcmDout
     }
     #[doc = "Pin is connected to SD13"]
     #[inline(always)]
     pub fn is_sd13(&self) -> bool {
-        *self == FSEL21_A::SD13
+        *self == Fsel21::Sd13
     }
     #[doc = "Pin is connected to DPI_D17"]
     #[inline(always)]
     pub fn is_dpi_d17(&self) -> bool {
-        *self == FSEL21_A::DPI_D17
+        *self == Fsel21::DpiD17
     }
     #[doc = "Pin is connected to SPI6_SCLK"]
     #[inline(always)]
     pub fn is_spi6_sclk(&self) -> bool {
-        *self == FSEL21_A::SPI6_SCLK
+        *self == Fsel21::Spi6Sclk
     }
     #[doc = "Pin is connected to SPI1_SCLK"]
     #[inline(always)]
     pub fn is_spi1_sclk(&self) -> bool {
-        *self == FSEL21_A::SPI1_SCLK
+        *self == Fsel21::Spi1Sclk
     }
     #[doc = "Pin is connected to GPCLK1"]
     #[inline(always)]
     pub fn is_gpclk1(&self) -> bool {
-        *self == FSEL21_A::GPCLK1
+        *self == Fsel21::Gpclk1
     }
 }
 #[doc = "Field `FSEL21` writer - Function Select 21"]
-pub type FSEL21_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL21_A>;
-impl<'a, REG> FSEL21_W<'a, REG>
+pub type Fsel21W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel21, crate::Safe>;
+impl<'a, REG> Fsel21W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -238,136 +240,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::INPUT)
+        self.variant(Fsel21::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::OUTPUT)
+        self.variant(Fsel21::Output)
     }
     #[doc = "Pin is connected to PCM_DOUT"]
     #[inline(always)]
     pub fn pcm_dout(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::PCM_DOUT)
+        self.variant(Fsel21::PcmDout)
     }
     #[doc = "Pin is connected to SD13"]
     #[inline(always)]
     pub fn sd13(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::SD13)
+        self.variant(Fsel21::Sd13)
     }
     #[doc = "Pin is connected to DPI_D17"]
     #[inline(always)]
     pub fn dpi_d17(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::DPI_D17)
+        self.variant(Fsel21::DpiD17)
     }
     #[doc = "Pin is connected to SPI6_SCLK"]
     #[inline(always)]
     pub fn spi6_sclk(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::SPI6_SCLK)
+        self.variant(Fsel21::Spi6Sclk)
     }
     #[doc = "Pin is connected to SPI1_SCLK"]
     #[inline(always)]
     pub fn spi1_sclk(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::SPI1_SCLK)
+        self.variant(Fsel21::Spi1Sclk)
     }
     #[doc = "Pin is connected to GPCLK1"]
     #[inline(always)]
     pub fn gpclk1(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL21_A::GPCLK1)
+        self.variant(Fsel21::Gpclk1)
     }
 }
-#[doc = "Field `FSEL22` reader - Function Select 22"]
-pub type FSEL22_R = crate::FieldReader<FSEL22_A>;
 #[doc = "Function Select 22"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL22_A {
+pub enum Fsel22 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SD0_CLK"]
-    SD0_CLK = 4,
+    Sd0Clk = 4,
     #[doc = "5: Pin is connected to SD14"]
-    SD14 = 5,
+    Sd14 = 5,
     #[doc = "6: Pin is connected to DPI_D18"]
-    DPI_D18 = 6,
+    DpiD18 = 6,
     #[doc = "7: Pin is connected to SD1_CLK"]
-    SD1_CLK = 7,
+    Sd1Clk = 7,
     #[doc = "3: Pin is connected to ARM_TRST"]
-    ARM_TRST = 3,
+    ArmTrst = 3,
     #[doc = "2: Pin is connected to SDA6"]
-    SDA6 = 2,
+    Sda6 = 2,
 }
-impl From<FSEL22_A> for u8 {
+impl From<Fsel22> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL22_A) -> Self {
+    fn from(variant: Fsel22) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL22_A {
+impl crate::FieldSpec for Fsel22 {
     type Ux = u8;
 }
-impl FSEL22_R {
+impl crate::IsEnum for Fsel22 {}
+#[doc = "Field `FSEL22` reader - Function Select 22"]
+pub type Fsel22R = crate::FieldReader<Fsel22>;
+impl Fsel22R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL22_A {
+    pub const fn variant(&self) -> Fsel22 {
         match self.bits {
-            0 => FSEL22_A::INPUT,
-            1 => FSEL22_A::OUTPUT,
-            4 => FSEL22_A::SD0_CLK,
-            5 => FSEL22_A::SD14,
-            6 => FSEL22_A::DPI_D18,
-            7 => FSEL22_A::SD1_CLK,
-            3 => FSEL22_A::ARM_TRST,
-            2 => FSEL22_A::SDA6,
+            0 => Fsel22::Input,
+            1 => Fsel22::Output,
+            4 => Fsel22::Sd0Clk,
+            5 => Fsel22::Sd14,
+            6 => Fsel22::DpiD18,
+            7 => Fsel22::Sd1Clk,
+            3 => Fsel22::ArmTrst,
+            2 => Fsel22::Sda6,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL22_A::INPUT
+        *self == Fsel22::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL22_A::OUTPUT
+        *self == Fsel22::Output
     }
     #[doc = "Pin is connected to SD0_CLK"]
     #[inline(always)]
     pub fn is_sd0_clk(&self) -> bool {
-        *self == FSEL22_A::SD0_CLK
+        *self == Fsel22::Sd0Clk
     }
     #[doc = "Pin is connected to SD14"]
     #[inline(always)]
     pub fn is_sd14(&self) -> bool {
-        *self == FSEL22_A::SD14
+        *self == Fsel22::Sd14
     }
     #[doc = "Pin is connected to DPI_D18"]
     #[inline(always)]
     pub fn is_dpi_d18(&self) -> bool {
-        *self == FSEL22_A::DPI_D18
+        *self == Fsel22::DpiD18
     }
     #[doc = "Pin is connected to SD1_CLK"]
     #[inline(always)]
     pub fn is_sd1_clk(&self) -> bool {
-        *self == FSEL22_A::SD1_CLK
+        *self == Fsel22::Sd1Clk
     }
     #[doc = "Pin is connected to ARM_TRST"]
     #[inline(always)]
     pub fn is_arm_trst(&self) -> bool {
-        *self == FSEL22_A::ARM_TRST
+        *self == Fsel22::ArmTrst
     }
     #[doc = "Pin is connected to SDA6"]
     #[inline(always)]
     pub fn is_sda6(&self) -> bool {
-        *self == FSEL22_A::SDA6
+        *self == Fsel22::Sda6
     }
 }
 #[doc = "Field `FSEL22` writer - Function Select 22"]
-pub type FSEL22_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL22_A>;
-impl<'a, REG> FSEL22_W<'a, REG>
+pub type Fsel22W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel22, crate::Safe>;
+impl<'a, REG> Fsel22W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -375,136 +378,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::INPUT)
+        self.variant(Fsel22::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::OUTPUT)
+        self.variant(Fsel22::Output)
     }
     #[doc = "Pin is connected to SD0_CLK"]
     #[inline(always)]
     pub fn sd0_clk(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::SD0_CLK)
+        self.variant(Fsel22::Sd0Clk)
     }
     #[doc = "Pin is connected to SD14"]
     #[inline(always)]
     pub fn sd14(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::SD14)
+        self.variant(Fsel22::Sd14)
     }
     #[doc = "Pin is connected to DPI_D18"]
     #[inline(always)]
     pub fn dpi_d18(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::DPI_D18)
+        self.variant(Fsel22::DpiD18)
     }
     #[doc = "Pin is connected to SD1_CLK"]
     #[inline(always)]
     pub fn sd1_clk(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::SD1_CLK)
+        self.variant(Fsel22::Sd1Clk)
     }
     #[doc = "Pin is connected to ARM_TRST"]
     #[inline(always)]
     pub fn arm_trst(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::ARM_TRST)
+        self.variant(Fsel22::ArmTrst)
     }
     #[doc = "Pin is connected to SDA6"]
     #[inline(always)]
     pub fn sda6(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL22_A::SDA6)
+        self.variant(Fsel22::Sda6)
     }
 }
-#[doc = "Field `FSEL23` reader - Function Select 23"]
-pub type FSEL23_R = crate::FieldReader<FSEL23_A>;
 #[doc = "Function Select 23"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL23_A {
+pub enum Fsel23 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SD0_CMD"]
-    SD0_CMD = 4,
+    Sd0Cmd = 4,
     #[doc = "5: Pin is connected to SD15"]
-    SD15 = 5,
+    Sd15 = 5,
     #[doc = "6: Pin is connected to DPI_D19"]
-    DPI_D19 = 6,
+    DpiD19 = 6,
     #[doc = "7: Pin is connected to SD1_CMD"]
-    SD1_CMD = 7,
+    Sd1Cmd = 7,
     #[doc = "3: Pin is connected to ARM_RTCK"]
-    ARM_RTCK = 3,
+    ArmRtck = 3,
     #[doc = "2: Pin is connected to SCL6"]
-    SCL6 = 2,
+    Scl6 = 2,
 }
-impl From<FSEL23_A> for u8 {
+impl From<Fsel23> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL23_A) -> Self {
+    fn from(variant: Fsel23) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL23_A {
+impl crate::FieldSpec for Fsel23 {
     type Ux = u8;
 }
-impl FSEL23_R {
+impl crate::IsEnum for Fsel23 {}
+#[doc = "Field `FSEL23` reader - Function Select 23"]
+pub type Fsel23R = crate::FieldReader<Fsel23>;
+impl Fsel23R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL23_A {
+    pub const fn variant(&self) -> Fsel23 {
         match self.bits {
-            0 => FSEL23_A::INPUT,
-            1 => FSEL23_A::OUTPUT,
-            4 => FSEL23_A::SD0_CMD,
-            5 => FSEL23_A::SD15,
-            6 => FSEL23_A::DPI_D19,
-            7 => FSEL23_A::SD1_CMD,
-            3 => FSEL23_A::ARM_RTCK,
-            2 => FSEL23_A::SCL6,
+            0 => Fsel23::Input,
+            1 => Fsel23::Output,
+            4 => Fsel23::Sd0Cmd,
+            5 => Fsel23::Sd15,
+            6 => Fsel23::DpiD19,
+            7 => Fsel23::Sd1Cmd,
+            3 => Fsel23::ArmRtck,
+            2 => Fsel23::Scl6,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL23_A::INPUT
+        *self == Fsel23::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL23_A::OUTPUT
+        *self == Fsel23::Output
     }
     #[doc = "Pin is connected to SD0_CMD"]
     #[inline(always)]
     pub fn is_sd0_cmd(&self) -> bool {
-        *self == FSEL23_A::SD0_CMD
+        *self == Fsel23::Sd0Cmd
     }
     #[doc = "Pin is connected to SD15"]
     #[inline(always)]
     pub fn is_sd15(&self) -> bool {
-        *self == FSEL23_A::SD15
+        *self == Fsel23::Sd15
     }
     #[doc = "Pin is connected to DPI_D19"]
     #[inline(always)]
     pub fn is_dpi_d19(&self) -> bool {
-        *self == FSEL23_A::DPI_D19
+        *self == Fsel23::DpiD19
     }
     #[doc = "Pin is connected to SD1_CMD"]
     #[inline(always)]
     pub fn is_sd1_cmd(&self) -> bool {
-        *self == FSEL23_A::SD1_CMD
+        *self == Fsel23::Sd1Cmd
     }
     #[doc = "Pin is connected to ARM_RTCK"]
     #[inline(always)]
     pub fn is_arm_rtck(&self) -> bool {
-        *self == FSEL23_A::ARM_RTCK
+        *self == Fsel23::ArmRtck
     }
     #[doc = "Pin is connected to SCL6"]
     #[inline(always)]
     pub fn is_scl6(&self) -> bool {
-        *self == FSEL23_A::SCL6
+        *self == Fsel23::Scl6
     }
 }
 #[doc = "Field `FSEL23` writer - Function Select 23"]
-pub type FSEL23_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL23_A>;
-impl<'a, REG> FSEL23_W<'a, REG>
+pub type Fsel23W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel23, crate::Safe>;
+impl<'a, REG> Fsel23W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -512,136 +516,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::INPUT)
+        self.variant(Fsel23::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::OUTPUT)
+        self.variant(Fsel23::Output)
     }
     #[doc = "Pin is connected to SD0_CMD"]
     #[inline(always)]
     pub fn sd0_cmd(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::SD0_CMD)
+        self.variant(Fsel23::Sd0Cmd)
     }
     #[doc = "Pin is connected to SD15"]
     #[inline(always)]
     pub fn sd15(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::SD15)
+        self.variant(Fsel23::Sd15)
     }
     #[doc = "Pin is connected to DPI_D19"]
     #[inline(always)]
     pub fn dpi_d19(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::DPI_D19)
+        self.variant(Fsel23::DpiD19)
     }
     #[doc = "Pin is connected to SD1_CMD"]
     #[inline(always)]
     pub fn sd1_cmd(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::SD1_CMD)
+        self.variant(Fsel23::Sd1Cmd)
     }
     #[doc = "Pin is connected to ARM_RTCK"]
     #[inline(always)]
     pub fn arm_rtck(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::ARM_RTCK)
+        self.variant(Fsel23::ArmRtck)
     }
     #[doc = "Pin is connected to SCL6"]
     #[inline(always)]
     pub fn scl6(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL23_A::SCL6)
+        self.variant(Fsel23::Scl6)
     }
 }
-#[doc = "Field `FSEL24` reader - Function Select 24"]
-pub type FSEL24_R = crate::FieldReader<FSEL24_A>;
 #[doc = "Function Select 24"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL24_A {
+pub enum Fsel24 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SD0_DAT0"]
-    SD0_DAT0 = 4,
+    Sd0Dat0 = 4,
     #[doc = "5: Pin is connected to SD16"]
-    SD16 = 5,
+    Sd16 = 5,
     #[doc = "6: Pin is connected to DPI_D20"]
-    DPI_D20 = 6,
+    DpiD20 = 6,
     #[doc = "7: Pin is connected to SD1_DAT0"]
-    SD1_DAT0 = 7,
+    Sd1Dat0 = 7,
     #[doc = "3: Pin is connected to ARM_TDO"]
-    ARM_TDO = 3,
+    ArmTdo = 3,
     #[doc = "2: Pin is connected to SPI3_CE1_N"]
-    SPI3_CE1_N = 2,
+    Spi3Ce1N = 2,
 }
-impl From<FSEL24_A> for u8 {
+impl From<Fsel24> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL24_A) -> Self {
+    fn from(variant: Fsel24) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL24_A {
+impl crate::FieldSpec for Fsel24 {
     type Ux = u8;
 }
-impl FSEL24_R {
+impl crate::IsEnum for Fsel24 {}
+#[doc = "Field `FSEL24` reader - Function Select 24"]
+pub type Fsel24R = crate::FieldReader<Fsel24>;
+impl Fsel24R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL24_A {
+    pub const fn variant(&self) -> Fsel24 {
         match self.bits {
-            0 => FSEL24_A::INPUT,
-            1 => FSEL24_A::OUTPUT,
-            4 => FSEL24_A::SD0_DAT0,
-            5 => FSEL24_A::SD16,
-            6 => FSEL24_A::DPI_D20,
-            7 => FSEL24_A::SD1_DAT0,
-            3 => FSEL24_A::ARM_TDO,
-            2 => FSEL24_A::SPI3_CE1_N,
+            0 => Fsel24::Input,
+            1 => Fsel24::Output,
+            4 => Fsel24::Sd0Dat0,
+            5 => Fsel24::Sd16,
+            6 => Fsel24::DpiD20,
+            7 => Fsel24::Sd1Dat0,
+            3 => Fsel24::ArmTdo,
+            2 => Fsel24::Spi3Ce1N,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL24_A::INPUT
+        *self == Fsel24::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL24_A::OUTPUT
+        *self == Fsel24::Output
     }
     #[doc = "Pin is connected to SD0_DAT0"]
     #[inline(always)]
     pub fn is_sd0_dat0(&self) -> bool {
-        *self == FSEL24_A::SD0_DAT0
+        *self == Fsel24::Sd0Dat0
     }
     #[doc = "Pin is connected to SD16"]
     #[inline(always)]
     pub fn is_sd16(&self) -> bool {
-        *self == FSEL24_A::SD16
+        *self == Fsel24::Sd16
     }
     #[doc = "Pin is connected to DPI_D20"]
     #[inline(always)]
     pub fn is_dpi_d20(&self) -> bool {
-        *self == FSEL24_A::DPI_D20
+        *self == Fsel24::DpiD20
     }
     #[doc = "Pin is connected to SD1_DAT0"]
     #[inline(always)]
     pub fn is_sd1_dat0(&self) -> bool {
-        *self == FSEL24_A::SD1_DAT0
+        *self == Fsel24::Sd1Dat0
     }
     #[doc = "Pin is connected to ARM_TDO"]
     #[inline(always)]
     pub fn is_arm_tdo(&self) -> bool {
-        *self == FSEL24_A::ARM_TDO
+        *self == Fsel24::ArmTdo
     }
     #[doc = "Pin is connected to SPI3_CE1_N"]
     #[inline(always)]
     pub fn is_spi3_ce1_n(&self) -> bool {
-        *self == FSEL24_A::SPI3_CE1_N
+        *self == Fsel24::Spi3Ce1N
     }
 }
 #[doc = "Field `FSEL24` writer - Function Select 24"]
-pub type FSEL24_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL24_A>;
-impl<'a, REG> FSEL24_W<'a, REG>
+pub type Fsel24W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel24, crate::Safe>;
+impl<'a, REG> Fsel24W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -649,136 +654,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::INPUT)
+        self.variant(Fsel24::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::OUTPUT)
+        self.variant(Fsel24::Output)
     }
     #[doc = "Pin is connected to SD0_DAT0"]
     #[inline(always)]
     pub fn sd0_dat0(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::SD0_DAT0)
+        self.variant(Fsel24::Sd0Dat0)
     }
     #[doc = "Pin is connected to SD16"]
     #[inline(always)]
     pub fn sd16(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::SD16)
+        self.variant(Fsel24::Sd16)
     }
     #[doc = "Pin is connected to DPI_D20"]
     #[inline(always)]
     pub fn dpi_d20(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::DPI_D20)
+        self.variant(Fsel24::DpiD20)
     }
     #[doc = "Pin is connected to SD1_DAT0"]
     #[inline(always)]
     pub fn sd1_dat0(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::SD1_DAT0)
+        self.variant(Fsel24::Sd1Dat0)
     }
     #[doc = "Pin is connected to ARM_TDO"]
     #[inline(always)]
     pub fn arm_tdo(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::ARM_TDO)
+        self.variant(Fsel24::ArmTdo)
     }
     #[doc = "Pin is connected to SPI3_CE1_N"]
     #[inline(always)]
     pub fn spi3_ce1_n(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL24_A::SPI3_CE1_N)
+        self.variant(Fsel24::Spi3Ce1N)
     }
 }
-#[doc = "Field `FSEL25` reader - Function Select 25"]
-pub type FSEL25_R = crate::FieldReader<FSEL25_A>;
 #[doc = "Function Select 25"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL25_A {
+pub enum Fsel25 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SD0_DAT1"]
-    SD0_DAT1 = 4,
+    Sd0Dat1 = 4,
     #[doc = "5: Pin is connected to SD17"]
-    SD17 = 5,
+    Sd17 = 5,
     #[doc = "6: Pin is connected to DPI_D21"]
-    DPI_D21 = 6,
+    DpiD21 = 6,
     #[doc = "7: Pin is connected to SD1_DAT1"]
-    SD1_DAT1 = 7,
+    Sd1Dat1 = 7,
     #[doc = "3: Pin is connected to ARM_TCK"]
-    ARM_TCK = 3,
+    ArmTck = 3,
     #[doc = "2: Pin is connected to SPI4_CE1_N"]
-    SPI4_CE1_N = 2,
+    Spi4Ce1N = 2,
 }
-impl From<FSEL25_A> for u8 {
+impl From<Fsel25> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL25_A) -> Self {
+    fn from(variant: Fsel25) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL25_A {
+impl crate::FieldSpec for Fsel25 {
     type Ux = u8;
 }
-impl FSEL25_R {
+impl crate::IsEnum for Fsel25 {}
+#[doc = "Field `FSEL25` reader - Function Select 25"]
+pub type Fsel25R = crate::FieldReader<Fsel25>;
+impl Fsel25R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL25_A {
+    pub const fn variant(&self) -> Fsel25 {
         match self.bits {
-            0 => FSEL25_A::INPUT,
-            1 => FSEL25_A::OUTPUT,
-            4 => FSEL25_A::SD0_DAT1,
-            5 => FSEL25_A::SD17,
-            6 => FSEL25_A::DPI_D21,
-            7 => FSEL25_A::SD1_DAT1,
-            3 => FSEL25_A::ARM_TCK,
-            2 => FSEL25_A::SPI4_CE1_N,
+            0 => Fsel25::Input,
+            1 => Fsel25::Output,
+            4 => Fsel25::Sd0Dat1,
+            5 => Fsel25::Sd17,
+            6 => Fsel25::DpiD21,
+            7 => Fsel25::Sd1Dat1,
+            3 => Fsel25::ArmTck,
+            2 => Fsel25::Spi4Ce1N,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL25_A::INPUT
+        *self == Fsel25::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL25_A::OUTPUT
+        *self == Fsel25::Output
     }
     #[doc = "Pin is connected to SD0_DAT1"]
     #[inline(always)]
     pub fn is_sd0_dat1(&self) -> bool {
-        *self == FSEL25_A::SD0_DAT1
+        *self == Fsel25::Sd0Dat1
     }
     #[doc = "Pin is connected to SD17"]
     #[inline(always)]
     pub fn is_sd17(&self) -> bool {
-        *self == FSEL25_A::SD17
+        *self == Fsel25::Sd17
     }
     #[doc = "Pin is connected to DPI_D21"]
     #[inline(always)]
     pub fn is_dpi_d21(&self) -> bool {
-        *self == FSEL25_A::DPI_D21
+        *self == Fsel25::DpiD21
     }
     #[doc = "Pin is connected to SD1_DAT1"]
     #[inline(always)]
     pub fn is_sd1_dat1(&self) -> bool {
-        *self == FSEL25_A::SD1_DAT1
+        *self == Fsel25::Sd1Dat1
     }
     #[doc = "Pin is connected to ARM_TCK"]
     #[inline(always)]
     pub fn is_arm_tck(&self) -> bool {
-        *self == FSEL25_A::ARM_TCK
+        *self == Fsel25::ArmTck
     }
     #[doc = "Pin is connected to SPI4_CE1_N"]
     #[inline(always)]
     pub fn is_spi4_ce1_n(&self) -> bool {
-        *self == FSEL25_A::SPI4_CE1_N
+        *self == Fsel25::Spi4Ce1N
     }
 }
 #[doc = "Field `FSEL25` writer - Function Select 25"]
-pub type FSEL25_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL25_A>;
-impl<'a, REG> FSEL25_W<'a, REG>
+pub type Fsel25W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel25, crate::Safe>;
+impl<'a, REG> Fsel25W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -786,136 +792,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::INPUT)
+        self.variant(Fsel25::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::OUTPUT)
+        self.variant(Fsel25::Output)
     }
     #[doc = "Pin is connected to SD0_DAT1"]
     #[inline(always)]
     pub fn sd0_dat1(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::SD0_DAT1)
+        self.variant(Fsel25::Sd0Dat1)
     }
     #[doc = "Pin is connected to SD17"]
     #[inline(always)]
     pub fn sd17(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::SD17)
+        self.variant(Fsel25::Sd17)
     }
     #[doc = "Pin is connected to DPI_D21"]
     #[inline(always)]
     pub fn dpi_d21(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::DPI_D21)
+        self.variant(Fsel25::DpiD21)
     }
     #[doc = "Pin is connected to SD1_DAT1"]
     #[inline(always)]
     pub fn sd1_dat1(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::SD1_DAT1)
+        self.variant(Fsel25::Sd1Dat1)
     }
     #[doc = "Pin is connected to ARM_TCK"]
     #[inline(always)]
     pub fn arm_tck(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::ARM_TCK)
+        self.variant(Fsel25::ArmTck)
     }
     #[doc = "Pin is connected to SPI4_CE1_N"]
     #[inline(always)]
     pub fn spi4_ce1_n(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL25_A::SPI4_CE1_N)
+        self.variant(Fsel25::Spi4Ce1N)
     }
 }
-#[doc = "Field `FSEL26` reader - Function Select 26"]
-pub type FSEL26_R = crate::FieldReader<FSEL26_A>;
 #[doc = "Function Select 26"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL26_A {
+pub enum Fsel26 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SD0_DAT2"]
-    SD0_DAT2 = 4,
+    Sd0Dat2 = 4,
     #[doc = "5: Alt function 1 reserved"]
-    RESERVED1 = 5,
+    Reserved1 = 5,
     #[doc = "6: Pin is connected to DPI_D22"]
-    DPI_D22 = 6,
+    DpiD22 = 6,
     #[doc = "7: Pin is connected to SD1_DAT2"]
-    SD1_DAT2 = 7,
+    Sd1Dat2 = 7,
     #[doc = "3: Pin is connected to ARM_TDI"]
-    ARM_TDI = 3,
+    ArmTdi = 3,
     #[doc = "2: Pin is connected to SPI5_CE1_N"]
-    SPI5_CE1_N = 2,
+    Spi5Ce1N = 2,
 }
-impl From<FSEL26_A> for u8 {
+impl From<Fsel26> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL26_A) -> Self {
+    fn from(variant: Fsel26) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL26_A {
+impl crate::FieldSpec for Fsel26 {
     type Ux = u8;
 }
-impl FSEL26_R {
+impl crate::IsEnum for Fsel26 {}
+#[doc = "Field `FSEL26` reader - Function Select 26"]
+pub type Fsel26R = crate::FieldReader<Fsel26>;
+impl Fsel26R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL26_A {
+    pub const fn variant(&self) -> Fsel26 {
         match self.bits {
-            0 => FSEL26_A::INPUT,
-            1 => FSEL26_A::OUTPUT,
-            4 => FSEL26_A::SD0_DAT2,
-            5 => FSEL26_A::RESERVED1,
-            6 => FSEL26_A::DPI_D22,
-            7 => FSEL26_A::SD1_DAT2,
-            3 => FSEL26_A::ARM_TDI,
-            2 => FSEL26_A::SPI5_CE1_N,
+            0 => Fsel26::Input,
+            1 => Fsel26::Output,
+            4 => Fsel26::Sd0Dat2,
+            5 => Fsel26::Reserved1,
+            6 => Fsel26::DpiD22,
+            7 => Fsel26::Sd1Dat2,
+            3 => Fsel26::ArmTdi,
+            2 => Fsel26::Spi5Ce1N,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL26_A::INPUT
+        *self == Fsel26::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL26_A::OUTPUT
+        *self == Fsel26::Output
     }
     #[doc = "Pin is connected to SD0_DAT2"]
     #[inline(always)]
     pub fn is_sd0_dat2(&self) -> bool {
-        *self == FSEL26_A::SD0_DAT2
+        *self == Fsel26::Sd0Dat2
     }
     #[doc = "Alt function 1 reserved"]
     #[inline(always)]
     pub fn is_reserved1(&self) -> bool {
-        *self == FSEL26_A::RESERVED1
+        *self == Fsel26::Reserved1
     }
     #[doc = "Pin is connected to DPI_D22"]
     #[inline(always)]
     pub fn is_dpi_d22(&self) -> bool {
-        *self == FSEL26_A::DPI_D22
+        *self == Fsel26::DpiD22
     }
     #[doc = "Pin is connected to SD1_DAT2"]
     #[inline(always)]
     pub fn is_sd1_dat2(&self) -> bool {
-        *self == FSEL26_A::SD1_DAT2
+        *self == Fsel26::Sd1Dat2
     }
     #[doc = "Pin is connected to ARM_TDI"]
     #[inline(always)]
     pub fn is_arm_tdi(&self) -> bool {
-        *self == FSEL26_A::ARM_TDI
+        *self == Fsel26::ArmTdi
     }
     #[doc = "Pin is connected to SPI5_CE1_N"]
     #[inline(always)]
     pub fn is_spi5_ce1_n(&self) -> bool {
-        *self == FSEL26_A::SPI5_CE1_N
+        *self == Fsel26::Spi5Ce1N
     }
 }
 #[doc = "Field `FSEL26` writer - Function Select 26"]
-pub type FSEL26_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL26_A>;
-impl<'a, REG> FSEL26_W<'a, REG>
+pub type Fsel26W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel26, crate::Safe>;
+impl<'a, REG> Fsel26W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -923,136 +930,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::INPUT)
+        self.variant(Fsel26::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::OUTPUT)
+        self.variant(Fsel26::Output)
     }
     #[doc = "Pin is connected to SD0_DAT2"]
     #[inline(always)]
     pub fn sd0_dat2(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::SD0_DAT2)
+        self.variant(Fsel26::Sd0Dat2)
     }
     #[doc = "Alt function 1 reserved"]
     #[inline(always)]
     pub fn reserved1(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::RESERVED1)
+        self.variant(Fsel26::Reserved1)
     }
     #[doc = "Pin is connected to DPI_D22"]
     #[inline(always)]
     pub fn dpi_d22(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::DPI_D22)
+        self.variant(Fsel26::DpiD22)
     }
     #[doc = "Pin is connected to SD1_DAT2"]
     #[inline(always)]
     pub fn sd1_dat2(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::SD1_DAT2)
+        self.variant(Fsel26::Sd1Dat2)
     }
     #[doc = "Pin is connected to ARM_TDI"]
     #[inline(always)]
     pub fn arm_tdi(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::ARM_TDI)
+        self.variant(Fsel26::ArmTdi)
     }
     #[doc = "Pin is connected to SPI5_CE1_N"]
     #[inline(always)]
     pub fn spi5_ce1_n(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL26_A::SPI5_CE1_N)
+        self.variant(Fsel26::Spi5Ce1N)
     }
 }
-#[doc = "Field `FSEL27` reader - Function Select 27"]
-pub type FSEL27_R = crate::FieldReader<FSEL27_A>;
 #[doc = "Function Select 27"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL27_A {
+pub enum Fsel27 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SD0_DAT3"]
-    SD0_DAT3 = 4,
+    Sd0Dat3 = 4,
     #[doc = "5: Alt function 1 reserved"]
-    RESERVED1 = 5,
+    Reserved1 = 5,
     #[doc = "6: Pin is connected to DPI_D23"]
-    DPI_D23 = 6,
+    DpiD23 = 6,
     #[doc = "7: Pin is connected to SD1_DAT3"]
-    SD1_DAT3 = 7,
+    Sd1Dat3 = 7,
     #[doc = "3: Pin is connected to ARM_TMS"]
-    ARM_TMS = 3,
+    ArmTms = 3,
     #[doc = "2: Pin is connected to SPI6_CE1_N"]
-    SPI6_CE1_N = 2,
+    Spi6Ce1N = 2,
 }
-impl From<FSEL27_A> for u8 {
+impl From<Fsel27> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL27_A) -> Self {
+    fn from(variant: Fsel27) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL27_A {
+impl crate::FieldSpec for Fsel27 {
     type Ux = u8;
 }
-impl FSEL27_R {
+impl crate::IsEnum for Fsel27 {}
+#[doc = "Field `FSEL27` reader - Function Select 27"]
+pub type Fsel27R = crate::FieldReader<Fsel27>;
+impl Fsel27R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL27_A {
+    pub const fn variant(&self) -> Fsel27 {
         match self.bits {
-            0 => FSEL27_A::INPUT,
-            1 => FSEL27_A::OUTPUT,
-            4 => FSEL27_A::SD0_DAT3,
-            5 => FSEL27_A::RESERVED1,
-            6 => FSEL27_A::DPI_D23,
-            7 => FSEL27_A::SD1_DAT3,
-            3 => FSEL27_A::ARM_TMS,
-            2 => FSEL27_A::SPI6_CE1_N,
+            0 => Fsel27::Input,
+            1 => Fsel27::Output,
+            4 => Fsel27::Sd0Dat3,
+            5 => Fsel27::Reserved1,
+            6 => Fsel27::DpiD23,
+            7 => Fsel27::Sd1Dat3,
+            3 => Fsel27::ArmTms,
+            2 => Fsel27::Spi6Ce1N,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL27_A::INPUT
+        *self == Fsel27::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL27_A::OUTPUT
+        *self == Fsel27::Output
     }
     #[doc = "Pin is connected to SD0_DAT3"]
     #[inline(always)]
     pub fn is_sd0_dat3(&self) -> bool {
-        *self == FSEL27_A::SD0_DAT3
+        *self == Fsel27::Sd0Dat3
     }
     #[doc = "Alt function 1 reserved"]
     #[inline(always)]
     pub fn is_reserved1(&self) -> bool {
-        *self == FSEL27_A::RESERVED1
+        *self == Fsel27::Reserved1
     }
     #[doc = "Pin is connected to DPI_D23"]
     #[inline(always)]
     pub fn is_dpi_d23(&self) -> bool {
-        *self == FSEL27_A::DPI_D23
+        *self == Fsel27::DpiD23
     }
     #[doc = "Pin is connected to SD1_DAT3"]
     #[inline(always)]
     pub fn is_sd1_dat3(&self) -> bool {
-        *self == FSEL27_A::SD1_DAT3
+        *self == Fsel27::Sd1Dat3
     }
     #[doc = "Pin is connected to ARM_TMS"]
     #[inline(always)]
     pub fn is_arm_tms(&self) -> bool {
-        *self == FSEL27_A::ARM_TMS
+        *self == Fsel27::ArmTms
     }
     #[doc = "Pin is connected to SPI6_CE1_N"]
     #[inline(always)]
     pub fn is_spi6_ce1_n(&self) -> bool {
-        *self == FSEL27_A::SPI6_CE1_N
+        *self == Fsel27::Spi6Ce1N
     }
 }
 #[doc = "Field `FSEL27` writer - Function Select 27"]
-pub type FSEL27_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL27_A>;
-impl<'a, REG> FSEL27_W<'a, REG>
+pub type Fsel27W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel27, crate::Safe>;
+impl<'a, REG> Fsel27W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -1060,136 +1068,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::INPUT)
+        self.variant(Fsel27::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::OUTPUT)
+        self.variant(Fsel27::Output)
     }
     #[doc = "Pin is connected to SD0_DAT3"]
     #[inline(always)]
     pub fn sd0_dat3(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::SD0_DAT3)
+        self.variant(Fsel27::Sd0Dat3)
     }
     #[doc = "Alt function 1 reserved"]
     #[inline(always)]
     pub fn reserved1(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::RESERVED1)
+        self.variant(Fsel27::Reserved1)
     }
     #[doc = "Pin is connected to DPI_D23"]
     #[inline(always)]
     pub fn dpi_d23(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::DPI_D23)
+        self.variant(Fsel27::DpiD23)
     }
     #[doc = "Pin is connected to SD1_DAT3"]
     #[inline(always)]
     pub fn sd1_dat3(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::SD1_DAT3)
+        self.variant(Fsel27::Sd1Dat3)
     }
     #[doc = "Pin is connected to ARM_TMS"]
     #[inline(always)]
     pub fn arm_tms(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::ARM_TMS)
+        self.variant(Fsel27::ArmTms)
     }
     #[doc = "Pin is connected to SPI6_CE1_N"]
     #[inline(always)]
     pub fn spi6_ce1_n(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL27_A::SPI6_CE1_N)
+        self.variant(Fsel27::Spi6Ce1N)
     }
 }
-#[doc = "Field `FSEL28` reader - Function Select 28"]
-pub type FSEL28_R = crate::FieldReader<FSEL28_A>;
 #[doc = "Function Select 28"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL28_A {
+pub enum Fsel28 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SDA0"]
-    SDA0 = 4,
+    Sda0 = 4,
     #[doc = "5: Pin is connected to SA5"]
-    SA5 = 5,
+    Sa5 = 5,
     #[doc = "6: Pin is connected to PCM_CLK"]
-    PCM_CLK = 6,
+    PcmClk = 6,
     #[doc = "7: Alt function 3 reserved"]
-    RESERVED3 = 7,
+    Reserved3 = 7,
     #[doc = "3: Pin is connected to MII_A_RX_ERR"]
-    MII_A_RX_ERR = 3,
+    MiiARxErr = 3,
     #[doc = "2: Pin is connected to RGMII_MDIO"]
-    RGMII_MDIO = 2,
+    RgmiiMdio = 2,
 }
-impl From<FSEL28_A> for u8 {
+impl From<Fsel28> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL28_A) -> Self {
+    fn from(variant: Fsel28) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL28_A {
+impl crate::FieldSpec for Fsel28 {
     type Ux = u8;
 }
-impl FSEL28_R {
+impl crate::IsEnum for Fsel28 {}
+#[doc = "Field `FSEL28` reader - Function Select 28"]
+pub type Fsel28R = crate::FieldReader<Fsel28>;
+impl Fsel28R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL28_A {
+    pub const fn variant(&self) -> Fsel28 {
         match self.bits {
-            0 => FSEL28_A::INPUT,
-            1 => FSEL28_A::OUTPUT,
-            4 => FSEL28_A::SDA0,
-            5 => FSEL28_A::SA5,
-            6 => FSEL28_A::PCM_CLK,
-            7 => FSEL28_A::RESERVED3,
-            3 => FSEL28_A::MII_A_RX_ERR,
-            2 => FSEL28_A::RGMII_MDIO,
+            0 => Fsel28::Input,
+            1 => Fsel28::Output,
+            4 => Fsel28::Sda0,
+            5 => Fsel28::Sa5,
+            6 => Fsel28::PcmClk,
+            7 => Fsel28::Reserved3,
+            3 => Fsel28::MiiARxErr,
+            2 => Fsel28::RgmiiMdio,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL28_A::INPUT
+        *self == Fsel28::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL28_A::OUTPUT
+        *self == Fsel28::Output
     }
     #[doc = "Pin is connected to SDA0"]
     #[inline(always)]
     pub fn is_sda0(&self) -> bool {
-        *self == FSEL28_A::SDA0
+        *self == Fsel28::Sda0
     }
     #[doc = "Pin is connected to SA5"]
     #[inline(always)]
     pub fn is_sa5(&self) -> bool {
-        *self == FSEL28_A::SA5
+        *self == Fsel28::Sa5
     }
     #[doc = "Pin is connected to PCM_CLK"]
     #[inline(always)]
     pub fn is_pcm_clk(&self) -> bool {
-        *self == FSEL28_A::PCM_CLK
+        *self == Fsel28::PcmClk
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
-        *self == FSEL28_A::RESERVED3
+        *self == Fsel28::Reserved3
     }
     #[doc = "Pin is connected to MII_A_RX_ERR"]
     #[inline(always)]
     pub fn is_mii_a_rx_err(&self) -> bool {
-        *self == FSEL28_A::MII_A_RX_ERR
+        *self == Fsel28::MiiARxErr
     }
     #[doc = "Pin is connected to RGMII_MDIO"]
     #[inline(always)]
     pub fn is_rgmii_mdio(&self) -> bool {
-        *self == FSEL28_A::RGMII_MDIO
+        *self == Fsel28::RgmiiMdio
     }
 }
 #[doc = "Field `FSEL28` writer - Function Select 28"]
-pub type FSEL28_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL28_A>;
-impl<'a, REG> FSEL28_W<'a, REG>
+pub type Fsel28W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel28, crate::Safe>;
+impl<'a, REG> Fsel28W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -1197,136 +1206,137 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::INPUT)
+        self.variant(Fsel28::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::OUTPUT)
+        self.variant(Fsel28::Output)
     }
     #[doc = "Pin is connected to SDA0"]
     #[inline(always)]
     pub fn sda0(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::SDA0)
+        self.variant(Fsel28::Sda0)
     }
     #[doc = "Pin is connected to SA5"]
     #[inline(always)]
     pub fn sa5(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::SA5)
+        self.variant(Fsel28::Sa5)
     }
     #[doc = "Pin is connected to PCM_CLK"]
     #[inline(always)]
     pub fn pcm_clk(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::PCM_CLK)
+        self.variant(Fsel28::PcmClk)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn reserved3(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::RESERVED3)
+        self.variant(Fsel28::Reserved3)
     }
     #[doc = "Pin is connected to MII_A_RX_ERR"]
     #[inline(always)]
     pub fn mii_a_rx_err(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::MII_A_RX_ERR)
+        self.variant(Fsel28::MiiARxErr)
     }
     #[doc = "Pin is connected to RGMII_MDIO"]
     #[inline(always)]
     pub fn rgmii_mdio(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL28_A::RGMII_MDIO)
+        self.variant(Fsel28::RgmiiMdio)
     }
 }
-#[doc = "Field `FSEL29` reader - Function Select 29"]
-pub type FSEL29_R = crate::FieldReader<FSEL29_A>;
 #[doc = "Function Select 29"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum FSEL29_A {
+pub enum Fsel29 {
     #[doc = "0: Pin is an input"]
-    INPUT = 0,
+    Input = 0,
     #[doc = "1: Pin is an output"]
-    OUTPUT = 1,
+    Output = 1,
     #[doc = "4: Pin is connected to SCL0"]
-    SCL0 = 4,
+    Scl0 = 4,
     #[doc = "5: Pin is connected to SA4"]
-    SA4 = 5,
+    Sa4 = 5,
     #[doc = "6: Pin is connected to PCM_FS"]
-    PCM_FS = 6,
+    PcmFs = 6,
     #[doc = "7: Alt function 3 reserved"]
-    RESERVED3 = 7,
+    Reserved3 = 7,
     #[doc = "3: Pin is connected to MII_A_TX_ERR"]
-    MII_A_TX_ERR = 3,
+    MiiATxErr = 3,
     #[doc = "2: Pin is connected to RGMII_MDC"]
-    RGMII_MDC = 2,
+    RgmiiMdc = 2,
 }
-impl From<FSEL29_A> for u8 {
+impl From<Fsel29> for u8 {
     #[inline(always)]
-    fn from(variant: FSEL29_A) -> Self {
+    fn from(variant: Fsel29) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for FSEL29_A {
+impl crate::FieldSpec for Fsel29 {
     type Ux = u8;
 }
-impl FSEL29_R {
+impl crate::IsEnum for Fsel29 {}
+#[doc = "Field `FSEL29` reader - Function Select 29"]
+pub type Fsel29R = crate::FieldReader<Fsel29>;
+impl Fsel29R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FSEL29_A {
+    pub const fn variant(&self) -> Fsel29 {
         match self.bits {
-            0 => FSEL29_A::INPUT,
-            1 => FSEL29_A::OUTPUT,
-            4 => FSEL29_A::SCL0,
-            5 => FSEL29_A::SA4,
-            6 => FSEL29_A::PCM_FS,
-            7 => FSEL29_A::RESERVED3,
-            3 => FSEL29_A::MII_A_TX_ERR,
-            2 => FSEL29_A::RGMII_MDC,
+            0 => Fsel29::Input,
+            1 => Fsel29::Output,
+            4 => Fsel29::Scl0,
+            5 => Fsel29::Sa4,
+            6 => Fsel29::PcmFs,
+            7 => Fsel29::Reserved3,
+            3 => Fsel29::MiiATxErr,
+            2 => Fsel29::RgmiiMdc,
             _ => unreachable!(),
         }
     }
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
-        *self == FSEL29_A::INPUT
+        *self == Fsel29::Input
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
-        *self == FSEL29_A::OUTPUT
+        *self == Fsel29::Output
     }
     #[doc = "Pin is connected to SCL0"]
     #[inline(always)]
     pub fn is_scl0(&self) -> bool {
-        *self == FSEL29_A::SCL0
+        *self == Fsel29::Scl0
     }
     #[doc = "Pin is connected to SA4"]
     #[inline(always)]
     pub fn is_sa4(&self) -> bool {
-        *self == FSEL29_A::SA4
+        *self == Fsel29::Sa4
     }
     #[doc = "Pin is connected to PCM_FS"]
     #[inline(always)]
     pub fn is_pcm_fs(&self) -> bool {
-        *self == FSEL29_A::PCM_FS
+        *self == Fsel29::PcmFs
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
-        *self == FSEL29_A::RESERVED3
+        *self == Fsel29::Reserved3
     }
     #[doc = "Pin is connected to MII_A_TX_ERR"]
     #[inline(always)]
     pub fn is_mii_a_tx_err(&self) -> bool {
-        *self == FSEL29_A::MII_A_TX_ERR
+        *self == Fsel29::MiiATxErr
     }
     #[doc = "Pin is connected to RGMII_MDC"]
     #[inline(always)]
     pub fn is_rgmii_mdc(&self) -> bool {
-        *self == FSEL29_A::RGMII_MDC
+        *self == Fsel29::RgmiiMdc
     }
 }
 #[doc = "Field `FSEL29` writer - Function Select 29"]
-pub type FSEL29_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL29_A>;
-impl<'a, REG> FSEL29_W<'a, REG>
+pub type Fsel29W<'a, REG> = crate::FieldWriter<'a, REG, 3, Fsel29, crate::Safe>;
+impl<'a, REG> Fsel29W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -1334,198 +1344,184 @@ where
     #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn input(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::INPUT)
+        self.variant(Fsel29::Input)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn output(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::OUTPUT)
+        self.variant(Fsel29::Output)
     }
     #[doc = "Pin is connected to SCL0"]
     #[inline(always)]
     pub fn scl0(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::SCL0)
+        self.variant(Fsel29::Scl0)
     }
     #[doc = "Pin is connected to SA4"]
     #[inline(always)]
     pub fn sa4(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::SA4)
+        self.variant(Fsel29::Sa4)
     }
     #[doc = "Pin is connected to PCM_FS"]
     #[inline(always)]
     pub fn pcm_fs(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::PCM_FS)
+        self.variant(Fsel29::PcmFs)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn reserved3(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::RESERVED3)
+        self.variant(Fsel29::Reserved3)
     }
     #[doc = "Pin is connected to MII_A_TX_ERR"]
     #[inline(always)]
     pub fn mii_a_tx_err(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::MII_A_TX_ERR)
+        self.variant(Fsel29::MiiATxErr)
     }
     #[doc = "Pin is connected to RGMII_MDC"]
     #[inline(always)]
     pub fn rgmii_mdc(self) -> &'a mut crate::W<REG> {
-        self.variant(FSEL29_A::RGMII_MDC)
+        self.variant(Fsel29::RgmiiMdc)
     }
 }
 impl R {
     #[doc = "Bits 0:2 - Function Select 20"]
     #[inline(always)]
-    pub fn fsel20(&self) -> FSEL20_R {
-        FSEL20_R::new((self.bits & 7) as u8)
+    pub fn fsel20(&self) -> Fsel20R {
+        Fsel20R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - Function Select 21"]
     #[inline(always)]
-    pub fn fsel21(&self) -> FSEL21_R {
-        FSEL21_R::new(((self.bits >> 3) & 7) as u8)
+    pub fn fsel21(&self) -> Fsel21R {
+        Fsel21R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:8 - Function Select 22"]
     #[inline(always)]
-    pub fn fsel22(&self) -> FSEL22_R {
-        FSEL22_R::new(((self.bits >> 6) & 7) as u8)
+    pub fn fsel22(&self) -> Fsel22R {
+        Fsel22R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:11 - Function Select 23"]
     #[inline(always)]
-    pub fn fsel23(&self) -> FSEL23_R {
-        FSEL23_R::new(((self.bits >> 9) & 7) as u8)
+    pub fn fsel23(&self) -> Fsel23R {
+        Fsel23R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:14 - Function Select 24"]
     #[inline(always)]
-    pub fn fsel24(&self) -> FSEL24_R {
-        FSEL24_R::new(((self.bits >> 12) & 7) as u8)
+    pub fn fsel24(&self) -> Fsel24R {
+        Fsel24R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 15:17 - Function Select 25"]
     #[inline(always)]
-    pub fn fsel25(&self) -> FSEL25_R {
-        FSEL25_R::new(((self.bits >> 15) & 7) as u8)
+    pub fn fsel25(&self) -> Fsel25R {
+        Fsel25R::new(((self.bits >> 15) & 7) as u8)
     }
     #[doc = "Bits 18:20 - Function Select 26"]
     #[inline(always)]
-    pub fn fsel26(&self) -> FSEL26_R {
-        FSEL26_R::new(((self.bits >> 18) & 7) as u8)
+    pub fn fsel26(&self) -> Fsel26R {
+        Fsel26R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bits 21:23 - Function Select 27"]
     #[inline(always)]
-    pub fn fsel27(&self) -> FSEL27_R {
-        FSEL27_R::new(((self.bits >> 21) & 7) as u8)
+    pub fn fsel27(&self) -> Fsel27R {
+        Fsel27R::new(((self.bits >> 21) & 7) as u8)
     }
     #[doc = "Bits 24:26 - Function Select 28"]
     #[inline(always)]
-    pub fn fsel28(&self) -> FSEL28_R {
-        FSEL28_R::new(((self.bits >> 24) & 7) as u8)
+    pub fn fsel28(&self) -> Fsel28R {
+        Fsel28R::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bits 27:29 - Function Select 29"]
     #[inline(always)]
-    pub fn fsel29(&self) -> FSEL29_R {
-        FSEL29_R::new(((self.bits >> 27) & 7) as u8)
+    pub fn fsel29(&self) -> Fsel29R {
+        Fsel29R::new(((self.bits >> 27) & 7) as u8)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPFSEL2")
-            .field("fsel20", &format_args!("{}", self.fsel20().bits()))
-            .field("fsel21", &format_args!("{}", self.fsel21().bits()))
-            .field("fsel22", &format_args!("{}", self.fsel22().bits()))
-            .field("fsel23", &format_args!("{}", self.fsel23().bits()))
-            .field("fsel24", &format_args!("{}", self.fsel24().bits()))
-            .field("fsel25", &format_args!("{}", self.fsel25().bits()))
-            .field("fsel26", &format_args!("{}", self.fsel26().bits()))
-            .field("fsel27", &format_args!("{}", self.fsel27().bits()))
-            .field("fsel28", &format_args!("{}", self.fsel28().bits()))
-            .field("fsel29", &format_args!("{}", self.fsel29().bits()))
+            .field("fsel20", &self.fsel20())
+            .field("fsel21", &self.fsel21())
+            .field("fsel22", &self.fsel22())
+            .field("fsel23", &self.fsel23())
+            .field("fsel24", &self.fsel24())
+            .field("fsel25", &self.fsel25())
+            .field("fsel26", &self.fsel26())
+            .field("fsel27", &self.fsel27())
+            .field("fsel28", &self.fsel28())
+            .field("fsel29", &self.fsel29())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GPFSEL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Function Select 20"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel20(&mut self) -> FSEL20_W<GPFSEL2_SPEC> {
-        FSEL20_W::new(self, 0)
+    pub fn fsel20(&mut self) -> Fsel20W<Gpfsel2Spec> {
+        Fsel20W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Function Select 21"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel21(&mut self) -> FSEL21_W<GPFSEL2_SPEC> {
-        FSEL21_W::new(self, 3)
+    pub fn fsel21(&mut self) -> Fsel21W<Gpfsel2Spec> {
+        Fsel21W::new(self, 3)
     }
     #[doc = "Bits 6:8 - Function Select 22"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel22(&mut self) -> FSEL22_W<GPFSEL2_SPEC> {
-        FSEL22_W::new(self, 6)
+    pub fn fsel22(&mut self) -> Fsel22W<Gpfsel2Spec> {
+        Fsel22W::new(self, 6)
     }
     #[doc = "Bits 9:11 - Function Select 23"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel23(&mut self) -> FSEL23_W<GPFSEL2_SPEC> {
-        FSEL23_W::new(self, 9)
+    pub fn fsel23(&mut self) -> Fsel23W<Gpfsel2Spec> {
+        Fsel23W::new(self, 9)
     }
     #[doc = "Bits 12:14 - Function Select 24"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel24(&mut self) -> FSEL24_W<GPFSEL2_SPEC> {
-        FSEL24_W::new(self, 12)
+    pub fn fsel24(&mut self) -> Fsel24W<Gpfsel2Spec> {
+        Fsel24W::new(self, 12)
     }
     #[doc = "Bits 15:17 - Function Select 25"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel25(&mut self) -> FSEL25_W<GPFSEL2_SPEC> {
-        FSEL25_W::new(self, 15)
+    pub fn fsel25(&mut self) -> Fsel25W<Gpfsel2Spec> {
+        Fsel25W::new(self, 15)
     }
     #[doc = "Bits 18:20 - Function Select 26"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel26(&mut self) -> FSEL26_W<GPFSEL2_SPEC> {
-        FSEL26_W::new(self, 18)
+    pub fn fsel26(&mut self) -> Fsel26W<Gpfsel2Spec> {
+        Fsel26W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Function Select 27"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel27(&mut self) -> FSEL27_W<GPFSEL2_SPEC> {
-        FSEL27_W::new(self, 21)
+    pub fn fsel27(&mut self) -> Fsel27W<Gpfsel2Spec> {
+        Fsel27W::new(self, 21)
     }
     #[doc = "Bits 24:26 - Function Select 28"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel28(&mut self) -> FSEL28_W<GPFSEL2_SPEC> {
-        FSEL28_W::new(self, 24)
+    pub fn fsel28(&mut self) -> Fsel28W<Gpfsel2Spec> {
+        Fsel28W::new(self, 24)
     }
     #[doc = "Bits 27:29 - Function Select 29"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel29(&mut self) -> FSEL29_W<GPFSEL2_SPEC> {
-        FSEL29_W::new(self, 27)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn fsel29(&mut self) -> Fsel29W<Gpfsel2Spec> {
+        Fsel29W::new(self, 27)
     }
 }
-#[doc = "GPIO Function Select 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpfsel2::R`](R).  You can [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpfsel2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GPFSEL2_SPEC;
-impl crate::RegisterSpec for GPFSEL2_SPEC {
+#[doc = "GPIO Function Select 2\n\nYou can [`read`](crate::Reg::read) this register and get [`gpfsel2::R`](R). You can [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpfsel2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Gpfsel2Spec;
+impl crate::RegisterSpec for Gpfsel2Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gpfsel2::R`](R) reader structure"]
-impl crate::Readable for GPFSEL2_SPEC {}
+impl crate::Readable for Gpfsel2Spec {}
 #[doc = "`write(|w| ..)` method takes [`gpfsel2::W`](W) writer structure"]
-impl crate::Writable for GPFSEL2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for Gpfsel2Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

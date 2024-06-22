@@ -1,109 +1,95 @@
 #[doc = "Register `GICD_ITARGETSR13` reader"]
-pub type R = crate::R<GICD_ITARGETSR13_SPEC>;
+pub type R = crate::R<GicdItargetsr13Spec>;
 #[doc = "Register `GICD_ITARGETSR13` writer"]
-pub type W = crate::W<GICD_ITARGETSR13_SPEC>;
+pub type W = crate::W<GicdItargetsr13Spec>;
 #[doc = "Field `INT52` reader - Interrupt 52"]
-pub type INT52_R = crate::FieldReader;
+pub type Int52R = crate::FieldReader;
 #[doc = "Field `INT52` writer - Interrupt 52"]
-pub type INT52_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Int52W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `INT53` reader - Interrupt 53"]
-pub type INT53_R = crate::FieldReader;
+pub type Int53R = crate::FieldReader;
 #[doc = "Field `INT53` writer - Interrupt 53"]
-pub type INT53_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Int53W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `INT54` reader - Interrupt 54"]
-pub type INT54_R = crate::FieldReader;
+pub type Int54R = crate::FieldReader;
 #[doc = "Field `INT54` writer - Interrupt 54"]
-pub type INT54_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Int54W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `INT55` reader - Interrupt 55"]
-pub type INT55_R = crate::FieldReader;
+pub type Int55R = crate::FieldReader;
 #[doc = "Field `INT55` writer - Interrupt 55"]
-pub type INT55_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type Int55W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Interrupt 52"]
     #[inline(always)]
-    pub fn int52(&self) -> INT52_R {
-        INT52_R::new((self.bits & 0xff) as u8)
+    pub fn int52(&self) -> Int52R {
+        Int52R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Interrupt 53"]
     #[inline(always)]
-    pub fn int53(&self) -> INT53_R {
-        INT53_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn int53(&self) -> Int53R {
+        Int53R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Interrupt 54"]
     #[inline(always)]
-    pub fn int54(&self) -> INT54_R {
-        INT54_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn int54(&self) -> Int54R {
+        Int54R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bits 24:31 - Interrupt 55"]
     #[inline(always)]
-    pub fn int55(&self) -> INT55_R {
-        INT55_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn int55(&self) -> Int55R {
+        Int55R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GICD_ITARGETSR13")
-            .field("int52", &format_args!("{}", self.int52().bits()))
-            .field("int53", &format_args!("{}", self.int53().bits()))
-            .field("int54", &format_args!("{}", self.int54().bits()))
-            .field("int55", &format_args!("{}", self.int55().bits()))
+            .field("int52", &self.int52())
+            .field("int53", &self.int53())
+            .field("int54", &self.int54())
+            .field("int55", &self.int55())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR13_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Interrupt 52"]
     #[inline(always)]
     #[must_use]
-    pub fn int52(&mut self) -> INT52_W<GICD_ITARGETSR13_SPEC> {
-        INT52_W::new(self, 0)
+    pub fn int52(&mut self) -> Int52W<GicdItargetsr13Spec> {
+        Int52W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Interrupt 53"]
     #[inline(always)]
     #[must_use]
-    pub fn int53(&mut self) -> INT53_W<GICD_ITARGETSR13_SPEC> {
-        INT53_W::new(self, 8)
+    pub fn int53(&mut self) -> Int53W<GicdItargetsr13Spec> {
+        Int53W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Interrupt 54"]
     #[inline(always)]
     #[must_use]
-    pub fn int54(&mut self) -> INT54_W<GICD_ITARGETSR13_SPEC> {
-        INT54_W::new(self, 16)
+    pub fn int54(&mut self) -> Int54W<GicdItargetsr13Spec> {
+        Int54W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Interrupt 55"]
     #[inline(always)]
     #[must_use]
-    pub fn int55(&mut self) -> INT55_W<GICD_ITARGETSR13_SPEC> {
-        INT55_W::new(self, 24)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn int55(&mut self) -> Int55W<GicdItargetsr13Spec> {
+        Int55W::new(self, 24)
     }
 }
-#[doc = "Interrupt Processor Target 52 - 55\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_itargetsr13::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_itargetsr13::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GICD_ITARGETSR13_SPEC;
-impl crate::RegisterSpec for GICD_ITARGETSR13_SPEC {
+#[doc = "Interrupt Processor Target 52 - 55\n\nYou can [`read`](crate::Reg::read) this register and get [`gicd_itargetsr13::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gicd_itargetsr13::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GicdItargetsr13Spec;
+impl crate::RegisterSpec for GicdItargetsr13Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gicd_itargetsr13::R`](R) reader structure"]
-impl crate::Readable for GICD_ITARGETSR13_SPEC {}
+impl crate::Readable for GicdItargetsr13Spec {}
 #[doc = "`write(|w| ..)` method takes [`gicd_itargetsr13::W`](W) writer structure"]
-impl crate::Writable for GICD_ITARGETSR13_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for GicdItargetsr13Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GICD_ITARGETSR13 to value 0"]
-impl crate::Resettable for GICD_ITARGETSR13_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for GicdItargetsr13Spec {
+    const RESET_VALUE: u32 = 0;
 }

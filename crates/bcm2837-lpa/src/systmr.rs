@@ -1,10 +1,10 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[derive(Debug)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
-    cs: CS,
-    clo: CLO,
-    chi: CHI,
+    cs: Cs,
+    clo: Clo,
+    chi: Chi,
     c0: C0,
     c1: C1,
     c2: C2,
@@ -13,17 +13,17 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x00 - Control / Status"]
     #[inline(always)]
-    pub const fn cs(&self) -> &CS {
+    pub const fn cs(&self) -> &Cs {
         &self.cs
     }
     #[doc = "0x04 - Lower 32 bits for the free running counter"]
     #[inline(always)]
-    pub const fn clo(&self) -> &CLO {
+    pub const fn clo(&self) -> &Clo {
         &self.clo
     }
     #[doc = "0x08 - Higher 32 bits for the free running counter"]
     #[inline(always)]
-    pub const fn chi(&self) -> &CHI {
+    pub const fn chi(&self) -> &Chi {
         &self.chi
     }
     #[doc = "0x0c - Compare channel 0"]
@@ -47,38 +47,41 @@ impl RegisterBlock {
         &self.c3
     }
 }
-#[doc = "CS (rw) register accessor: Control / Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cs::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cs::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cs`]
+#[doc = "CS (rw) register accessor: Control / Status\n\nYou can [`read`](crate::Reg::read) this register and get [`cs::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cs::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cs`]
 module"]
-pub type CS = crate::Reg<cs::CS_SPEC>;
+#[doc(alias = "CS")]
+pub type Cs = crate::Reg<cs::CsSpec>;
 #[doc = "Control / Status"]
 pub mod cs;
-#[doc = "CLO (r) register accessor: Lower 32 bits for the free running counter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clo`]
+#[doc = "CLO (r) register accessor: Lower 32 bits for the free running counter\n\nYou can [`read`](crate::Reg::read) this register and get [`clo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clo`]
 module"]
-pub type CLO = crate::Reg<clo::CLO_SPEC>;
+#[doc(alias = "CLO")]
+pub type Clo = crate::Reg<clo::CloSpec>;
 #[doc = "Lower 32 bits for the free running counter"]
 pub mod clo;
-#[doc = "CHI (r) register accessor: Higher 32 bits for the free running counter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chi::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chi`]
+#[doc = "CHI (r) register accessor: Higher 32 bits for the free running counter\n\nYou can [`read`](crate::Reg::read) this register and get [`chi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chi`]
 module"]
-pub type CHI = crate::Reg<chi::CHI_SPEC>;
+#[doc(alias = "CHI")]
+pub type Chi = crate::Reg<chi::ChiSpec>;
 #[doc = "Higher 32 bits for the free running counter"]
 pub mod chi;
-#[doc = "C0 (rw) register accessor: Compare channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c0`]
+#[doc = "C0 (rw) register accessor: Compare channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`c0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c0`]
 module"]
-pub type C0 = crate::Reg<c0::C0_SPEC>;
+pub type C0 = crate::Reg<c0::C0Spec>;
 #[doc = "Compare channel 0"]
 pub mod c0;
-#[doc = "C1 (rw) register accessor: Compare channel 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c1`]
+#[doc = "C1 (rw) register accessor: Compare channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`c1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c1`]
 module"]
-pub type C1 = crate::Reg<c1::C1_SPEC>;
+pub type C1 = crate::Reg<c1::C1Spec>;
 #[doc = "Compare channel 1"]
 pub mod c1;
-#[doc = "C2 (rw) register accessor: Compare channel 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c2`]
+#[doc = "C2 (rw) register accessor: Compare channel 2\n\nYou can [`read`](crate::Reg::read) this register and get [`c2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c2`]
 module"]
-pub type C2 = crate::Reg<c2::C2_SPEC>;
+pub type C2 = crate::Reg<c2::C2Spec>;
 #[doc = "Compare channel 2"]
 pub mod c2;
-#[doc = "C3 (rw) register accessor: Compare channel 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c3`]
+#[doc = "C3 (rw) register accessor: Compare channel 3\n\nYou can [`read`](crate::Reg::read) this register and get [`c3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c3`]
 module"]
-pub type C3 = crate::Reg<c3::C3_SPEC>;
+pub type C3 = crate::Reg<c3::C3Spec>;
 #[doc = "Compare channel 3"]
 pub mod c3;

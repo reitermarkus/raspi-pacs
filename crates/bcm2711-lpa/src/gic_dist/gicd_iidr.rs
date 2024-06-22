@@ -1,61 +1,53 @@
 #[doc = "Register `GICD_IIDR` reader"]
-pub type R = crate::R<GICD_IIDR_SPEC>;
+pub type R = crate::R<GicdIidrSpec>;
 #[doc = "Field `IMPLEMENTER` reader - Implementer"]
-pub type IMPLEMENTER_R = crate::FieldReader<u16>;
+pub type ImplementerR = crate::FieldReader<u16>;
 #[doc = "Field `REVISION` reader - Revision"]
-pub type REVISION_R = crate::FieldReader;
+pub type RevisionR = crate::FieldReader;
 #[doc = "Field `VARIANT` reader - Variant"]
-pub type VARIANT_R = crate::FieldReader;
+pub type VariantR = crate::FieldReader;
 #[doc = "Field `PRODUCT_ID` reader - Product ID"]
-pub type PRODUCT_ID_R = crate::FieldReader;
+pub type ProductIdR = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:11 - Implementer"]
     #[inline(always)]
-    pub fn implementer(&self) -> IMPLEMENTER_R {
-        IMPLEMENTER_R::new((self.bits & 0x0fff) as u16)
+    pub fn implementer(&self) -> ImplementerR {
+        ImplementerR::new((self.bits & 0x0fff) as u16)
     }
     #[doc = "Bits 12:15 - Revision"]
     #[inline(always)]
-    pub fn revision(&self) -> REVISION_R {
-        REVISION_R::new(((self.bits >> 12) & 0x0f) as u8)
+    pub fn revision(&self) -> RevisionR {
+        RevisionR::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 16:19 - Variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VARIANT_R {
-        VARIANT_R::new(((self.bits >> 16) & 0x0f) as u8)
+    pub fn variant(&self) -> VariantR {
+        VariantR::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 24:31 - Product ID"]
     #[inline(always)]
-    pub fn product_id(&self) -> PRODUCT_ID_R {
-        PRODUCT_ID_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn product_id(&self) -> ProductIdR {
+        ProductIdR::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GICD_IIDR")
-            .field("product_id", &format_args!("{}", self.product_id().bits()))
-            .field("variant", &format_args!("{}", self.variant().bits()))
-            .field("revision", &format_args!("{}", self.revision().bits()))
-            .field(
-                "implementer",
-                &format_args!("{}", self.implementer().bits()),
-            )
+            .field("product_id", &self.product_id())
+            .field("variant", &self.variant())
+            .field("revision", &self.revision())
+            .field("implementer", &self.implementer())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<GICD_IIDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Distributor Implementer Identification Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_iidr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GICD_IIDR_SPEC;
-impl crate::RegisterSpec for GICD_IIDR_SPEC {
+#[doc = "Distributor Implementer Identification Register\n\nYou can [`read`](crate::Reg::read) this register and get [`gicd_iidr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GicdIidrSpec;
+impl crate::RegisterSpec for GicdIidrSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gicd_iidr::R`](R) reader structure"]
-impl crate::Readable for GICD_IIDR_SPEC {}
+impl crate::Readable for GicdIidrSpec {}
 #[doc = "`reset()` method sets GICD_IIDR to value 0x0200_143b"]
-impl crate::Resettable for GICD_IIDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0200_143b;
+impl crate::Resettable for GicdIidrSpec {
+    const RESET_VALUE: u32 = 0x0200_143b;
 }
