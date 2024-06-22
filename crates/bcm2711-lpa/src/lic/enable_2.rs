@@ -1,557 +1,543 @@
 #[doc = "Register `ENABLE_2` reader"]
-pub type R = crate::R<ENABLE_2_SPEC>;
+pub type R = crate::R<Enable2Spec>;
 #[doc = "Register `ENABLE_2` writer"]
-pub type W = crate::W<ENABLE_2_SPEC>;
+pub type W = crate::W<Enable2Spec>;
 #[doc = "Field `INT32` reader - Interrupt 32"]
-pub type INT32_R = crate::BitReader;
+pub type Int32R = crate::BitReader;
 #[doc = "Field `INT32` writer - Interrupt 32"]
-pub type INT32_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int32W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT33` reader - Interrupt 33"]
-pub type INT33_R = crate::BitReader;
+pub type Int33R = crate::BitReader;
 #[doc = "Field `INT33` writer - Interrupt 33"]
-pub type INT33_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int33W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT34` reader - Interrupt 34"]
-pub type INT34_R = crate::BitReader;
+pub type Int34R = crate::BitReader;
 #[doc = "Field `INT34` writer - Interrupt 34"]
-pub type INT34_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int34W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT35` reader - Interrupt 35"]
-pub type INT35_R = crate::BitReader;
+pub type Int35R = crate::BitReader;
 #[doc = "Field `INT35` writer - Interrupt 35"]
-pub type INT35_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int35W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT36` reader - Interrupt 36"]
-pub type INT36_R = crate::BitReader;
+pub type Int36R = crate::BitReader;
 #[doc = "Field `INT36` writer - Interrupt 36"]
-pub type INT36_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int36W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT37` reader - Interrupt 37"]
-pub type INT37_R = crate::BitReader;
+pub type Int37R = crate::BitReader;
 #[doc = "Field `INT37` writer - Interrupt 37"]
-pub type INT37_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int37W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT38` reader - Interrupt 38"]
-pub type INT38_R = crate::BitReader;
+pub type Int38R = crate::BitReader;
 #[doc = "Field `INT38` writer - Interrupt 38"]
-pub type INT38_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int38W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT39` reader - Interrupt 39"]
-pub type INT39_R = crate::BitReader;
+pub type Int39R = crate::BitReader;
 #[doc = "Field `INT39` writer - Interrupt 39"]
-pub type INT39_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int39W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT40` reader - Interrupt 40"]
-pub type INT40_R = crate::BitReader;
+pub type Int40R = crate::BitReader;
 #[doc = "Field `INT40` writer - Interrupt 40"]
-pub type INT40_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int40W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT41` reader - Interrupt 41"]
-pub type INT41_R = crate::BitReader;
+pub type Int41R = crate::BitReader;
 #[doc = "Field `INT41` writer - Interrupt 41"]
-pub type INT41_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int41W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT42` reader - Interrupt 42"]
-pub type INT42_R = crate::BitReader;
+pub type Int42R = crate::BitReader;
 #[doc = "Field `INT42` writer - Interrupt 42"]
-pub type INT42_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int42W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT43` reader - Interrupt 43"]
-pub type INT43_R = crate::BitReader;
+pub type Int43R = crate::BitReader;
 #[doc = "Field `INT43` writer - Interrupt 43"]
-pub type INT43_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int43W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT44` reader - Interrupt 44"]
-pub type INT44_R = crate::BitReader;
+pub type Int44R = crate::BitReader;
 #[doc = "Field `INT44` writer - Interrupt 44"]
-pub type INT44_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int44W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT45` reader - Interrupt 45"]
-pub type INT45_R = crate::BitReader;
+pub type Int45R = crate::BitReader;
 #[doc = "Field `INT45` writer - Interrupt 45"]
-pub type INT45_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int45W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT46` reader - Interrupt 46"]
-pub type INT46_R = crate::BitReader;
+pub type Int46R = crate::BitReader;
 #[doc = "Field `INT46` writer - Interrupt 46"]
-pub type INT46_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int46W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT47` reader - Interrupt 47"]
-pub type INT47_R = crate::BitReader;
+pub type Int47R = crate::BitReader;
 #[doc = "Field `INT47` writer - Interrupt 47"]
-pub type INT47_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int47W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT48` reader - Interrupt 48"]
-pub type INT48_R = crate::BitReader;
+pub type Int48R = crate::BitReader;
 #[doc = "Field `INT48` writer - Interrupt 48"]
-pub type INT48_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int48W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT49` reader - Interrupt 49"]
-pub type INT49_R = crate::BitReader;
+pub type Int49R = crate::BitReader;
 #[doc = "Field `INT49` writer - Interrupt 49"]
-pub type INT49_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int49W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT50` reader - Interrupt 50"]
-pub type INT50_R = crate::BitReader;
+pub type Int50R = crate::BitReader;
 #[doc = "Field `INT50` writer - Interrupt 50"]
-pub type INT50_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int50W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT51` reader - Interrupt 51"]
-pub type INT51_R = crate::BitReader;
+pub type Int51R = crate::BitReader;
 #[doc = "Field `INT51` writer - Interrupt 51"]
-pub type INT51_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int51W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT52` reader - Interrupt 52"]
-pub type INT52_R = crate::BitReader;
+pub type Int52R = crate::BitReader;
 #[doc = "Field `INT52` writer - Interrupt 52"]
-pub type INT52_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int52W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT53` reader - Interrupt 53"]
-pub type INT53_R = crate::BitReader;
+pub type Int53R = crate::BitReader;
 #[doc = "Field `INT53` writer - Interrupt 53"]
-pub type INT53_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int53W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT54` reader - Interrupt 54"]
-pub type INT54_R = crate::BitReader;
+pub type Int54R = crate::BitReader;
 #[doc = "Field `INT54` writer - Interrupt 54"]
-pub type INT54_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int54W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT55` reader - Interrupt 55"]
-pub type INT55_R = crate::BitReader;
+pub type Int55R = crate::BitReader;
 #[doc = "Field `INT55` writer - Interrupt 55"]
-pub type INT55_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int55W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT56` reader - Interrupt 56"]
-pub type INT56_R = crate::BitReader;
+pub type Int56R = crate::BitReader;
 #[doc = "Field `INT56` writer - Interrupt 56"]
-pub type INT56_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int56W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT57` reader - Interrupt 57"]
-pub type INT57_R = crate::BitReader;
+pub type Int57R = crate::BitReader;
 #[doc = "Field `INT57` writer - Interrupt 57"]
-pub type INT57_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int57W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT58` reader - Interrupt 58"]
-pub type INT58_R = crate::BitReader;
+pub type Int58R = crate::BitReader;
 #[doc = "Field `INT58` writer - Interrupt 58"]
-pub type INT58_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int58W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT59` reader - Interrupt 59"]
-pub type INT59_R = crate::BitReader;
+pub type Int59R = crate::BitReader;
 #[doc = "Field `INT59` writer - Interrupt 59"]
-pub type INT59_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int59W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT60` reader - Interrupt 60"]
-pub type INT60_R = crate::BitReader;
+pub type Int60R = crate::BitReader;
 #[doc = "Field `INT60` writer - Interrupt 60"]
-pub type INT60_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int60W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT61` reader - Interrupt 61"]
-pub type INT61_R = crate::BitReader;
+pub type Int61R = crate::BitReader;
 #[doc = "Field `INT61` writer - Interrupt 61"]
-pub type INT61_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int61W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT62` reader - Interrupt 62"]
-pub type INT62_R = crate::BitReader;
+pub type Int62R = crate::BitReader;
 #[doc = "Field `INT62` writer - Interrupt 62"]
-pub type INT62_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int62W<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `INT63` reader - Interrupt 63"]
-pub type INT63_R = crate::BitReader;
+pub type Int63R = crate::BitReader;
 #[doc = "Field `INT63` writer - Interrupt 63"]
-pub type INT63_W<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type Int63W<'a, REG> = crate::BitWriter1S<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Interrupt 32"]
     #[inline(always)]
-    pub fn int32(&self) -> INT32_R {
-        INT32_R::new((self.bits & 1) != 0)
+    pub fn int32(&self) -> Int32R {
+        Int32R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Interrupt 33"]
     #[inline(always)]
-    pub fn int33(&self) -> INT33_R {
-        INT33_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn int33(&self) -> Int33R {
+        Int33R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Interrupt 34"]
     #[inline(always)]
-    pub fn int34(&self) -> INT34_R {
-        INT34_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn int34(&self) -> Int34R {
+        Int34R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Interrupt 35"]
     #[inline(always)]
-    pub fn int35(&self) -> INT35_R {
-        INT35_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn int35(&self) -> Int35R {
+        Int35R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Interrupt 36"]
     #[inline(always)]
-    pub fn int36(&self) -> INT36_R {
-        INT36_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn int36(&self) -> Int36R {
+        Int36R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Interrupt 37"]
     #[inline(always)]
-    pub fn int37(&self) -> INT37_R {
-        INT37_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn int37(&self) -> Int37R {
+        Int37R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Interrupt 38"]
     #[inline(always)]
-    pub fn int38(&self) -> INT38_R {
-        INT38_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn int38(&self) -> Int38R {
+        Int38R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Interrupt 39"]
     #[inline(always)]
-    pub fn int39(&self) -> INT39_R {
-        INT39_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn int39(&self) -> Int39R {
+        Int39R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Interrupt 40"]
     #[inline(always)]
-    pub fn int40(&self) -> INT40_R {
-        INT40_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn int40(&self) -> Int40R {
+        Int40R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Interrupt 41"]
     #[inline(always)]
-    pub fn int41(&self) -> INT41_R {
-        INT41_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn int41(&self) -> Int41R {
+        Int41R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Interrupt 42"]
     #[inline(always)]
-    pub fn int42(&self) -> INT42_R {
-        INT42_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn int42(&self) -> Int42R {
+        Int42R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Interrupt 43"]
     #[inline(always)]
-    pub fn int43(&self) -> INT43_R {
-        INT43_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn int43(&self) -> Int43R {
+        Int43R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Interrupt 44"]
     #[inline(always)]
-    pub fn int44(&self) -> INT44_R {
-        INT44_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn int44(&self) -> Int44R {
+        Int44R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Interrupt 45"]
     #[inline(always)]
-    pub fn int45(&self) -> INT45_R {
-        INT45_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn int45(&self) -> Int45R {
+        Int45R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Interrupt 46"]
     #[inline(always)]
-    pub fn int46(&self) -> INT46_R {
-        INT46_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn int46(&self) -> Int46R {
+        Int46R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Interrupt 47"]
     #[inline(always)]
-    pub fn int47(&self) -> INT47_R {
-        INT47_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn int47(&self) -> Int47R {
+        Int47R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Interrupt 48"]
     #[inline(always)]
-    pub fn int48(&self) -> INT48_R {
-        INT48_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn int48(&self) -> Int48R {
+        Int48R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Interrupt 49"]
     #[inline(always)]
-    pub fn int49(&self) -> INT49_R {
-        INT49_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn int49(&self) -> Int49R {
+        Int49R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Interrupt 50"]
     #[inline(always)]
-    pub fn int50(&self) -> INT50_R {
-        INT50_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn int50(&self) -> Int50R {
+        Int50R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Interrupt 51"]
     #[inline(always)]
-    pub fn int51(&self) -> INT51_R {
-        INT51_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn int51(&self) -> Int51R {
+        Int51R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Interrupt 52"]
     #[inline(always)]
-    pub fn int52(&self) -> INT52_R {
-        INT52_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn int52(&self) -> Int52R {
+        Int52R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Interrupt 53"]
     #[inline(always)]
-    pub fn int53(&self) -> INT53_R {
-        INT53_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn int53(&self) -> Int53R {
+        Int53R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Interrupt 54"]
     #[inline(always)]
-    pub fn int54(&self) -> INT54_R {
-        INT54_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn int54(&self) -> Int54R {
+        Int54R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Interrupt 55"]
     #[inline(always)]
-    pub fn int55(&self) -> INT55_R {
-        INT55_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn int55(&self) -> Int55R {
+        Int55R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Interrupt 56"]
     #[inline(always)]
-    pub fn int56(&self) -> INT56_R {
-        INT56_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn int56(&self) -> Int56R {
+        Int56R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Interrupt 57"]
     #[inline(always)]
-    pub fn int57(&self) -> INT57_R {
-        INT57_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn int57(&self) -> Int57R {
+        Int57R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Interrupt 58"]
     #[inline(always)]
-    pub fn int58(&self) -> INT58_R {
-        INT58_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn int58(&self) -> Int58R {
+        Int58R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Interrupt 59"]
     #[inline(always)]
-    pub fn int59(&self) -> INT59_R {
-        INT59_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn int59(&self) -> Int59R {
+        Int59R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Interrupt 60"]
     #[inline(always)]
-    pub fn int60(&self) -> INT60_R {
-        INT60_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn int60(&self) -> Int60R {
+        Int60R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Interrupt 61"]
     #[inline(always)]
-    pub fn int61(&self) -> INT61_R {
-        INT61_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn int61(&self) -> Int61R {
+        Int61R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Interrupt 62"]
     #[inline(always)]
-    pub fn int62(&self) -> INT62_R {
-        INT62_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn int62(&self) -> Int62R {
+        Int62R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Interrupt 63"]
     #[inline(always)]
-    pub fn int63(&self) -> INT63_R {
-        INT63_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn int63(&self) -> Int63R {
+        Int63R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENABLE_2")
-            .field("int32", &format_args!("{}", self.int32().bit()))
-            .field("int33", &format_args!("{}", self.int33().bit()))
-            .field("int34", &format_args!("{}", self.int34().bit()))
-            .field("int35", &format_args!("{}", self.int35().bit()))
-            .field("int36", &format_args!("{}", self.int36().bit()))
-            .field("int37", &format_args!("{}", self.int37().bit()))
-            .field("int38", &format_args!("{}", self.int38().bit()))
-            .field("int39", &format_args!("{}", self.int39().bit()))
-            .field("int40", &format_args!("{}", self.int40().bit()))
-            .field("int41", &format_args!("{}", self.int41().bit()))
-            .field("int42", &format_args!("{}", self.int42().bit()))
-            .field("int43", &format_args!("{}", self.int43().bit()))
-            .field("int44", &format_args!("{}", self.int44().bit()))
-            .field("int45", &format_args!("{}", self.int45().bit()))
-            .field("int46", &format_args!("{}", self.int46().bit()))
-            .field("int47", &format_args!("{}", self.int47().bit()))
-            .field("int48", &format_args!("{}", self.int48().bit()))
-            .field("int49", &format_args!("{}", self.int49().bit()))
-            .field("int50", &format_args!("{}", self.int50().bit()))
-            .field("int51", &format_args!("{}", self.int51().bit()))
-            .field("int52", &format_args!("{}", self.int52().bit()))
-            .field("int53", &format_args!("{}", self.int53().bit()))
-            .field("int54", &format_args!("{}", self.int54().bit()))
-            .field("int55", &format_args!("{}", self.int55().bit()))
-            .field("int56", &format_args!("{}", self.int56().bit()))
-            .field("int57", &format_args!("{}", self.int57().bit()))
-            .field("int58", &format_args!("{}", self.int58().bit()))
-            .field("int59", &format_args!("{}", self.int59().bit()))
-            .field("int60", &format_args!("{}", self.int60().bit()))
-            .field("int61", &format_args!("{}", self.int61().bit()))
-            .field("int62", &format_args!("{}", self.int62().bit()))
-            .field("int63", &format_args!("{}", self.int63().bit()))
+            .field("int32", &self.int32())
+            .field("int33", &self.int33())
+            .field("int34", &self.int34())
+            .field("int35", &self.int35())
+            .field("int36", &self.int36())
+            .field("int37", &self.int37())
+            .field("int38", &self.int38())
+            .field("int39", &self.int39())
+            .field("int40", &self.int40())
+            .field("int41", &self.int41())
+            .field("int42", &self.int42())
+            .field("int43", &self.int43())
+            .field("int44", &self.int44())
+            .field("int45", &self.int45())
+            .field("int46", &self.int46())
+            .field("int47", &self.int47())
+            .field("int48", &self.int48())
+            .field("int49", &self.int49())
+            .field("int50", &self.int50())
+            .field("int51", &self.int51())
+            .field("int52", &self.int52())
+            .field("int53", &self.int53())
+            .field("int54", &self.int54())
+            .field("int55", &self.int55())
+            .field("int56", &self.int56())
+            .field("int57", &self.int57())
+            .field("int58", &self.int58())
+            .field("int59", &self.int59())
+            .field("int60", &self.int60())
+            .field("int61", &self.int61())
+            .field("int62", &self.int62())
+            .field("int63", &self.int63())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ENABLE_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Interrupt 32"]
     #[inline(always)]
     #[must_use]
-    pub fn int32(&mut self) -> INT32_W<ENABLE_2_SPEC> {
-        INT32_W::new(self, 0)
+    pub fn int32(&mut self) -> Int32W<Enable2Spec> {
+        Int32W::new(self, 0)
     }
     #[doc = "Bit 1 - Interrupt 33"]
     #[inline(always)]
     #[must_use]
-    pub fn int33(&mut self) -> INT33_W<ENABLE_2_SPEC> {
-        INT33_W::new(self, 1)
+    pub fn int33(&mut self) -> Int33W<Enable2Spec> {
+        Int33W::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt 34"]
     #[inline(always)]
     #[must_use]
-    pub fn int34(&mut self) -> INT34_W<ENABLE_2_SPEC> {
-        INT34_W::new(self, 2)
+    pub fn int34(&mut self) -> Int34W<Enable2Spec> {
+        Int34W::new(self, 2)
     }
     #[doc = "Bit 3 - Interrupt 35"]
     #[inline(always)]
     #[must_use]
-    pub fn int35(&mut self) -> INT35_W<ENABLE_2_SPEC> {
-        INT35_W::new(self, 3)
+    pub fn int35(&mut self) -> Int35W<Enable2Spec> {
+        Int35W::new(self, 3)
     }
     #[doc = "Bit 4 - Interrupt 36"]
     #[inline(always)]
     #[must_use]
-    pub fn int36(&mut self) -> INT36_W<ENABLE_2_SPEC> {
-        INT36_W::new(self, 4)
+    pub fn int36(&mut self) -> Int36W<Enable2Spec> {
+        Int36W::new(self, 4)
     }
     #[doc = "Bit 5 - Interrupt 37"]
     #[inline(always)]
     #[must_use]
-    pub fn int37(&mut self) -> INT37_W<ENABLE_2_SPEC> {
-        INT37_W::new(self, 5)
+    pub fn int37(&mut self) -> Int37W<Enable2Spec> {
+        Int37W::new(self, 5)
     }
     #[doc = "Bit 6 - Interrupt 38"]
     #[inline(always)]
     #[must_use]
-    pub fn int38(&mut self) -> INT38_W<ENABLE_2_SPEC> {
-        INT38_W::new(self, 6)
+    pub fn int38(&mut self) -> Int38W<Enable2Spec> {
+        Int38W::new(self, 6)
     }
     #[doc = "Bit 7 - Interrupt 39"]
     #[inline(always)]
     #[must_use]
-    pub fn int39(&mut self) -> INT39_W<ENABLE_2_SPEC> {
-        INT39_W::new(self, 7)
+    pub fn int39(&mut self) -> Int39W<Enable2Spec> {
+        Int39W::new(self, 7)
     }
     #[doc = "Bit 8 - Interrupt 40"]
     #[inline(always)]
     #[must_use]
-    pub fn int40(&mut self) -> INT40_W<ENABLE_2_SPEC> {
-        INT40_W::new(self, 8)
+    pub fn int40(&mut self) -> Int40W<Enable2Spec> {
+        Int40W::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt 41"]
     #[inline(always)]
     #[must_use]
-    pub fn int41(&mut self) -> INT41_W<ENABLE_2_SPEC> {
-        INT41_W::new(self, 9)
+    pub fn int41(&mut self) -> Int41W<Enable2Spec> {
+        Int41W::new(self, 9)
     }
     #[doc = "Bit 10 - Interrupt 42"]
     #[inline(always)]
     #[must_use]
-    pub fn int42(&mut self) -> INT42_W<ENABLE_2_SPEC> {
-        INT42_W::new(self, 10)
+    pub fn int42(&mut self) -> Int42W<Enable2Spec> {
+        Int42W::new(self, 10)
     }
     #[doc = "Bit 11 - Interrupt 43"]
     #[inline(always)]
     #[must_use]
-    pub fn int43(&mut self) -> INT43_W<ENABLE_2_SPEC> {
-        INT43_W::new(self, 11)
+    pub fn int43(&mut self) -> Int43W<Enable2Spec> {
+        Int43W::new(self, 11)
     }
     #[doc = "Bit 12 - Interrupt 44"]
     #[inline(always)]
     #[must_use]
-    pub fn int44(&mut self) -> INT44_W<ENABLE_2_SPEC> {
-        INT44_W::new(self, 12)
+    pub fn int44(&mut self) -> Int44W<Enable2Spec> {
+        Int44W::new(self, 12)
     }
     #[doc = "Bit 13 - Interrupt 45"]
     #[inline(always)]
     #[must_use]
-    pub fn int45(&mut self) -> INT45_W<ENABLE_2_SPEC> {
-        INT45_W::new(self, 13)
+    pub fn int45(&mut self) -> Int45W<Enable2Spec> {
+        Int45W::new(self, 13)
     }
     #[doc = "Bit 14 - Interrupt 46"]
     #[inline(always)]
     #[must_use]
-    pub fn int46(&mut self) -> INT46_W<ENABLE_2_SPEC> {
-        INT46_W::new(self, 14)
+    pub fn int46(&mut self) -> Int46W<Enable2Spec> {
+        Int46W::new(self, 14)
     }
     #[doc = "Bit 15 - Interrupt 47"]
     #[inline(always)]
     #[must_use]
-    pub fn int47(&mut self) -> INT47_W<ENABLE_2_SPEC> {
-        INT47_W::new(self, 15)
+    pub fn int47(&mut self) -> Int47W<Enable2Spec> {
+        Int47W::new(self, 15)
     }
     #[doc = "Bit 16 - Interrupt 48"]
     #[inline(always)]
     #[must_use]
-    pub fn int48(&mut self) -> INT48_W<ENABLE_2_SPEC> {
-        INT48_W::new(self, 16)
+    pub fn int48(&mut self) -> Int48W<Enable2Spec> {
+        Int48W::new(self, 16)
     }
     #[doc = "Bit 17 - Interrupt 49"]
     #[inline(always)]
     #[must_use]
-    pub fn int49(&mut self) -> INT49_W<ENABLE_2_SPEC> {
-        INT49_W::new(self, 17)
+    pub fn int49(&mut self) -> Int49W<Enable2Spec> {
+        Int49W::new(self, 17)
     }
     #[doc = "Bit 18 - Interrupt 50"]
     #[inline(always)]
     #[must_use]
-    pub fn int50(&mut self) -> INT50_W<ENABLE_2_SPEC> {
-        INT50_W::new(self, 18)
+    pub fn int50(&mut self) -> Int50W<Enable2Spec> {
+        Int50W::new(self, 18)
     }
     #[doc = "Bit 19 - Interrupt 51"]
     #[inline(always)]
     #[must_use]
-    pub fn int51(&mut self) -> INT51_W<ENABLE_2_SPEC> {
-        INT51_W::new(self, 19)
+    pub fn int51(&mut self) -> Int51W<Enable2Spec> {
+        Int51W::new(self, 19)
     }
     #[doc = "Bit 20 - Interrupt 52"]
     #[inline(always)]
     #[must_use]
-    pub fn int52(&mut self) -> INT52_W<ENABLE_2_SPEC> {
-        INT52_W::new(self, 20)
+    pub fn int52(&mut self) -> Int52W<Enable2Spec> {
+        Int52W::new(self, 20)
     }
     #[doc = "Bit 21 - Interrupt 53"]
     #[inline(always)]
     #[must_use]
-    pub fn int53(&mut self) -> INT53_W<ENABLE_2_SPEC> {
-        INT53_W::new(self, 21)
+    pub fn int53(&mut self) -> Int53W<Enable2Spec> {
+        Int53W::new(self, 21)
     }
     #[doc = "Bit 22 - Interrupt 54"]
     #[inline(always)]
     #[must_use]
-    pub fn int54(&mut self) -> INT54_W<ENABLE_2_SPEC> {
-        INT54_W::new(self, 22)
+    pub fn int54(&mut self) -> Int54W<Enable2Spec> {
+        Int54W::new(self, 22)
     }
     #[doc = "Bit 23 - Interrupt 55"]
     #[inline(always)]
     #[must_use]
-    pub fn int55(&mut self) -> INT55_W<ENABLE_2_SPEC> {
-        INT55_W::new(self, 23)
+    pub fn int55(&mut self) -> Int55W<Enable2Spec> {
+        Int55W::new(self, 23)
     }
     #[doc = "Bit 24 - Interrupt 56"]
     #[inline(always)]
     #[must_use]
-    pub fn int56(&mut self) -> INT56_W<ENABLE_2_SPEC> {
-        INT56_W::new(self, 24)
+    pub fn int56(&mut self) -> Int56W<Enable2Spec> {
+        Int56W::new(self, 24)
     }
     #[doc = "Bit 25 - Interrupt 57"]
     #[inline(always)]
     #[must_use]
-    pub fn int57(&mut self) -> INT57_W<ENABLE_2_SPEC> {
-        INT57_W::new(self, 25)
+    pub fn int57(&mut self) -> Int57W<Enable2Spec> {
+        Int57W::new(self, 25)
     }
     #[doc = "Bit 26 - Interrupt 58"]
     #[inline(always)]
     #[must_use]
-    pub fn int58(&mut self) -> INT58_W<ENABLE_2_SPEC> {
-        INT58_W::new(self, 26)
+    pub fn int58(&mut self) -> Int58W<Enable2Spec> {
+        Int58W::new(self, 26)
     }
     #[doc = "Bit 27 - Interrupt 59"]
     #[inline(always)]
     #[must_use]
-    pub fn int59(&mut self) -> INT59_W<ENABLE_2_SPEC> {
-        INT59_W::new(self, 27)
+    pub fn int59(&mut self) -> Int59W<Enable2Spec> {
+        Int59W::new(self, 27)
     }
     #[doc = "Bit 28 - Interrupt 60"]
     #[inline(always)]
     #[must_use]
-    pub fn int60(&mut self) -> INT60_W<ENABLE_2_SPEC> {
-        INT60_W::new(self, 28)
+    pub fn int60(&mut self) -> Int60W<Enable2Spec> {
+        Int60W::new(self, 28)
     }
     #[doc = "Bit 29 - Interrupt 61"]
     #[inline(always)]
     #[must_use]
-    pub fn int61(&mut self) -> INT61_W<ENABLE_2_SPEC> {
-        INT61_W::new(self, 29)
+    pub fn int61(&mut self) -> Int61W<Enable2Spec> {
+        Int61W::new(self, 29)
     }
     #[doc = "Bit 30 - Interrupt 62"]
     #[inline(always)]
     #[must_use]
-    pub fn int62(&mut self) -> INT62_W<ENABLE_2_SPEC> {
-        INT62_W::new(self, 30)
+    pub fn int62(&mut self) -> Int62W<Enable2Spec> {
+        Int62W::new(self, 30)
     }
     #[doc = "Bit 31 - Interrupt 63"]
     #[inline(always)]
     #[must_use]
-    pub fn int63(&mut self) -> INT63_W<ENABLE_2_SPEC> {
-        INT63_W::new(self, 31)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn int63(&mut self) -> Int63W<Enable2Spec> {
+        Int63W::new(self, 31)
     }
 }
-#[doc = "Enable interrupts 32 - 63\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`enable_2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct ENABLE_2_SPEC;
-impl crate::RegisterSpec for ENABLE_2_SPEC {
+#[doc = "Enable interrupts 32 - 63\n\nYou can [`read`](crate::Reg::read) this register and get [`enable_2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable_2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Enable2Spec;
+impl crate::RegisterSpec for Enable2Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`enable_2::R`](R) reader structure"]
-impl crate::Readable for ENABLE_2_SPEC {}
+impl crate::Readable for Enable2Spec {}
 #[doc = "`write(|w| ..)` method takes [`enable_2::W`](W) writer structure"]
-impl crate::Writable for ENABLE_2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0xffff_ffff;
+impl crate::Writable for Enable2Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff_ffff;
 }
 #[doc = "`reset()` method sets ENABLE_2 to value 0"]
-impl crate::Resettable for ENABLE_2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for Enable2Spec {
+    const RESET_VALUE: u32 = 0;
 }

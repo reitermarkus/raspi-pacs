@@ -1,53 +1,58 @@
-#[doc = r"Register block"]
 #[repr(C)]
 #[derive(Debug)]
-pub struct OUT_ENDPOINT {
-    doepctl: DOEPCTL,
+#[doc = "OUT Endpoint %s"]
+#[doc(alias = "OUT_ENDPOINT")]
+pub struct OutEndpoint {
+    doepctl: Doepctl,
     _reserved1: [u8; 0x04],
-    doepint: DOEPINT,
+    doepint: Doepint,
     _reserved2: [u8; 0x04],
-    doeptsiz: DOEPTSIZ,
-    doepdma: DOEPDMA,
+    doeptsiz: Doeptsiz,
+    doepdma: Doepdma,
 }
-impl OUT_ENDPOINT {
+impl OutEndpoint {
     #[doc = "0x00 - Control"]
     #[inline(always)]
-    pub const fn doepctl(&self) -> &DOEPCTL {
+    pub const fn doepctl(&self) -> &Doepctl {
         &self.doepctl
     }
     #[doc = "0x08 - Interrupt"]
     #[inline(always)]
-    pub const fn doepint(&self) -> &DOEPINT {
+    pub const fn doepint(&self) -> &Doepint {
         &self.doepint
     }
     #[doc = "0x10 - Transfer size"]
     #[inline(always)]
-    pub const fn doeptsiz(&self) -> &DOEPTSIZ {
+    pub const fn doeptsiz(&self) -> &Doeptsiz {
         &self.doeptsiz
     }
     #[doc = "0x14 - DMA address"]
     #[inline(always)]
-    pub const fn doepdma(&self) -> &DOEPDMA {
+    pub const fn doepdma(&self) -> &Doepdma {
         &self.doepdma
     }
 }
-#[doc = "DOEPCTL (rw) register accessor: Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl`]
+#[doc = "DOEPCTL (rw) register accessor: Control\n\nYou can [`read`](crate::Reg::read) this register and get [`doepctl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepctl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl`]
 module"]
-pub type DOEPCTL = crate::Reg<doepctl::DOEPCTL_SPEC>;
+#[doc(alias = "DOEPCTL")]
+pub type Doepctl = crate::Reg<doepctl::DoepctlSpec>;
 #[doc = "Control"]
 pub mod doepctl;
-#[doc = "DOEPINT (rw) register accessor: Interrupt\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint`]
+#[doc = "DOEPINT (rw) register accessor: Interrupt\n\nYou can [`read`](crate::Reg::read) this register and get [`doepint::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepint::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepint`]
 module"]
-pub type DOEPINT = crate::Reg<doepint::DOEPINT_SPEC>;
+#[doc(alias = "DOEPINT")]
+pub type Doepint = crate::Reg<doepint::DoepintSpec>;
 #[doc = "Interrupt"]
 pub mod doepint;
-#[doc = "DOEPTSIZ (rw) register accessor: Transfer size\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doeptsiz::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doeptsiz::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz`]
+#[doc = "DOEPTSIZ (rw) register accessor: Transfer size\n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz`]
 module"]
-pub type DOEPTSIZ = crate::Reg<doeptsiz::DOEPTSIZ_SPEC>;
+#[doc(alias = "DOEPTSIZ")]
+pub type Doeptsiz = crate::Reg<doeptsiz::DoeptsizSpec>;
 #[doc = "Transfer size"]
 pub mod doeptsiz;
-#[doc = "DOEPDMA (rw) register accessor: DMA address\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepdma::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepdma::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepdma`]
+#[doc = "DOEPDMA (rw) register accessor: DMA address\n\nYou can [`read`](crate::Reg::read) this register and get [`doepdma::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepdma::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepdma`]
 module"]
-pub type DOEPDMA = crate::Reg<doepdma::DOEPDMA_SPEC>;
+#[doc(alias = "DOEPDMA")]
+pub type Doepdma = crate::Reg<doepdma::DoepdmaSpec>;
 #[doc = "DMA address"]
 pub mod doepdma;

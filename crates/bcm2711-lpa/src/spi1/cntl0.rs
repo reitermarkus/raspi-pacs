@@ -1,41 +1,39 @@
 #[doc = "Register `CNTL0` reader"]
-pub type R = crate::R<CNTL0_SPEC>;
+pub type R = crate::R<Cntl0Spec>;
 #[doc = "Register `CNTL0` writer"]
-pub type W = crate::W<CNTL0_SPEC>;
+pub type W = crate::W<Cntl0Spec>;
 #[doc = "Field `SHIFT_LENGTH` reader - Number of bits to shift"]
-pub type SHIFT_LENGTH_R = crate::FieldReader;
+pub type ShiftLengthR = crate::FieldReader;
 #[doc = "Field `SHIFT_LENGTH` writer - Number of bits to shift"]
-pub type SHIFT_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+pub type ShiftLengthW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `MSB_FIRST` reader - Shift out the most significant bit (MSB) first"]
-pub type MSB_FIRST_R = crate::BitReader;
+pub type MsbFirstR = crate::BitReader;
 #[doc = "Field `MSB_FIRST` writer - Shift out the most significant bit (MSB) first"]
-pub type MSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type MsbFirstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INVERT_CLK` reader - Idle clock high"]
-pub type INVERT_CLK_R = crate::BitReader;
+pub type InvertClkR = crate::BitReader;
 #[doc = "Field `INVERT_CLK` writer - Idle clock high"]
-pub type INVERT_CLK_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type InvertClkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_RISING` reader - Data is clocked out on rising edge of CLK"]
-pub type OUT_RISING_R = crate::BitReader;
+pub type OutRisingR = crate::BitReader;
 #[doc = "Field `OUT_RISING` writer - Data is clocked out on rising edge of CLK"]
-pub type OUT_RISING_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OutRisingW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLEAR_FIFOS` reader - Clear FIFOs"]
-pub type CLEAR_FIFOS_R = crate::BitReader;
+pub type ClearFifosR = crate::BitReader;
 #[doc = "Field `CLEAR_FIFOS` writer - Clear FIFOs"]
-pub type CLEAR_FIFOS_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ClearFifosW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IN_RISING` reader - Data is clocked in on rising edge of CLK"]
-pub type IN_RISING_R = crate::BitReader;
+pub type InRisingR = crate::BitReader;
 #[doc = "Field `IN_RISING` writer - Data is clocked in on rising edge of CLK"]
-pub type IN_RISING_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type InRisingW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENABLE` reader - Enable the interface"]
-pub type ENABLE_R = crate::BitReader;
+pub type EnableR = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enable the interface"]
-pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DOUT_HOLD_TIME` reader - Controls extra DOUT hold time in system clock cycles"]
-pub type DOUT_HOLD_TIME_R = crate::FieldReader<DOUT_HOLD_TIME_A>;
+pub type EnableW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Controls extra DOUT hold time in system clock cycles\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum DOUT_HOLD_TIME_A {
+pub enum DoutHoldTime {
     #[doc = "0: `0`"]
     _0 = 0,
     #[doc = "1: `1`"]
@@ -45,51 +43,54 @@ pub enum DOUT_HOLD_TIME_A {
     #[doc = "3: `11`"]
     _7 = 3,
 }
-impl From<DOUT_HOLD_TIME_A> for u8 {
+impl From<DoutHoldTime> for u8 {
     #[inline(always)]
-    fn from(variant: DOUT_HOLD_TIME_A) -> Self {
+    fn from(variant: DoutHoldTime) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for DOUT_HOLD_TIME_A {
+impl crate::FieldSpec for DoutHoldTime {
     type Ux = u8;
 }
-impl DOUT_HOLD_TIME_R {
+impl crate::IsEnum for DoutHoldTime {}
+#[doc = "Field `DOUT_HOLD_TIME` reader - Controls extra DOUT hold time in system clock cycles"]
+pub type DoutHoldTimeR = crate::FieldReader<DoutHoldTime>;
+impl DoutHoldTimeR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> DOUT_HOLD_TIME_A {
+    pub const fn variant(&self) -> DoutHoldTime {
         match self.bits {
-            0 => DOUT_HOLD_TIME_A::_0,
-            1 => DOUT_HOLD_TIME_A::_1,
-            2 => DOUT_HOLD_TIME_A::_4,
-            3 => DOUT_HOLD_TIME_A::_7,
+            0 => DoutHoldTime::_0,
+            1 => DoutHoldTime::_1,
+            2 => DoutHoldTime::_4,
+            3 => DoutHoldTime::_7,
             _ => unreachable!(),
         }
     }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn is_0(&self) -> bool {
-        *self == DOUT_HOLD_TIME_A::_0
+        *self == DoutHoldTime::_0
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn is_1(&self) -> bool {
-        *self == DOUT_HOLD_TIME_A::_1
+        *self == DoutHoldTime::_1
     }
     #[doc = "`10`"]
     #[inline(always)]
     pub fn is_4(&self) -> bool {
-        *self == DOUT_HOLD_TIME_A::_4
+        *self == DoutHoldTime::_4
     }
     #[doc = "`11`"]
     #[inline(always)]
     pub fn is_7(&self) -> bool {
-        *self == DOUT_HOLD_TIME_A::_7
+        *self == DoutHoldTime::_7
     }
 }
 #[doc = "Field `DOUT_HOLD_TIME` writer - Controls extra DOUT hold time in system clock cycles"]
-pub type DOUT_HOLD_TIME_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, DOUT_HOLD_TIME_A>;
-impl<'a, REG> DOUT_HOLD_TIME_W<'a, REG>
+pub type DoutHoldTimeW<'a, REG> = crate::FieldWriter<'a, REG, 2, DoutHoldTime, crate::Safe>;
+impl<'a, REG> DoutHoldTimeW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -97,250 +98,224 @@ where
     #[doc = "`0`"]
     #[inline(always)]
     pub fn _0(self) -> &'a mut crate::W<REG> {
-        self.variant(DOUT_HOLD_TIME_A::_0)
+        self.variant(DoutHoldTime::_0)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn _1(self) -> &'a mut crate::W<REG> {
-        self.variant(DOUT_HOLD_TIME_A::_1)
+        self.variant(DoutHoldTime::_1)
     }
     #[doc = "`10`"]
     #[inline(always)]
     pub fn _4(self) -> &'a mut crate::W<REG> {
-        self.variant(DOUT_HOLD_TIME_A::_4)
+        self.variant(DoutHoldTime::_4)
     }
     #[doc = "`11`"]
     #[inline(always)]
     pub fn _7(self) -> &'a mut crate::W<REG> {
-        self.variant(DOUT_HOLD_TIME_A::_7)
+        self.variant(DoutHoldTime::_7)
     }
 }
 #[doc = "Field `VARIABLE_WIDTH` reader - Take shift length and data from FIFO"]
-pub type VARIABLE_WIDTH_R = crate::BitReader;
+pub type VariableWidthR = crate::BitReader;
 #[doc = "Field `VARIABLE_WIDTH` writer - Take shift length and data from FIFO"]
-pub type VARIABLE_WIDTH_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type VariableWidthW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VARIABLE_CS` reader - Take CS pattern and data from TX FIFO (along with VARIABLE_WIDTH)"]
-pub type VARIABLE_CS_R = crate::BitReader;
+pub type VariableCsR = crate::BitReader;
 #[doc = "Field `VARIABLE_CS` writer - Take CS pattern and data from TX FIFO (along with VARIABLE_WIDTH)"]
-pub type VARIABLE_CS_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type VariableCsW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POST_INPUT` reader - Post input mode"]
-pub type POST_INPUT_R = crate::BitReader;
+pub type PostInputR = crate::BitReader;
 #[doc = "Field `POST_INPUT` writer - Post input mode"]
-pub type POST_INPUT_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PostInputW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHIP_SELECTS` reader - The CS pattern when active"]
-pub type CHIP_SELECTS_R = crate::FieldReader;
+pub type ChipSelectsR = crate::FieldReader;
 #[doc = "Field `CHIP_SELECTS` writer - The CS pattern when active"]
-pub type CHIP_SELECTS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type ChipSelectsW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPEED` reader - SPI clock speed. clk = sys / 2 * (SPEED + 1)"]
-pub type SPEED_R = crate::FieldReader<u16>;
+pub type SpeedR = crate::FieldReader<u16>;
 #[doc = "Field `SPEED` writer - SPI clock speed. clk = sys / 2 * (SPEED + 1)"]
-pub type SPEED_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+pub type SpeedW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:5 - Number of bits to shift"]
     #[inline(always)]
-    pub fn shift_length(&self) -> SHIFT_LENGTH_R {
-        SHIFT_LENGTH_R::new((self.bits & 0x3f) as u8)
+    pub fn shift_length(&self) -> ShiftLengthR {
+        ShiftLengthR::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bit 6 - Shift out the most significant bit (MSB) first"]
     #[inline(always)]
-    pub fn msb_first(&self) -> MSB_FIRST_R {
-        MSB_FIRST_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn msb_first(&self) -> MsbFirstR {
+        MsbFirstR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Idle clock high"]
     #[inline(always)]
-    pub fn invert_clk(&self) -> INVERT_CLK_R {
-        INVERT_CLK_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn invert_clk(&self) -> InvertClkR {
+        InvertClkR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Data is clocked out on rising edge of CLK"]
     #[inline(always)]
-    pub fn out_rising(&self) -> OUT_RISING_R {
-        OUT_RISING_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn out_rising(&self) -> OutRisingR {
+        OutRisingR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Clear FIFOs"]
     #[inline(always)]
-    pub fn clear_fifos(&self) -> CLEAR_FIFOS_R {
-        CLEAR_FIFOS_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn clear_fifos(&self) -> ClearFifosR {
+        ClearFifosR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Data is clocked in on rising edge of CLK"]
     #[inline(always)]
-    pub fn in_rising(&self) -> IN_RISING_R {
-        IN_RISING_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn in_rising(&self) -> InRisingR {
+        InRisingR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Enable the interface"]
     #[inline(always)]
-    pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn enable(&self) -> EnableR {
+        EnableR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:13 - Controls extra DOUT hold time in system clock cycles"]
     #[inline(always)]
-    pub fn dout_hold_time(&self) -> DOUT_HOLD_TIME_R {
-        DOUT_HOLD_TIME_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn dout_hold_time(&self) -> DoutHoldTimeR {
+        DoutHoldTimeR::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14 - Take shift length and data from FIFO"]
     #[inline(always)]
-    pub fn variable_width(&self) -> VARIABLE_WIDTH_R {
-        VARIABLE_WIDTH_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn variable_width(&self) -> VariableWidthR {
+        VariableWidthR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Take CS pattern and data from TX FIFO (along with VARIABLE_WIDTH)"]
     #[inline(always)]
-    pub fn variable_cs(&self) -> VARIABLE_CS_R {
-        VARIABLE_CS_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn variable_cs(&self) -> VariableCsR {
+        VariableCsR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Post input mode"]
     #[inline(always)]
-    pub fn post_input(&self) -> POST_INPUT_R {
-        POST_INPUT_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn post_input(&self) -> PostInputR {
+        PostInputR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:19 - The CS pattern when active"]
     #[inline(always)]
-    pub fn chip_selects(&self) -> CHIP_SELECTS_R {
-        CHIP_SELECTS_R::new(((self.bits >> 17) & 7) as u8)
+    pub fn chip_selects(&self) -> ChipSelectsR {
+        ChipSelectsR::new(((self.bits >> 17) & 7) as u8)
     }
     #[doc = "Bits 20:31 - SPI clock speed. clk = sys / 2 * (SPEED + 1)"]
     #[inline(always)]
-    pub fn speed(&self) -> SPEED_R {
-        SPEED_R::new(((self.bits >> 20) & 0x0fff) as u16)
+    pub fn speed(&self) -> SpeedR {
+        SpeedR::new(((self.bits >> 20) & 0x0fff) as u16)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CNTL0")
-            .field("speed", &format_args!("{}", self.speed().bits()))
-            .field(
-                "chip_selects",
-                &format_args!("{}", self.chip_selects().bits()),
-            )
-            .field("post_input", &format_args!("{}", self.post_input().bit()))
-            .field("variable_cs", &format_args!("{}", self.variable_cs().bit()))
-            .field(
-                "variable_width",
-                &format_args!("{}", self.variable_width().bit()),
-            )
-            .field(
-                "dout_hold_time",
-                &format_args!("{}", self.dout_hold_time().bits()),
-            )
-            .field("enable", &format_args!("{}", self.enable().bit()))
-            .field("in_rising", &format_args!("{}", self.in_rising().bit()))
-            .field("clear_fifos", &format_args!("{}", self.clear_fifos().bit()))
-            .field("out_rising", &format_args!("{}", self.out_rising().bit()))
-            .field("invert_clk", &format_args!("{}", self.invert_clk().bit()))
-            .field("msb_first", &format_args!("{}", self.msb_first().bit()))
-            .field(
-                "shift_length",
-                &format_args!("{}", self.shift_length().bits()),
-            )
+            .field("speed", &self.speed())
+            .field("chip_selects", &self.chip_selects())
+            .field("post_input", &self.post_input())
+            .field("variable_cs", &self.variable_cs())
+            .field("variable_width", &self.variable_width())
+            .field("dout_hold_time", &self.dout_hold_time())
+            .field("enable", &self.enable())
+            .field("in_rising", &self.in_rising())
+            .field("clear_fifos", &self.clear_fifos())
+            .field("out_rising", &self.out_rising())
+            .field("invert_clk", &self.invert_clk())
+            .field("msb_first", &self.msb_first())
+            .field("shift_length", &self.shift_length())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CNTL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - Number of bits to shift"]
     #[inline(always)]
     #[must_use]
-    pub fn shift_length(&mut self) -> SHIFT_LENGTH_W<CNTL0_SPEC> {
-        SHIFT_LENGTH_W::new(self, 0)
+    pub fn shift_length(&mut self) -> ShiftLengthW<Cntl0Spec> {
+        ShiftLengthW::new(self, 0)
     }
     #[doc = "Bit 6 - Shift out the most significant bit (MSB) first"]
     #[inline(always)]
     #[must_use]
-    pub fn msb_first(&mut self) -> MSB_FIRST_W<CNTL0_SPEC> {
-        MSB_FIRST_W::new(self, 6)
+    pub fn msb_first(&mut self) -> MsbFirstW<Cntl0Spec> {
+        MsbFirstW::new(self, 6)
     }
     #[doc = "Bit 7 - Idle clock high"]
     #[inline(always)]
     #[must_use]
-    pub fn invert_clk(&mut self) -> INVERT_CLK_W<CNTL0_SPEC> {
-        INVERT_CLK_W::new(self, 7)
+    pub fn invert_clk(&mut self) -> InvertClkW<Cntl0Spec> {
+        InvertClkW::new(self, 7)
     }
     #[doc = "Bit 8 - Data is clocked out on rising edge of CLK"]
     #[inline(always)]
     #[must_use]
-    pub fn out_rising(&mut self) -> OUT_RISING_W<CNTL0_SPEC> {
-        OUT_RISING_W::new(self, 8)
+    pub fn out_rising(&mut self) -> OutRisingW<Cntl0Spec> {
+        OutRisingW::new(self, 8)
     }
     #[doc = "Bit 9 - Clear FIFOs"]
     #[inline(always)]
     #[must_use]
-    pub fn clear_fifos(&mut self) -> CLEAR_FIFOS_W<CNTL0_SPEC> {
-        CLEAR_FIFOS_W::new(self, 9)
+    pub fn clear_fifos(&mut self) -> ClearFifosW<Cntl0Spec> {
+        ClearFifosW::new(self, 9)
     }
     #[doc = "Bit 10 - Data is clocked in on rising edge of CLK"]
     #[inline(always)]
     #[must_use]
-    pub fn in_rising(&mut self) -> IN_RISING_W<CNTL0_SPEC> {
-        IN_RISING_W::new(self, 10)
+    pub fn in_rising(&mut self) -> InRisingW<Cntl0Spec> {
+        InRisingW::new(self, 10)
     }
     #[doc = "Bit 11 - Enable the interface"]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<CNTL0_SPEC> {
-        ENABLE_W::new(self, 11)
+    pub fn enable(&mut self) -> EnableW<Cntl0Spec> {
+        EnableW::new(self, 11)
     }
     #[doc = "Bits 12:13 - Controls extra DOUT hold time in system clock cycles"]
     #[inline(always)]
     #[must_use]
-    pub fn dout_hold_time(&mut self) -> DOUT_HOLD_TIME_W<CNTL0_SPEC> {
-        DOUT_HOLD_TIME_W::new(self, 12)
+    pub fn dout_hold_time(&mut self) -> DoutHoldTimeW<Cntl0Spec> {
+        DoutHoldTimeW::new(self, 12)
     }
     #[doc = "Bit 14 - Take shift length and data from FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn variable_width(&mut self) -> VARIABLE_WIDTH_W<CNTL0_SPEC> {
-        VARIABLE_WIDTH_W::new(self, 14)
+    pub fn variable_width(&mut self) -> VariableWidthW<Cntl0Spec> {
+        VariableWidthW::new(self, 14)
     }
     #[doc = "Bit 15 - Take CS pattern and data from TX FIFO (along with VARIABLE_WIDTH)"]
     #[inline(always)]
     #[must_use]
-    pub fn variable_cs(&mut self) -> VARIABLE_CS_W<CNTL0_SPEC> {
-        VARIABLE_CS_W::new(self, 15)
+    pub fn variable_cs(&mut self) -> VariableCsW<Cntl0Spec> {
+        VariableCsW::new(self, 15)
     }
     #[doc = "Bit 16 - Post input mode"]
     #[inline(always)]
     #[must_use]
-    pub fn post_input(&mut self) -> POST_INPUT_W<CNTL0_SPEC> {
-        POST_INPUT_W::new(self, 16)
+    pub fn post_input(&mut self) -> PostInputW<Cntl0Spec> {
+        PostInputW::new(self, 16)
     }
     #[doc = "Bits 17:19 - The CS pattern when active"]
     #[inline(always)]
     #[must_use]
-    pub fn chip_selects(&mut self) -> CHIP_SELECTS_W<CNTL0_SPEC> {
-        CHIP_SELECTS_W::new(self, 17)
+    pub fn chip_selects(&mut self) -> ChipSelectsW<Cntl0Spec> {
+        ChipSelectsW::new(self, 17)
     }
     #[doc = "Bits 20:31 - SPI clock speed. clk = sys / 2 * (SPEED + 1)"]
     #[inline(always)]
     #[must_use]
-    pub fn speed(&mut self) -> SPEED_W<CNTL0_SPEC> {
-        SPEED_W::new(self, 20)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn speed(&mut self) -> SpeedW<Cntl0Spec> {
+        SpeedW::new(self, 20)
     }
 }
-#[doc = "Control 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cntl0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cntl0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CNTL0_SPEC;
-impl crate::RegisterSpec for CNTL0_SPEC {
+#[doc = "Control 0\n\nYou can [`read`](crate::Reg::read) this register and get [`cntl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cntl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Cntl0Spec;
+impl crate::RegisterSpec for Cntl0Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`cntl0::R`](R) reader structure"]
-impl crate::Readable for CNTL0_SPEC {}
+impl crate::Readable for Cntl0Spec {}
 #[doc = "`write(|w| ..)` method takes [`cntl0::W`](W) writer structure"]
-impl crate::Writable for CNTL0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for Cntl0Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CNTL0 to value 0x000e_0000"]
-impl crate::Resettable for CNTL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x000e_0000;
+impl crate::Resettable for Cntl0Spec {
+    const RESET_VALUE: u32 = 0x000e_0000;
 }

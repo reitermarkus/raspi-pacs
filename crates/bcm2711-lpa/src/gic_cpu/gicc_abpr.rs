@@ -1,64 +1,47 @@
 #[doc = "Register `GICC_ABPR` reader"]
-pub type R = crate::R<GICC_ABPR_SPEC>;
+pub type R = crate::R<GiccAbprSpec>;
 #[doc = "Register `GICC_ABPR` writer"]
-pub type W = crate::W<GICC_ABPR_SPEC>;
+pub type W = crate::W<GiccAbprSpec>;
 #[doc = "Field `BINARY_POINT` reader - Split point between group priority and subpriority"]
-pub type BINARY_POINT_R = crate::FieldReader;
+pub type BinaryPointR = crate::FieldReader;
 #[doc = "Field `BINARY_POINT` writer - Split point between group priority and subpriority"]
-pub type BINARY_POINT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type BinaryPointW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Split point between group priority and subpriority"]
     #[inline(always)]
-    pub fn binary_point(&self) -> BINARY_POINT_R {
-        BINARY_POINT_R::new((self.bits & 7) as u8)
+    pub fn binary_point(&self) -> BinaryPointR {
+        BinaryPointR::new((self.bits & 7) as u8)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GICC_ABPR")
-            .field(
-                "binary_point",
-                &format_args!("{}", self.binary_point().bits()),
-            )
+            .field("binary_point", &self.binary_point())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GICC_ABPR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Split point between group priority and subpriority"]
     #[inline(always)]
     #[must_use]
-    pub fn binary_point(&mut self) -> BINARY_POINT_W<GICC_ABPR_SPEC> {
-        BINARY_POINT_W::new(self, 0)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn binary_point(&mut self) -> BinaryPointW<GiccAbprSpec> {
+        BinaryPointW::new(self, 0)
     }
 }
-#[doc = "Aliased Binary Point\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicc_abpr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicc_abpr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GICC_ABPR_SPEC;
-impl crate::RegisterSpec for GICC_ABPR_SPEC {
+#[doc = "Aliased Binary Point\n\nYou can [`read`](crate::Reg::read) this register and get [`gicc_abpr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gicc_abpr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GiccAbprSpec;
+impl crate::RegisterSpec for GiccAbprSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gicc_abpr::R`](R) reader structure"]
-impl crate::Readable for GICC_ABPR_SPEC {}
+impl crate::Readable for GiccAbprSpec {}
 #[doc = "`write(|w| ..)` method takes [`gicc_abpr::W`](W) writer structure"]
-impl crate::Writable for GICC_ABPR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for GiccAbprSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GICC_ABPR to value 0"]
-impl crate::Resettable for GICC_ABPR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for GiccAbprSpec {
+    const RESET_VALUE: u32 = 0;
 }

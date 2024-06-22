@@ -1,456 +1,439 @@
 #[doc = "Register `GINTMSK` reader"]
-pub type R = crate::R<GINTMSK_SPEC>;
+pub type R = crate::R<GintmskSpec>;
 #[doc = "Register `GINTMSK` writer"]
-pub type W = crate::W<GINTMSK_SPEC>;
+pub type W = crate::W<GintmskSpec>;
 #[doc = "Field `MMISM` reader - Mode mismatch interrupt mask"]
-pub type MMISM_R = crate::BitReader;
+pub type MmismR = crate::BitReader;
 #[doc = "Field `MMISM` writer - Mode mismatch interrupt mask"]
-pub type MMISM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type MmismW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTGINT` reader - OTG interrupt mask"]
-pub type OTGINT_R = crate::BitReader;
+pub type OtgintR = crate::BitReader;
 #[doc = "Field `OTGINT` writer - OTG interrupt mask"]
-pub type OTGINT_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OtgintW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOFM` reader - Start of frame mask"]
-pub type SOFM_R = crate::BitReader;
+pub type SofmR = crate::BitReader;
 #[doc = "Field `SOFM` writer - Start of frame mask"]
-pub type SOFM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SofmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFLVLM` reader - Receive FIFO nonempty mask"]
-pub type RXFLVLM_R = crate::BitReader;
+pub type RxflvlmR = crate::BitReader;
 #[doc = "Field `RXFLVLM` writer - Receive FIFO nonempty mask"]
-pub type RXFLVLM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type RxflvlmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NPTXFEM` reader - Nonperiodic TxFIFO empty mask"]
-pub type NPTXFEM_R = crate::BitReader;
+pub type NptxfemR = crate::BitReader;
 #[doc = "Field `NPTXFEM` writer - Nonperiodic TxFIFO empty mask"]
-pub type NPTXFEM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type NptxfemW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GINAKEFFM` reader - Global nonperiodic IN NAK effective mask"]
-pub type GINAKEFFM_R = crate::BitReader;
+pub type GinakeffmR = crate::BitReader;
 #[doc = "Field `GINAKEFFM` writer - Global nonperiodic IN NAK effective mask"]
-pub type GINAKEFFM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type GinakeffmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GONAKEFFM` reader - Global OUT NAK effective mask"]
-pub type GONAKEFFM_R = crate::BitReader;
+pub type GonakeffmR = crate::BitReader;
 #[doc = "Field `GONAKEFFM` writer - Global OUT NAK effective mask"]
-pub type GONAKEFFM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type GonakeffmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESUSPM` reader - Early suspend mask"]
-pub type ESUSPM_R = crate::BitReader;
+pub type EsuspmR = crate::BitReader;
 #[doc = "Field `ESUSPM` writer - Early suspend mask"]
-pub type ESUSPM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EsuspmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBSUSPM` reader - USB suspend mask"]
-pub type USBSUSPM_R = crate::BitReader;
+pub type UsbsuspmR = crate::BitReader;
 #[doc = "Field `USBSUSPM` writer - USB suspend mask"]
-pub type USBSUSPM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type UsbsuspmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBRST` reader - USB reset mask"]
-pub type USBRST_R = crate::BitReader;
+pub type UsbrstR = crate::BitReader;
 #[doc = "Field `USBRST` writer - USB reset mask"]
-pub type USBRST_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type UsbrstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENUMDNEM` reader - Enumeration done mask"]
-pub type ENUMDNEM_R = crate::BitReader;
+pub type EnumdnemR = crate::BitReader;
 #[doc = "Field `ENUMDNEM` writer - Enumeration done mask"]
-pub type ENUMDNEM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EnumdnemW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ISOODRPM` reader - Isochronous OUT packet dropped interrupt mask"]
-pub type ISOODRPM_R = crate::BitReader;
+pub type IsoodrpmR = crate::BitReader;
 #[doc = "Field `ISOODRPM` writer - Isochronous OUT packet dropped interrupt mask"]
-pub type ISOODRPM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type IsoodrpmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EOPFM` reader - End of periodic frame interrupt mask"]
-pub type EOPFM_R = crate::BitReader;
+pub type EopfmR = crate::BitReader;
 #[doc = "Field `EOPFM` writer - End of periodic frame interrupt mask"]
-pub type EOPFM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EopfmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPMISM` reader - Endpoint mismatch interrupt mask"]
-pub type EPMISM_R = crate::BitReader;
+pub type EpmismR = crate::BitReader;
 #[doc = "Field `EPMISM` writer - Endpoint mismatch interrupt mask"]
-pub type EPMISM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EpmismW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IEPINT` reader - IN endpoints interrupt mask"]
-pub type IEPINT_R = crate::BitReader;
+pub type IepintR = crate::BitReader;
 #[doc = "Field `IEPINT` writer - IN endpoints interrupt mask"]
-pub type IEPINT_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type IepintW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OEPINT` reader - OUT endpoints interrupt mask"]
-pub type OEPINT_R = crate::BitReader;
+pub type OepintR = crate::BitReader;
 #[doc = "Field `OEPINT` writer - OUT endpoints interrupt mask"]
-pub type OEPINT_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type OepintW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IISOIXFRM` reader - Incomplete isochronous IN transfer mask"]
-pub type IISOIXFRM_R = crate::BitReader;
+pub type IisoixfrmR = crate::BitReader;
 #[doc = "Field `IISOIXFRM` writer - Incomplete isochronous IN transfer mask"]
-pub type IISOIXFRM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type IisoixfrmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PXFRM_IISOOXFRM` reader - Incomplete periodic transfer mask"]
-pub type PXFRM_IISOOXFRM_R = crate::BitReader;
+pub type PxfrmIisooxfrmR = crate::BitReader;
 #[doc = "Field `PXFRM_IISOOXFRM` writer - Incomplete periodic transfer mask"]
-pub type PXFRM_IISOOXFRM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PxfrmIisooxfrmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FSUSPM` reader - Data fetch suspended mask"]
-pub type FSUSPM_R = crate::BitReader;
+pub type FsuspmR = crate::BitReader;
 #[doc = "Field `FSUSPM` writer - Data fetch suspended mask"]
-pub type FSUSPM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type FsuspmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRTIM` reader - Host port interrupt mask"]
-pub type PRTIM_R = crate::BitReader;
+pub type PrtimR = crate::BitReader;
 #[doc = "Field `HCIM` reader - Host channels interrupt mask"]
-pub type HCIM_R = crate::BitReader;
+pub type HcimR = crate::BitReader;
 #[doc = "Field `HCIM` writer - Host channels interrupt mask"]
-pub type HCIM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type HcimW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PTXFEM` reader - Periodic TxFIFO empty mask"]
-pub type PTXFEM_R = crate::BitReader;
+pub type PtxfemR = crate::BitReader;
 #[doc = "Field `PTXFEM` writer - Periodic TxFIFO empty mask"]
-pub type PTXFEM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PtxfemW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CIDSCHGM` reader - Connector ID status change mask"]
-pub type CIDSCHGM_R = crate::BitReader;
+pub type CidschgmR = crate::BitReader;
 #[doc = "Field `CIDSCHGM` writer - Connector ID status change mask"]
-pub type CIDSCHGM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type CidschgmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISCINT` reader - Disconnect detected interrupt mask"]
-pub type DISCINT_R = crate::BitReader;
+pub type DiscintR = crate::BitReader;
 #[doc = "Field `DISCINT` writer - Disconnect detected interrupt mask"]
-pub type DISCINT_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type DiscintW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRQIM` reader - Session request/new session detected interrupt mask"]
-pub type SRQIM_R = crate::BitReader;
+pub type SrqimR = crate::BitReader;
 #[doc = "Field `SRQIM` writer - Session request/new session detected interrupt mask"]
-pub type SRQIM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SrqimW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WUIM` reader - Resume/remote wakeup detected interrupt mask"]
-pub type WUIM_R = crate::BitReader;
+pub type WuimR = crate::BitReader;
 #[doc = "Field `WUIM` writer - Resume/remote wakeup detected interrupt mask"]
-pub type WUIM_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type WuimW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Mode mismatch interrupt mask"]
     #[inline(always)]
-    pub fn mmism(&self) -> MMISM_R {
-        MMISM_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn mmism(&self) -> MmismR {
+        MmismR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - OTG interrupt mask"]
     #[inline(always)]
-    pub fn otgint(&self) -> OTGINT_R {
-        OTGINT_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn otgint(&self) -> OtgintR {
+        OtgintR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Start of frame mask"]
     #[inline(always)]
-    pub fn sofm(&self) -> SOFM_R {
-        SOFM_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn sofm(&self) -> SofmR {
+        SofmR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Receive FIFO nonempty mask"]
     #[inline(always)]
-    pub fn rxflvlm(&self) -> RXFLVLM_R {
-        RXFLVLM_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn rxflvlm(&self) -> RxflvlmR {
+        RxflvlmR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Nonperiodic TxFIFO empty mask"]
     #[inline(always)]
-    pub fn nptxfem(&self) -> NPTXFEM_R {
-        NPTXFEM_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn nptxfem(&self) -> NptxfemR {
+        NptxfemR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Global nonperiodic IN NAK effective mask"]
     #[inline(always)]
-    pub fn ginakeffm(&self) -> GINAKEFFM_R {
-        GINAKEFFM_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn ginakeffm(&self) -> GinakeffmR {
+        GinakeffmR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Global OUT NAK effective mask"]
     #[inline(always)]
-    pub fn gonakeffm(&self) -> GONAKEFFM_R {
-        GONAKEFFM_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn gonakeffm(&self) -> GonakeffmR {
+        GonakeffmR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 10 - Early suspend mask"]
     #[inline(always)]
-    pub fn esuspm(&self) -> ESUSPM_R {
-        ESUSPM_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn esuspm(&self) -> EsuspmR {
+        EsuspmR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - USB suspend mask"]
     #[inline(always)]
-    pub fn usbsuspm(&self) -> USBSUSPM_R {
-        USBSUSPM_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn usbsuspm(&self) -> UsbsuspmR {
+        UsbsuspmR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - USB reset mask"]
     #[inline(always)]
-    pub fn usbrst(&self) -> USBRST_R {
-        USBRST_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn usbrst(&self) -> UsbrstR {
+        UsbrstR::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Enumeration done mask"]
     #[inline(always)]
-    pub fn enumdnem(&self) -> ENUMDNEM_R {
-        ENUMDNEM_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn enumdnem(&self) -> EnumdnemR {
+        EnumdnemR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Isochronous OUT packet dropped interrupt mask"]
     #[inline(always)]
-    pub fn isoodrpm(&self) -> ISOODRPM_R {
-        ISOODRPM_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn isoodrpm(&self) -> IsoodrpmR {
+        IsoodrpmR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - End of periodic frame interrupt mask"]
     #[inline(always)]
-    pub fn eopfm(&self) -> EOPFM_R {
-        EOPFM_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn eopfm(&self) -> EopfmR {
+        EopfmR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 17 - Endpoint mismatch interrupt mask"]
     #[inline(always)]
-    pub fn epmism(&self) -> EPMISM_R {
-        EPMISM_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn epmism(&self) -> EpmismR {
+        EpmismR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - IN endpoints interrupt mask"]
     #[inline(always)]
-    pub fn iepint(&self) -> IEPINT_R {
-        IEPINT_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn iepint(&self) -> IepintR {
+        IepintR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - OUT endpoints interrupt mask"]
     #[inline(always)]
-    pub fn oepint(&self) -> OEPINT_R {
-        OEPINT_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn oepint(&self) -> OepintR {
+        OepintR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Incomplete isochronous IN transfer mask"]
     #[inline(always)]
-    pub fn iisoixfrm(&self) -> IISOIXFRM_R {
-        IISOIXFRM_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn iisoixfrm(&self) -> IisoixfrmR {
+        IisoixfrmR::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Incomplete periodic transfer mask"]
     #[inline(always)]
-    pub fn pxfrm_iisooxfrm(&self) -> PXFRM_IISOOXFRM_R {
-        PXFRM_IISOOXFRM_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn pxfrm_iisooxfrm(&self) -> PxfrmIisooxfrmR {
+        PxfrmIisooxfrmR::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Data fetch suspended mask"]
     #[inline(always)]
-    pub fn fsuspm(&self) -> FSUSPM_R {
-        FSUSPM_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn fsuspm(&self) -> FsuspmR {
+        FsuspmR::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 24 - Host port interrupt mask"]
     #[inline(always)]
-    pub fn prtim(&self) -> PRTIM_R {
-        PRTIM_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn prtim(&self) -> PrtimR {
+        PrtimR::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Host channels interrupt mask"]
     #[inline(always)]
-    pub fn hcim(&self) -> HCIM_R {
-        HCIM_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn hcim(&self) -> HcimR {
+        HcimR::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Periodic TxFIFO empty mask"]
     #[inline(always)]
-    pub fn ptxfem(&self) -> PTXFEM_R {
-        PTXFEM_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn ptxfem(&self) -> PtxfemR {
+        PtxfemR::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 28 - Connector ID status change mask"]
     #[inline(always)]
-    pub fn cidschgm(&self) -> CIDSCHGM_R {
-        CIDSCHGM_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn cidschgm(&self) -> CidschgmR {
+        CidschgmR::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Disconnect detected interrupt mask"]
     #[inline(always)]
-    pub fn discint(&self) -> DISCINT_R {
-        DISCINT_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn discint(&self) -> DiscintR {
+        DiscintR::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Session request/new session detected interrupt mask"]
     #[inline(always)]
-    pub fn srqim(&self) -> SRQIM_R {
-        SRQIM_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn srqim(&self) -> SrqimR {
+        SrqimR::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Resume/remote wakeup detected interrupt mask"]
     #[inline(always)]
-    pub fn wuim(&self) -> WUIM_R {
-        WUIM_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn wuim(&self) -> WuimR {
+        WuimR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GINTMSK")
-            .field("mmism", &format_args!("{}", self.mmism().bit()))
-            .field("otgint", &format_args!("{}", self.otgint().bit()))
-            .field("sofm", &format_args!("{}", self.sofm().bit()))
-            .field("rxflvlm", &format_args!("{}", self.rxflvlm().bit()))
-            .field("nptxfem", &format_args!("{}", self.nptxfem().bit()))
-            .field("ginakeffm", &format_args!("{}", self.ginakeffm().bit()))
-            .field("gonakeffm", &format_args!("{}", self.gonakeffm().bit()))
-            .field("esuspm", &format_args!("{}", self.esuspm().bit()))
-            .field("usbsuspm", &format_args!("{}", self.usbsuspm().bit()))
-            .field("usbrst", &format_args!("{}", self.usbrst().bit()))
-            .field("enumdnem", &format_args!("{}", self.enumdnem().bit()))
-            .field("isoodrpm", &format_args!("{}", self.isoodrpm().bit()))
-            .field("eopfm", &format_args!("{}", self.eopfm().bit()))
-            .field("epmism", &format_args!("{}", self.epmism().bit()))
-            .field("iepint", &format_args!("{}", self.iepint().bit()))
-            .field("oepint", &format_args!("{}", self.oepint().bit()))
-            .field("iisoixfrm", &format_args!("{}", self.iisoixfrm().bit()))
-            .field(
-                "pxfrm_iisooxfrm",
-                &format_args!("{}", self.pxfrm_iisooxfrm().bit()),
-            )
-            .field("fsuspm", &format_args!("{}", self.fsuspm().bit()))
-            .field("prtim", &format_args!("{}", self.prtim().bit()))
-            .field("hcim", &format_args!("{}", self.hcim().bit()))
-            .field("ptxfem", &format_args!("{}", self.ptxfem().bit()))
-            .field("cidschgm", &format_args!("{}", self.cidschgm().bit()))
-            .field("discint", &format_args!("{}", self.discint().bit()))
-            .field("srqim", &format_args!("{}", self.srqim().bit()))
-            .field("wuim", &format_args!("{}", self.wuim().bit()))
+            .field("mmism", &self.mmism())
+            .field("otgint", &self.otgint())
+            .field("sofm", &self.sofm())
+            .field("rxflvlm", &self.rxflvlm())
+            .field("nptxfem", &self.nptxfem())
+            .field("ginakeffm", &self.ginakeffm())
+            .field("gonakeffm", &self.gonakeffm())
+            .field("esuspm", &self.esuspm())
+            .field("usbsuspm", &self.usbsuspm())
+            .field("usbrst", &self.usbrst())
+            .field("enumdnem", &self.enumdnem())
+            .field("isoodrpm", &self.isoodrpm())
+            .field("eopfm", &self.eopfm())
+            .field("epmism", &self.epmism())
+            .field("iepint", &self.iepint())
+            .field("oepint", &self.oepint())
+            .field("iisoixfrm", &self.iisoixfrm())
+            .field("pxfrm_iisooxfrm", &self.pxfrm_iisooxfrm())
+            .field("fsuspm", &self.fsuspm())
+            .field("prtim", &self.prtim())
+            .field("hcim", &self.hcim())
+            .field("ptxfem", &self.ptxfem())
+            .field("cidschgm", &self.cidschgm())
+            .field("discint", &self.discint())
+            .field("srqim", &self.srqim())
+            .field("wuim", &self.wuim())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GINTMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Mode mismatch interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn mmism(&mut self) -> MMISM_W<GINTMSK_SPEC> {
-        MMISM_W::new(self, 1)
+    pub fn mmism(&mut self) -> MmismW<GintmskSpec> {
+        MmismW::new(self, 1)
     }
     #[doc = "Bit 2 - OTG interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn otgint(&mut self) -> OTGINT_W<GINTMSK_SPEC> {
-        OTGINT_W::new(self, 2)
+    pub fn otgint(&mut self) -> OtgintW<GintmskSpec> {
+        OtgintW::new(self, 2)
     }
     #[doc = "Bit 3 - Start of frame mask"]
     #[inline(always)]
     #[must_use]
-    pub fn sofm(&mut self) -> SOFM_W<GINTMSK_SPEC> {
-        SOFM_W::new(self, 3)
+    pub fn sofm(&mut self) -> SofmW<GintmskSpec> {
+        SofmW::new(self, 3)
     }
     #[doc = "Bit 4 - Receive FIFO nonempty mask"]
     #[inline(always)]
     #[must_use]
-    pub fn rxflvlm(&mut self) -> RXFLVLM_W<GINTMSK_SPEC> {
-        RXFLVLM_W::new(self, 4)
+    pub fn rxflvlm(&mut self) -> RxflvlmW<GintmskSpec> {
+        RxflvlmW::new(self, 4)
     }
     #[doc = "Bit 5 - Nonperiodic TxFIFO empty mask"]
     #[inline(always)]
     #[must_use]
-    pub fn nptxfem(&mut self) -> NPTXFEM_W<GINTMSK_SPEC> {
-        NPTXFEM_W::new(self, 5)
+    pub fn nptxfem(&mut self) -> NptxfemW<GintmskSpec> {
+        NptxfemW::new(self, 5)
     }
     #[doc = "Bit 6 - Global nonperiodic IN NAK effective mask"]
     #[inline(always)]
     #[must_use]
-    pub fn ginakeffm(&mut self) -> GINAKEFFM_W<GINTMSK_SPEC> {
-        GINAKEFFM_W::new(self, 6)
+    pub fn ginakeffm(&mut self) -> GinakeffmW<GintmskSpec> {
+        GinakeffmW::new(self, 6)
     }
     #[doc = "Bit 7 - Global OUT NAK effective mask"]
     #[inline(always)]
     #[must_use]
-    pub fn gonakeffm(&mut self) -> GONAKEFFM_W<GINTMSK_SPEC> {
-        GONAKEFFM_W::new(self, 7)
+    pub fn gonakeffm(&mut self) -> GonakeffmW<GintmskSpec> {
+        GonakeffmW::new(self, 7)
     }
     #[doc = "Bit 10 - Early suspend mask"]
     #[inline(always)]
     #[must_use]
-    pub fn esuspm(&mut self) -> ESUSPM_W<GINTMSK_SPEC> {
-        ESUSPM_W::new(self, 10)
+    pub fn esuspm(&mut self) -> EsuspmW<GintmskSpec> {
+        EsuspmW::new(self, 10)
     }
     #[doc = "Bit 11 - USB suspend mask"]
     #[inline(always)]
     #[must_use]
-    pub fn usbsuspm(&mut self) -> USBSUSPM_W<GINTMSK_SPEC> {
-        USBSUSPM_W::new(self, 11)
+    pub fn usbsuspm(&mut self) -> UsbsuspmW<GintmskSpec> {
+        UsbsuspmW::new(self, 11)
     }
     #[doc = "Bit 12 - USB reset mask"]
     #[inline(always)]
     #[must_use]
-    pub fn usbrst(&mut self) -> USBRST_W<GINTMSK_SPEC> {
-        USBRST_W::new(self, 12)
+    pub fn usbrst(&mut self) -> UsbrstW<GintmskSpec> {
+        UsbrstW::new(self, 12)
     }
     #[doc = "Bit 13 - Enumeration done mask"]
     #[inline(always)]
     #[must_use]
-    pub fn enumdnem(&mut self) -> ENUMDNEM_W<GINTMSK_SPEC> {
-        ENUMDNEM_W::new(self, 13)
+    pub fn enumdnem(&mut self) -> EnumdnemW<GintmskSpec> {
+        EnumdnemW::new(self, 13)
     }
     #[doc = "Bit 14 - Isochronous OUT packet dropped interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn isoodrpm(&mut self) -> ISOODRPM_W<GINTMSK_SPEC> {
-        ISOODRPM_W::new(self, 14)
+    pub fn isoodrpm(&mut self) -> IsoodrpmW<GintmskSpec> {
+        IsoodrpmW::new(self, 14)
     }
     #[doc = "Bit 15 - End of periodic frame interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn eopfm(&mut self) -> EOPFM_W<GINTMSK_SPEC> {
-        EOPFM_W::new(self, 15)
+    pub fn eopfm(&mut self) -> EopfmW<GintmskSpec> {
+        EopfmW::new(self, 15)
     }
     #[doc = "Bit 17 - Endpoint mismatch interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn epmism(&mut self) -> EPMISM_W<GINTMSK_SPEC> {
-        EPMISM_W::new(self, 17)
+    pub fn epmism(&mut self) -> EpmismW<GintmskSpec> {
+        EpmismW::new(self, 17)
     }
     #[doc = "Bit 18 - IN endpoints interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn iepint(&mut self) -> IEPINT_W<GINTMSK_SPEC> {
-        IEPINT_W::new(self, 18)
+    pub fn iepint(&mut self) -> IepintW<GintmskSpec> {
+        IepintW::new(self, 18)
     }
     #[doc = "Bit 19 - OUT endpoints interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn oepint(&mut self) -> OEPINT_W<GINTMSK_SPEC> {
-        OEPINT_W::new(self, 19)
+    pub fn oepint(&mut self) -> OepintW<GintmskSpec> {
+        OepintW::new(self, 19)
     }
     #[doc = "Bit 20 - Incomplete isochronous IN transfer mask"]
     #[inline(always)]
     #[must_use]
-    pub fn iisoixfrm(&mut self) -> IISOIXFRM_W<GINTMSK_SPEC> {
-        IISOIXFRM_W::new(self, 20)
+    pub fn iisoixfrm(&mut self) -> IisoixfrmW<GintmskSpec> {
+        IisoixfrmW::new(self, 20)
     }
     #[doc = "Bit 21 - Incomplete periodic transfer mask"]
     #[inline(always)]
     #[must_use]
-    pub fn pxfrm_iisooxfrm(&mut self) -> PXFRM_IISOOXFRM_W<GINTMSK_SPEC> {
-        PXFRM_IISOOXFRM_W::new(self, 21)
+    pub fn pxfrm_iisooxfrm(&mut self) -> PxfrmIisooxfrmW<GintmskSpec> {
+        PxfrmIisooxfrmW::new(self, 21)
     }
     #[doc = "Bit 22 - Data fetch suspended mask"]
     #[inline(always)]
     #[must_use]
-    pub fn fsuspm(&mut self) -> FSUSPM_W<GINTMSK_SPEC> {
-        FSUSPM_W::new(self, 22)
+    pub fn fsuspm(&mut self) -> FsuspmW<GintmskSpec> {
+        FsuspmW::new(self, 22)
     }
     #[doc = "Bit 25 - Host channels interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn hcim(&mut self) -> HCIM_W<GINTMSK_SPEC> {
-        HCIM_W::new(self, 25)
+    pub fn hcim(&mut self) -> HcimW<GintmskSpec> {
+        HcimW::new(self, 25)
     }
     #[doc = "Bit 26 - Periodic TxFIFO empty mask"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfem(&mut self) -> PTXFEM_W<GINTMSK_SPEC> {
-        PTXFEM_W::new(self, 26)
+    pub fn ptxfem(&mut self) -> PtxfemW<GintmskSpec> {
+        PtxfemW::new(self, 26)
     }
     #[doc = "Bit 28 - Connector ID status change mask"]
     #[inline(always)]
     #[must_use]
-    pub fn cidschgm(&mut self) -> CIDSCHGM_W<GINTMSK_SPEC> {
-        CIDSCHGM_W::new(self, 28)
+    pub fn cidschgm(&mut self) -> CidschgmW<GintmskSpec> {
+        CidschgmW::new(self, 28)
     }
     #[doc = "Bit 29 - Disconnect detected interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn discint(&mut self) -> DISCINT_W<GINTMSK_SPEC> {
-        DISCINT_W::new(self, 29)
+    pub fn discint(&mut self) -> DiscintW<GintmskSpec> {
+        DiscintW::new(self, 29)
     }
     #[doc = "Bit 30 - Session request/new session detected interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn srqim(&mut self) -> SRQIM_W<GINTMSK_SPEC> {
-        SRQIM_W::new(self, 30)
+    pub fn srqim(&mut self) -> SrqimW<GintmskSpec> {
+        SrqimW::new(self, 30)
     }
     #[doc = "Bit 31 - Resume/remote wakeup detected interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn wuim(&mut self) -> WUIM_W<GINTMSK_SPEC> {
-        WUIM_W::new(self, 31)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn wuim(&mut self) -> WuimW<GintmskSpec> {
+        WuimW::new(self, 31)
     }
 }
-#[doc = "OTG_HS interrupt mask register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gintmsk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gintmsk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GINTMSK_SPEC;
-impl crate::RegisterSpec for GINTMSK_SPEC {
+#[doc = "OTG_HS interrupt mask register\n\nYou can [`read`](crate::Reg::read) this register and get [`gintmsk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gintmsk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GintmskSpec;
+impl crate::RegisterSpec for GintmskSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gintmsk::R`](R) reader structure"]
-impl crate::Readable for GINTMSK_SPEC {}
+impl crate::Readable for GintmskSpec {}
 #[doc = "`write(|w| ..)` method takes [`gintmsk::W`](W) writer structure"]
-impl crate::Writable for GINTMSK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for GintmskSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GINTMSK to value 0"]
-impl crate::Resettable for GINTMSK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for GintmskSpec {
+    const RESET_VALUE: u32 = 0;
 }

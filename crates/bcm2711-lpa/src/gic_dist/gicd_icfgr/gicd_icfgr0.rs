@@ -1,1085 +1,1071 @@
 #[doc = "Register `GICD_ICFGR0` reader"]
-pub type R = crate::R<GICD_ICFGR0_SPEC>;
+pub type R = crate::R<GicdIcfgr0Spec>;
 #[doc = "Register `GICD_ICFGR0` writer"]
-pub type W = crate::W<GICD_ICFGR0_SPEC>;
-#[doc = "Field `INT0` reader - Interrupt 0"]
-pub type INT0_R = crate::BitReader<INT0_A>;
+pub type W = crate::W<GicdIcfgr0Spec>;
 #[doc = "Interrupt 0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT0_A {
+pub enum Int0 {
     #[doc = "0: Level sensitive"]
-    LEVEL = 0,
+    Level = 0,
     #[doc = "1: Edge triggered"]
-    EDGE = 1,
+    Edge = 1,
 }
-impl From<INT0_A> for bool {
+impl From<Int0> for bool {
     #[inline(always)]
-    fn from(variant: INT0_A) -> Self {
+    fn from(variant: Int0) -> Self {
         variant as u8 != 0
     }
 }
-impl INT0_R {
+#[doc = "Field `INT0` reader - Interrupt 0"]
+pub type Int0R = crate::BitReader<Int0>;
+impl Int0R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT0_A {
+    pub const fn variant(&self) -> Int0 {
         match self.bits {
-            false => INT0_A::LEVEL,
-            true => INT0_A::EDGE,
+            false => Int0::Level,
+            true => Int0::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT0_A::LEVEL
+        *self == Int0::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT0_A::EDGE
+        *self == Int0::Edge
     }
 }
 #[doc = "Field `INT0` writer - Interrupt 0"]
-pub type INT0_W<'a, REG> = crate::BitWriter<'a, REG, INT0_A>;
-impl<'a, REG> INT0_W<'a, REG>
+pub type Int0W<'a, REG> = crate::BitWriter<'a, REG, Int0>;
+impl<'a, REG> Int0W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT0_A::LEVEL)
+        self.variant(Int0::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT0_A::EDGE)
+        self.variant(Int0::Edge)
+    }
+}
+#[doc = "Interrupt 1\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int1 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int1> for bool {
+    #[inline(always)]
+    fn from(variant: Int1) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT1` reader - Interrupt 1"]
-pub type INT1_R = crate::BitReader<INT1_A>;
-#[doc = "Interrupt 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT1_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT1_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT1_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT1_R {
+pub type Int1R = crate::BitReader<Int1>;
+impl Int1R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT1_A {
+    pub const fn variant(&self) -> Int1 {
         match self.bits {
-            false => INT1_A::LEVEL,
-            true => INT1_A::EDGE,
+            false => Int1::Level,
+            true => Int1::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT1_A::LEVEL
+        *self == Int1::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT1_A::EDGE
+        *self == Int1::Edge
     }
 }
 #[doc = "Field `INT1` writer - Interrupt 1"]
-pub type INT1_W<'a, REG> = crate::BitWriter<'a, REG, INT1_A>;
-impl<'a, REG> INT1_W<'a, REG>
+pub type Int1W<'a, REG> = crate::BitWriter<'a, REG, Int1>;
+impl<'a, REG> Int1W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT1_A::LEVEL)
+        self.variant(Int1::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT1_A::EDGE)
+        self.variant(Int1::Edge)
+    }
+}
+#[doc = "Interrupt 2\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int2 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int2> for bool {
+    #[inline(always)]
+    fn from(variant: Int2) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT2` reader - Interrupt 2"]
-pub type INT2_R = crate::BitReader<INT2_A>;
-#[doc = "Interrupt 2\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT2_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT2_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT2_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT2_R {
+pub type Int2R = crate::BitReader<Int2>;
+impl Int2R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT2_A {
+    pub const fn variant(&self) -> Int2 {
         match self.bits {
-            false => INT2_A::LEVEL,
-            true => INT2_A::EDGE,
+            false => Int2::Level,
+            true => Int2::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT2_A::LEVEL
+        *self == Int2::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT2_A::EDGE
+        *self == Int2::Edge
     }
 }
 #[doc = "Field `INT2` writer - Interrupt 2"]
-pub type INT2_W<'a, REG> = crate::BitWriter<'a, REG, INT2_A>;
-impl<'a, REG> INT2_W<'a, REG>
+pub type Int2W<'a, REG> = crate::BitWriter<'a, REG, Int2>;
+impl<'a, REG> Int2W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT2_A::LEVEL)
+        self.variant(Int2::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT2_A::EDGE)
+        self.variant(Int2::Edge)
+    }
+}
+#[doc = "Interrupt 3\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int3 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int3> for bool {
+    #[inline(always)]
+    fn from(variant: Int3) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT3` reader - Interrupt 3"]
-pub type INT3_R = crate::BitReader<INT3_A>;
-#[doc = "Interrupt 3\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT3_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT3_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT3_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT3_R {
+pub type Int3R = crate::BitReader<Int3>;
+impl Int3R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT3_A {
+    pub const fn variant(&self) -> Int3 {
         match self.bits {
-            false => INT3_A::LEVEL,
-            true => INT3_A::EDGE,
+            false => Int3::Level,
+            true => Int3::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT3_A::LEVEL
+        *self == Int3::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT3_A::EDGE
+        *self == Int3::Edge
     }
 }
 #[doc = "Field `INT3` writer - Interrupt 3"]
-pub type INT3_W<'a, REG> = crate::BitWriter<'a, REG, INT3_A>;
-impl<'a, REG> INT3_W<'a, REG>
+pub type Int3W<'a, REG> = crate::BitWriter<'a, REG, Int3>;
+impl<'a, REG> Int3W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT3_A::LEVEL)
+        self.variant(Int3::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT3_A::EDGE)
+        self.variant(Int3::Edge)
+    }
+}
+#[doc = "Interrupt 4\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int4 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int4> for bool {
+    #[inline(always)]
+    fn from(variant: Int4) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT4` reader - Interrupt 4"]
-pub type INT4_R = crate::BitReader<INT4_A>;
-#[doc = "Interrupt 4\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT4_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT4_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT4_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT4_R {
+pub type Int4R = crate::BitReader<Int4>;
+impl Int4R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT4_A {
+    pub const fn variant(&self) -> Int4 {
         match self.bits {
-            false => INT4_A::LEVEL,
-            true => INT4_A::EDGE,
+            false => Int4::Level,
+            true => Int4::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT4_A::LEVEL
+        *self == Int4::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT4_A::EDGE
+        *self == Int4::Edge
     }
 }
 #[doc = "Field `INT4` writer - Interrupt 4"]
-pub type INT4_W<'a, REG> = crate::BitWriter<'a, REG, INT4_A>;
-impl<'a, REG> INT4_W<'a, REG>
+pub type Int4W<'a, REG> = crate::BitWriter<'a, REG, Int4>;
+impl<'a, REG> Int4W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT4_A::LEVEL)
+        self.variant(Int4::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT4_A::EDGE)
+        self.variant(Int4::Edge)
+    }
+}
+#[doc = "Interrupt 5\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int5 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int5> for bool {
+    #[inline(always)]
+    fn from(variant: Int5) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT5` reader - Interrupt 5"]
-pub type INT5_R = crate::BitReader<INT5_A>;
-#[doc = "Interrupt 5\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT5_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT5_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT5_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT5_R {
+pub type Int5R = crate::BitReader<Int5>;
+impl Int5R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT5_A {
+    pub const fn variant(&self) -> Int5 {
         match self.bits {
-            false => INT5_A::LEVEL,
-            true => INT5_A::EDGE,
+            false => Int5::Level,
+            true => Int5::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT5_A::LEVEL
+        *self == Int5::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT5_A::EDGE
+        *self == Int5::Edge
     }
 }
 #[doc = "Field `INT5` writer - Interrupt 5"]
-pub type INT5_W<'a, REG> = crate::BitWriter<'a, REG, INT5_A>;
-impl<'a, REG> INT5_W<'a, REG>
+pub type Int5W<'a, REG> = crate::BitWriter<'a, REG, Int5>;
+impl<'a, REG> Int5W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT5_A::LEVEL)
+        self.variant(Int5::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT5_A::EDGE)
+        self.variant(Int5::Edge)
+    }
+}
+#[doc = "Interrupt 6\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int6 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int6> for bool {
+    #[inline(always)]
+    fn from(variant: Int6) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT6` reader - Interrupt 6"]
-pub type INT6_R = crate::BitReader<INT6_A>;
-#[doc = "Interrupt 6\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT6_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT6_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT6_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT6_R {
+pub type Int6R = crate::BitReader<Int6>;
+impl Int6R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT6_A {
+    pub const fn variant(&self) -> Int6 {
         match self.bits {
-            false => INT6_A::LEVEL,
-            true => INT6_A::EDGE,
+            false => Int6::Level,
+            true => Int6::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT6_A::LEVEL
+        *self == Int6::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT6_A::EDGE
+        *self == Int6::Edge
     }
 }
 #[doc = "Field `INT6` writer - Interrupt 6"]
-pub type INT6_W<'a, REG> = crate::BitWriter<'a, REG, INT6_A>;
-impl<'a, REG> INT6_W<'a, REG>
+pub type Int6W<'a, REG> = crate::BitWriter<'a, REG, Int6>;
+impl<'a, REG> Int6W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT6_A::LEVEL)
+        self.variant(Int6::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT6_A::EDGE)
+        self.variant(Int6::Edge)
+    }
+}
+#[doc = "Interrupt 7\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int7 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int7> for bool {
+    #[inline(always)]
+    fn from(variant: Int7) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT7` reader - Interrupt 7"]
-pub type INT7_R = crate::BitReader<INT7_A>;
-#[doc = "Interrupt 7\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT7_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT7_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT7_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT7_R {
+pub type Int7R = crate::BitReader<Int7>;
+impl Int7R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT7_A {
+    pub const fn variant(&self) -> Int7 {
         match self.bits {
-            false => INT7_A::LEVEL,
-            true => INT7_A::EDGE,
+            false => Int7::Level,
+            true => Int7::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT7_A::LEVEL
+        *self == Int7::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT7_A::EDGE
+        *self == Int7::Edge
     }
 }
 #[doc = "Field `INT7` writer - Interrupt 7"]
-pub type INT7_W<'a, REG> = crate::BitWriter<'a, REG, INT7_A>;
-impl<'a, REG> INT7_W<'a, REG>
+pub type Int7W<'a, REG> = crate::BitWriter<'a, REG, Int7>;
+impl<'a, REG> Int7W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT7_A::LEVEL)
+        self.variant(Int7::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT7_A::EDGE)
+        self.variant(Int7::Edge)
+    }
+}
+#[doc = "Interrupt 8\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int8 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int8> for bool {
+    #[inline(always)]
+    fn from(variant: Int8) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT8` reader - Interrupt 8"]
-pub type INT8_R = crate::BitReader<INT8_A>;
-#[doc = "Interrupt 8\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT8_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT8_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT8_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT8_R {
+pub type Int8R = crate::BitReader<Int8>;
+impl Int8R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT8_A {
+    pub const fn variant(&self) -> Int8 {
         match self.bits {
-            false => INT8_A::LEVEL,
-            true => INT8_A::EDGE,
+            false => Int8::Level,
+            true => Int8::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT8_A::LEVEL
+        *self == Int8::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT8_A::EDGE
+        *self == Int8::Edge
     }
 }
 #[doc = "Field `INT8` writer - Interrupt 8"]
-pub type INT8_W<'a, REG> = crate::BitWriter<'a, REG, INT8_A>;
-impl<'a, REG> INT8_W<'a, REG>
+pub type Int8W<'a, REG> = crate::BitWriter<'a, REG, Int8>;
+impl<'a, REG> Int8W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT8_A::LEVEL)
+        self.variant(Int8::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT8_A::EDGE)
+        self.variant(Int8::Edge)
+    }
+}
+#[doc = "Interrupt 9\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int9 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int9> for bool {
+    #[inline(always)]
+    fn from(variant: Int9) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT9` reader - Interrupt 9"]
-pub type INT9_R = crate::BitReader<INT9_A>;
-#[doc = "Interrupt 9\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT9_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT9_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT9_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT9_R {
+pub type Int9R = crate::BitReader<Int9>;
+impl Int9R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT9_A {
+    pub const fn variant(&self) -> Int9 {
         match self.bits {
-            false => INT9_A::LEVEL,
-            true => INT9_A::EDGE,
+            false => Int9::Level,
+            true => Int9::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT9_A::LEVEL
+        *self == Int9::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT9_A::EDGE
+        *self == Int9::Edge
     }
 }
 #[doc = "Field `INT9` writer - Interrupt 9"]
-pub type INT9_W<'a, REG> = crate::BitWriter<'a, REG, INT9_A>;
-impl<'a, REG> INT9_W<'a, REG>
+pub type Int9W<'a, REG> = crate::BitWriter<'a, REG, Int9>;
+impl<'a, REG> Int9W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT9_A::LEVEL)
+        self.variant(Int9::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT9_A::EDGE)
+        self.variant(Int9::Edge)
+    }
+}
+#[doc = "Interrupt 10\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int10 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int10> for bool {
+    #[inline(always)]
+    fn from(variant: Int10) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT10` reader - Interrupt 10"]
-pub type INT10_R = crate::BitReader<INT10_A>;
-#[doc = "Interrupt 10\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT10_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT10_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT10_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT10_R {
+pub type Int10R = crate::BitReader<Int10>;
+impl Int10R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT10_A {
+    pub const fn variant(&self) -> Int10 {
         match self.bits {
-            false => INT10_A::LEVEL,
-            true => INT10_A::EDGE,
+            false => Int10::Level,
+            true => Int10::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT10_A::LEVEL
+        *self == Int10::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT10_A::EDGE
+        *self == Int10::Edge
     }
 }
 #[doc = "Field `INT10` writer - Interrupt 10"]
-pub type INT10_W<'a, REG> = crate::BitWriter<'a, REG, INT10_A>;
-impl<'a, REG> INT10_W<'a, REG>
+pub type Int10W<'a, REG> = crate::BitWriter<'a, REG, Int10>;
+impl<'a, REG> Int10W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT10_A::LEVEL)
+        self.variant(Int10::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT10_A::EDGE)
+        self.variant(Int10::Edge)
+    }
+}
+#[doc = "Interrupt 11\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int11 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int11> for bool {
+    #[inline(always)]
+    fn from(variant: Int11) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT11` reader - Interrupt 11"]
-pub type INT11_R = crate::BitReader<INT11_A>;
-#[doc = "Interrupt 11\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT11_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT11_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT11_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT11_R {
+pub type Int11R = crate::BitReader<Int11>;
+impl Int11R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT11_A {
+    pub const fn variant(&self) -> Int11 {
         match self.bits {
-            false => INT11_A::LEVEL,
-            true => INT11_A::EDGE,
+            false => Int11::Level,
+            true => Int11::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT11_A::LEVEL
+        *self == Int11::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT11_A::EDGE
+        *self == Int11::Edge
     }
 }
 #[doc = "Field `INT11` writer - Interrupt 11"]
-pub type INT11_W<'a, REG> = crate::BitWriter<'a, REG, INT11_A>;
-impl<'a, REG> INT11_W<'a, REG>
+pub type Int11W<'a, REG> = crate::BitWriter<'a, REG, Int11>;
+impl<'a, REG> Int11W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT11_A::LEVEL)
+        self.variant(Int11::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT11_A::EDGE)
+        self.variant(Int11::Edge)
+    }
+}
+#[doc = "Interrupt 12\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int12 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int12> for bool {
+    #[inline(always)]
+    fn from(variant: Int12) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT12` reader - Interrupt 12"]
-pub type INT12_R = crate::BitReader<INT12_A>;
-#[doc = "Interrupt 12\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT12_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT12_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT12_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT12_R {
+pub type Int12R = crate::BitReader<Int12>;
+impl Int12R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT12_A {
+    pub const fn variant(&self) -> Int12 {
         match self.bits {
-            false => INT12_A::LEVEL,
-            true => INT12_A::EDGE,
+            false => Int12::Level,
+            true => Int12::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT12_A::LEVEL
+        *self == Int12::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT12_A::EDGE
+        *self == Int12::Edge
     }
 }
 #[doc = "Field `INT12` writer - Interrupt 12"]
-pub type INT12_W<'a, REG> = crate::BitWriter<'a, REG, INT12_A>;
-impl<'a, REG> INT12_W<'a, REG>
+pub type Int12W<'a, REG> = crate::BitWriter<'a, REG, Int12>;
+impl<'a, REG> Int12W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT12_A::LEVEL)
+        self.variant(Int12::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT12_A::EDGE)
+        self.variant(Int12::Edge)
+    }
+}
+#[doc = "Interrupt 13\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int13 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int13> for bool {
+    #[inline(always)]
+    fn from(variant: Int13) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT13` reader - Interrupt 13"]
-pub type INT13_R = crate::BitReader<INT13_A>;
-#[doc = "Interrupt 13\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT13_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT13_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT13_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT13_R {
+pub type Int13R = crate::BitReader<Int13>;
+impl Int13R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT13_A {
+    pub const fn variant(&self) -> Int13 {
         match self.bits {
-            false => INT13_A::LEVEL,
-            true => INT13_A::EDGE,
+            false => Int13::Level,
+            true => Int13::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT13_A::LEVEL
+        *self == Int13::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT13_A::EDGE
+        *self == Int13::Edge
     }
 }
 #[doc = "Field `INT13` writer - Interrupt 13"]
-pub type INT13_W<'a, REG> = crate::BitWriter<'a, REG, INT13_A>;
-impl<'a, REG> INT13_W<'a, REG>
+pub type Int13W<'a, REG> = crate::BitWriter<'a, REG, Int13>;
+impl<'a, REG> Int13W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT13_A::LEVEL)
+        self.variant(Int13::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT13_A::EDGE)
+        self.variant(Int13::Edge)
+    }
+}
+#[doc = "Interrupt 14\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Int14 {
+    #[doc = "0: Level sensitive"]
+    Level = 0,
+    #[doc = "1: Edge triggered"]
+    Edge = 1,
+}
+impl From<Int14> for bool {
+    #[inline(always)]
+    fn from(variant: Int14) -> Self {
+        variant as u8 != 0
     }
 }
 #[doc = "Field `INT14` reader - Interrupt 14"]
-pub type INT14_R = crate::BitReader<INT14_A>;
-#[doc = "Interrupt 14\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT14_A {
-    #[doc = "0: Level sensitive"]
-    LEVEL = 0,
-    #[doc = "1: Edge triggered"]
-    EDGE = 1,
-}
-impl From<INT14_A> for bool {
-    #[inline(always)]
-    fn from(variant: INT14_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl INT14_R {
+pub type Int14R = crate::BitReader<Int14>;
+impl Int14R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT14_A {
+    pub const fn variant(&self) -> Int14 {
         match self.bits {
-            false => INT14_A::LEVEL,
-            true => INT14_A::EDGE,
+            false => Int14::Level,
+            true => Int14::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT14_A::LEVEL
+        *self == Int14::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT14_A::EDGE
+        *self == Int14::Edge
     }
 }
 #[doc = "Field `INT14` writer - Interrupt 14"]
-pub type INT14_W<'a, REG> = crate::BitWriter<'a, REG, INT14_A>;
-impl<'a, REG> INT14_W<'a, REG>
+pub type Int14W<'a, REG> = crate::BitWriter<'a, REG, Int14>;
+impl<'a, REG> Int14W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT14_A::LEVEL)
+        self.variant(Int14::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT14_A::EDGE)
+        self.variant(Int14::Edge)
     }
 }
-#[doc = "Field `INT15` reader - Interrupt 15"]
-pub type INT15_R = crate::BitReader<INT15_A>;
 #[doc = "Interrupt 15\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum INT15_A {
+pub enum Int15 {
     #[doc = "0: Level sensitive"]
-    LEVEL = 0,
+    Level = 0,
     #[doc = "1: Edge triggered"]
-    EDGE = 1,
+    Edge = 1,
 }
-impl From<INT15_A> for bool {
+impl From<Int15> for bool {
     #[inline(always)]
-    fn from(variant: INT15_A) -> Self {
+    fn from(variant: Int15) -> Self {
         variant as u8 != 0
     }
 }
-impl INT15_R {
+#[doc = "Field `INT15` reader - Interrupt 15"]
+pub type Int15R = crate::BitReader<Int15>;
+impl Int15R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> INT15_A {
+    pub const fn variant(&self) -> Int15 {
         match self.bits {
-            false => INT15_A::LEVEL,
-            true => INT15_A::EDGE,
+            false => Int15::Level,
+            true => Int15::Edge,
         }
     }
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        *self == INT15_A::LEVEL
+        *self == Int15::Level
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
-        *self == INT15_A::EDGE
+        *self == Int15::Edge
     }
 }
 #[doc = "Field `INT15` writer - Interrupt 15"]
-pub type INT15_W<'a, REG> = crate::BitWriter<'a, REG, INT15_A>;
-impl<'a, REG> INT15_W<'a, REG>
+pub type Int15W<'a, REG> = crate::BitWriter<'a, REG, Int15>;
+impl<'a, REG> Int15W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn level(self) -> &'a mut crate::W<REG> {
-        self.variant(INT15_A::LEVEL)
+        self.variant(Int15::Level)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn edge(self) -> &'a mut crate::W<REG> {
-        self.variant(INT15_A::EDGE)
+        self.variant(Int15::Edge)
     }
 }
 impl R {
     #[doc = "Bit 1 - Interrupt 0"]
     #[inline(always)]
-    pub fn int0(&self) -> INT0_R {
-        INT0_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn int0(&self) -> Int0R {
+        Int0R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - Interrupt 1"]
     #[inline(always)]
-    pub fn int1(&self) -> INT1_R {
-        INT1_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn int1(&self) -> Int1R {
+        Int1R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - Interrupt 2"]
     #[inline(always)]
-    pub fn int2(&self) -> INT2_R {
-        INT2_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn int2(&self) -> Int2R {
+        Int2R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - Interrupt 3"]
     #[inline(always)]
-    pub fn int3(&self) -> INT3_R {
-        INT3_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn int3(&self) -> Int3R {
+        Int3R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 9 - Interrupt 4"]
     #[inline(always)]
-    pub fn int4(&self) -> INT4_R {
-        INT4_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn int4(&self) -> Int4R {
+        Int4R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 11 - Interrupt 5"]
     #[inline(always)]
-    pub fn int5(&self) -> INT5_R {
-        INT5_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn int5(&self) -> Int5R {
+        Int5R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 13 - Interrupt 6"]
     #[inline(always)]
-    pub fn int6(&self) -> INT6_R {
-        INT6_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn int6(&self) -> Int6R {
+        Int6R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 15 - Interrupt 7"]
     #[inline(always)]
-    pub fn int7(&self) -> INT7_R {
-        INT7_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn int7(&self) -> Int7R {
+        Int7R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 17 - Interrupt 8"]
     #[inline(always)]
-    pub fn int8(&self) -> INT8_R {
-        INT8_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn int8(&self) -> Int8R {
+        Int8R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 19 - Interrupt 9"]
     #[inline(always)]
-    pub fn int9(&self) -> INT9_R {
-        INT9_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn int9(&self) -> Int9R {
+        Int9R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 21 - Interrupt 10"]
     #[inline(always)]
-    pub fn int10(&self) -> INT10_R {
-        INT10_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn int10(&self) -> Int10R {
+        Int10R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 23 - Interrupt 11"]
     #[inline(always)]
-    pub fn int11(&self) -> INT11_R {
-        INT11_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn int11(&self) -> Int11R {
+        Int11R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 25 - Interrupt 12"]
     #[inline(always)]
-    pub fn int12(&self) -> INT12_R {
-        INT12_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn int12(&self) -> Int12R {
+        Int12R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 27 - Interrupt 13"]
     #[inline(always)]
-    pub fn int13(&self) -> INT13_R {
-        INT13_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn int13(&self) -> Int13R {
+        Int13R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 29 - Interrupt 14"]
     #[inline(always)]
-    pub fn int14(&self) -> INT14_R {
-        INT14_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn int14(&self) -> Int14R {
+        Int14R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 31 - Interrupt 15"]
     #[inline(always)]
-    pub fn int15(&self) -> INT15_R {
-        INT15_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn int15(&self) -> Int15R {
+        Int15R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GICD_ICFGR0")
-            .field("int0", &format_args!("{}", self.int0().bit()))
-            .field("int1", &format_args!("{}", self.int1().bit()))
-            .field("int2", &format_args!("{}", self.int2().bit()))
-            .field("int3", &format_args!("{}", self.int3().bit()))
-            .field("int4", &format_args!("{}", self.int4().bit()))
-            .field("int5", &format_args!("{}", self.int5().bit()))
-            .field("int6", &format_args!("{}", self.int6().bit()))
-            .field("int7", &format_args!("{}", self.int7().bit()))
-            .field("int8", &format_args!("{}", self.int8().bit()))
-            .field("int9", &format_args!("{}", self.int9().bit()))
-            .field("int10", &format_args!("{}", self.int10().bit()))
-            .field("int11", &format_args!("{}", self.int11().bit()))
-            .field("int12", &format_args!("{}", self.int12().bit()))
-            .field("int13", &format_args!("{}", self.int13().bit()))
-            .field("int14", &format_args!("{}", self.int14().bit()))
-            .field("int15", &format_args!("{}", self.int15().bit()))
+            .field("int0", &self.int0())
+            .field("int1", &self.int1())
+            .field("int2", &self.int2())
+            .field("int3", &self.int3())
+            .field("int4", &self.int4())
+            .field("int5", &self.int5())
+            .field("int6", &self.int6())
+            .field("int7", &self.int7())
+            .field("int8", &self.int8())
+            .field("int9", &self.int9())
+            .field("int10", &self.int10())
+            .field("int11", &self.int11())
+            .field("int12", &self.int12())
+            .field("int13", &self.int13())
+            .field("int14", &self.int14())
+            .field("int15", &self.int15())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Interrupt 0"]
     #[inline(always)]
     #[must_use]
-    pub fn int0(&mut self) -> INT0_W<GICD_ICFGR0_SPEC> {
-        INT0_W::new(self, 1)
+    pub fn int0(&mut self) -> Int0W<GicdIcfgr0Spec> {
+        Int0W::new(self, 1)
     }
     #[doc = "Bit 3 - Interrupt 1"]
     #[inline(always)]
     #[must_use]
-    pub fn int1(&mut self) -> INT1_W<GICD_ICFGR0_SPEC> {
-        INT1_W::new(self, 3)
+    pub fn int1(&mut self) -> Int1W<GicdIcfgr0Spec> {
+        Int1W::new(self, 3)
     }
     #[doc = "Bit 5 - Interrupt 2"]
     #[inline(always)]
     #[must_use]
-    pub fn int2(&mut self) -> INT2_W<GICD_ICFGR0_SPEC> {
-        INT2_W::new(self, 5)
+    pub fn int2(&mut self) -> Int2W<GicdIcfgr0Spec> {
+        Int2W::new(self, 5)
     }
     #[doc = "Bit 7 - Interrupt 3"]
     #[inline(always)]
     #[must_use]
-    pub fn int3(&mut self) -> INT3_W<GICD_ICFGR0_SPEC> {
-        INT3_W::new(self, 7)
+    pub fn int3(&mut self) -> Int3W<GicdIcfgr0Spec> {
+        Int3W::new(self, 7)
     }
     #[doc = "Bit 9 - Interrupt 4"]
     #[inline(always)]
     #[must_use]
-    pub fn int4(&mut self) -> INT4_W<GICD_ICFGR0_SPEC> {
-        INT4_W::new(self, 9)
+    pub fn int4(&mut self) -> Int4W<GicdIcfgr0Spec> {
+        Int4W::new(self, 9)
     }
     #[doc = "Bit 11 - Interrupt 5"]
     #[inline(always)]
     #[must_use]
-    pub fn int5(&mut self) -> INT5_W<GICD_ICFGR0_SPEC> {
-        INT5_W::new(self, 11)
+    pub fn int5(&mut self) -> Int5W<GicdIcfgr0Spec> {
+        Int5W::new(self, 11)
     }
     #[doc = "Bit 13 - Interrupt 6"]
     #[inline(always)]
     #[must_use]
-    pub fn int6(&mut self) -> INT6_W<GICD_ICFGR0_SPEC> {
-        INT6_W::new(self, 13)
+    pub fn int6(&mut self) -> Int6W<GicdIcfgr0Spec> {
+        Int6W::new(self, 13)
     }
     #[doc = "Bit 15 - Interrupt 7"]
     #[inline(always)]
     #[must_use]
-    pub fn int7(&mut self) -> INT7_W<GICD_ICFGR0_SPEC> {
-        INT7_W::new(self, 15)
+    pub fn int7(&mut self) -> Int7W<GicdIcfgr0Spec> {
+        Int7W::new(self, 15)
     }
     #[doc = "Bit 17 - Interrupt 8"]
     #[inline(always)]
     #[must_use]
-    pub fn int8(&mut self) -> INT8_W<GICD_ICFGR0_SPEC> {
-        INT8_W::new(self, 17)
+    pub fn int8(&mut self) -> Int8W<GicdIcfgr0Spec> {
+        Int8W::new(self, 17)
     }
     #[doc = "Bit 19 - Interrupt 9"]
     #[inline(always)]
     #[must_use]
-    pub fn int9(&mut self) -> INT9_W<GICD_ICFGR0_SPEC> {
-        INT9_W::new(self, 19)
+    pub fn int9(&mut self) -> Int9W<GicdIcfgr0Spec> {
+        Int9W::new(self, 19)
     }
     #[doc = "Bit 21 - Interrupt 10"]
     #[inline(always)]
     #[must_use]
-    pub fn int10(&mut self) -> INT10_W<GICD_ICFGR0_SPEC> {
-        INT10_W::new(self, 21)
+    pub fn int10(&mut self) -> Int10W<GicdIcfgr0Spec> {
+        Int10W::new(self, 21)
     }
     #[doc = "Bit 23 - Interrupt 11"]
     #[inline(always)]
     #[must_use]
-    pub fn int11(&mut self) -> INT11_W<GICD_ICFGR0_SPEC> {
-        INT11_W::new(self, 23)
+    pub fn int11(&mut self) -> Int11W<GicdIcfgr0Spec> {
+        Int11W::new(self, 23)
     }
     #[doc = "Bit 25 - Interrupt 12"]
     #[inline(always)]
     #[must_use]
-    pub fn int12(&mut self) -> INT12_W<GICD_ICFGR0_SPEC> {
-        INT12_W::new(self, 25)
+    pub fn int12(&mut self) -> Int12W<GicdIcfgr0Spec> {
+        Int12W::new(self, 25)
     }
     #[doc = "Bit 27 - Interrupt 13"]
     #[inline(always)]
     #[must_use]
-    pub fn int13(&mut self) -> INT13_W<GICD_ICFGR0_SPEC> {
-        INT13_W::new(self, 27)
+    pub fn int13(&mut self) -> Int13W<GicdIcfgr0Spec> {
+        Int13W::new(self, 27)
     }
     #[doc = "Bit 29 - Interrupt 14"]
     #[inline(always)]
     #[must_use]
-    pub fn int14(&mut self) -> INT14_W<GICD_ICFGR0_SPEC> {
-        INT14_W::new(self, 29)
+    pub fn int14(&mut self) -> Int14W<GicdIcfgr0Spec> {
+        Int14W::new(self, 29)
     }
     #[doc = "Bit 31 - Interrupt 15"]
     #[inline(always)]
     #[must_use]
-    pub fn int15(&mut self) -> INT15_W<GICD_ICFGR0_SPEC> {
-        INT15_W::new(self, 31)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn int15(&mut self) -> Int15W<GicdIcfgr0Spec> {
+        Int15W::new(self, 31)
     }
 }
-#[doc = "Interrupt Configuration 0 - 15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icfgr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icfgr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GICD_ICFGR0_SPEC;
-impl crate::RegisterSpec for GICD_ICFGR0_SPEC {
+#[doc = "Interrupt Configuration 0 - 15\n\nYou can [`read`](crate::Reg::read) this register and get [`gicd_icfgr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gicd_icfgr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GicdIcfgr0Spec;
+impl crate::RegisterSpec for GicdIcfgr0Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gicd_icfgr0::R`](R) reader structure"]
-impl crate::Readable for GICD_ICFGR0_SPEC {}
+impl crate::Readable for GicdIcfgr0Spec {}
 #[doc = "`write(|w| ..)` method takes [`gicd_icfgr0::W`](W) writer structure"]
-impl crate::Writable for GICD_ICFGR0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+impl crate::Writable for GicdIcfgr0Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GICD_ICFGR0 to value 0"]
-impl crate::Resettable for GICD_ICFGR0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for GicdIcfgr0Spec {
+    const RESET_VALUE: u32 = 0;
 }

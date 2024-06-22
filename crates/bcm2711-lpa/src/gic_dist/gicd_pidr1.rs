@@ -1,72 +1,68 @@
 #[doc = "Register `GICD_PIDR1` reader"]
-pub type R = crate::R<GICD_PIDR1_SPEC>;
-#[doc = "Field `GICD_PIDR1` reader - Peripheral ID 1"]
-pub type GICD_PIDR1_R = crate::FieldReader<GICD_PIDR1_A>;
+pub type R = crate::R<GicdPidr1Spec>;
 #[doc = "Peripheral ID 1\n\nValue on reset: 180"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u32)]
-pub enum GICD_PIDR1_A {
+pub enum GicdPidr1 {
     #[doc = "180: Valid"]
-    VALID = 180,
+    Valid = 180,
     #[doc = "0: Invalid"]
-    INVALID = 0,
+    Invalid = 0,
 }
-impl From<GICD_PIDR1_A> for u32 {
+impl From<GicdPidr1> for u32 {
     #[inline(always)]
-    fn from(variant: GICD_PIDR1_A) -> Self {
+    fn from(variant: GicdPidr1) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for GICD_PIDR1_A {
+impl crate::FieldSpec for GicdPidr1 {
     type Ux = u32;
 }
-impl GICD_PIDR1_R {
+impl crate::IsEnum for GicdPidr1 {}
+#[doc = "Field `GICD_PIDR1` reader - Peripheral ID 1"]
+pub type GicdPidr1R = crate::FieldReader<GicdPidr1>;
+impl GicdPidr1R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> GICD_PIDR1_A {
+    pub const fn variant(&self) -> GicdPidr1 {
         match self.bits {
-            180 => GICD_PIDR1_A::VALID,
-            _ => GICD_PIDR1_A::INVALID,
+            180 => GicdPidr1::Valid,
+            _ => GicdPidr1::Invalid,
         }
     }
     #[doc = "Valid"]
     #[inline(always)]
     pub fn is_valid(&self) -> bool {
-        *self == GICD_PIDR1_A::VALID
+        *self == GicdPidr1::Valid
     }
     #[doc = "Invalid"]
     #[inline(always)]
     pub fn is_invalid(&self) -> bool {
-        matches!(self.variant(), GICD_PIDR1_A::INVALID)
+        matches!(self.variant(), GicdPidr1::Invalid)
     }
 }
 impl R {
     #[doc = "Bits 0:31 - Peripheral ID 1"]
     #[inline(always)]
-    pub fn gicd_pidr1(&self) -> GICD_PIDR1_R {
-        GICD_PIDR1_R::new(self.bits)
+    pub fn gicd_pidr1(&self) -> GicdPidr1R {
+        GicdPidr1R::new(self.bits)
     }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GICD_PIDR1")
-            .field("gicd_pidr1", &format_args!("{}", self.gicd_pidr1().bits()))
+            .field("gicd_pidr1", &self.gicd_pidr1())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<GICD_PIDR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Peripheral ID 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_pidr1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GICD_PIDR1_SPEC;
-impl crate::RegisterSpec for GICD_PIDR1_SPEC {
+#[doc = "Peripheral ID 1\n\nYou can [`read`](crate::Reg::read) this register and get [`gicd_pidr1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GicdPidr1Spec;
+impl crate::RegisterSpec for GicdPidr1Spec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`gicd_pidr1::R`](R) reader structure"]
-impl crate::Readable for GICD_PIDR1_SPEC {}
+impl crate::Readable for GicdPidr1Spec {}
 #[doc = "`reset()` method sets GICD_PIDR1 to value 0xb4"]
-impl crate::Resettable for GICD_PIDR1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xb4;
+impl crate::Resettable for GicdPidr1Spec {
+    const RESET_VALUE: u32 = 0xb4;
 }
