@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
+
+set -euo pipefail
 
 print_usage() {
     echo 'Usage: gen.sh MCU_NAME' >&2
