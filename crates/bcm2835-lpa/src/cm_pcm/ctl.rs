@@ -1,7 +1,7 @@
-#[doc = "Register `CS` reader"]
-pub type R = crate::R<CsSpec>;
-#[doc = "Register `CS` writer"]
-pub type W = crate::W<CsSpec>;
+#[doc = "Register `CTL` reader"]
+pub type R = crate::R<CtlSpec>;
+#[doc = "Register `CTL` writer"]
+pub type W = crate::W<CtlSpec>;
 #[doc = "Clock source\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -15,9 +15,9 @@ pub enum Src {
     #[doc = "4: `100`"]
     Plla = 4,
     #[doc = "5: `101`"]
-    Pllb = 5,
+    Pllc = 5,
     #[doc = "6: `110`"]
-    Pllc = 6,
+    Plld = 6,
     #[doc = "7: `111`"]
     Hdmi = 7,
     #[doc = "0: `0`"]
@@ -44,8 +44,8 @@ impl SrcR {
             2 => Src::Test0,
             3 => Src::Test1,
             4 => Src::Plla,
-            5 => Src::Pllb,
-            6 => Src::Pllc,
+            5 => Src::Pllc,
+            6 => Src::Plld,
             7 => Src::Hdmi,
             _ => Src::Gnd,
         }
@@ -72,13 +72,13 @@ impl SrcR {
     }
     #[doc = "`101`"]
     #[inline(always)]
-    pub fn is_pllb(&self) -> bool {
-        *self == Src::Pllb
+    pub fn is_pllc(&self) -> bool {
+        *self == Src::Pllc
     }
     #[doc = "`110`"]
     #[inline(always)]
-    pub fn is_pllc(&self) -> bool {
-        *self == Src::Pllc
+    pub fn is_plld(&self) -> bool {
+        *self == Src::Plld
     }
     #[doc = "`111`"]
     #[inline(always)]
@@ -120,13 +120,13 @@ where
     }
     #[doc = "`101`"]
     #[inline(always)]
-    pub fn pllb(self) -> &'a mut crate::W<REG> {
-        self.variant(Src::Pllb)
+    pub fn pllc(self) -> &'a mut crate::W<REG> {
+        self.variant(Src::Pllc)
     }
     #[doc = "`110`"]
     #[inline(always)]
-    pub fn pllc(self) -> &'a mut crate::W<REG> {
-        self.variant(Src::Pllc)
+    pub fn plld(self) -> &'a mut crate::W<REG> {
+        self.variant(Src::Plld)
     }
     #[doc = "`111`"]
     #[inline(always)]
@@ -221,7 +221,7 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CS")
+        f.debug_struct("CTL")
             .field("mash", &self.mash())
             .field("flip", &self.flip())
             .field("busy", &self.busy())
@@ -235,54 +235,54 @@ impl W {
     #[doc = "Bits 0:3 - Clock source"]
     #[inline(always)]
     #[must_use]
-    pub fn src(&mut self) -> SrcW<CsSpec> {
+    pub fn src(&mut self) -> SrcW<CtlSpec> {
         SrcW::new(self, 0)
     }
     #[doc = "Bit 4 - Enable the clock generator. (Switch SRC first.)"]
     #[inline(always)]
     #[must_use]
-    pub fn enab(&mut self) -> EnabW<CsSpec> {
+    pub fn enab(&mut self) -> EnabW<CtlSpec> {
         EnabW::new(self, 4)
     }
     #[doc = "Bit 5 - Stop and reset the generator"]
     #[inline(always)]
     #[must_use]
-    pub fn kill(&mut self) -> KillW<CsSpec> {
+    pub fn kill(&mut self) -> KillW<CtlSpec> {
         KillW::new(self, 5)
     }
     #[doc = "Bit 8 - Generate an edge on output. (For testing)"]
     #[inline(always)]
     #[must_use]
-    pub fn flip(&mut self) -> FlipW<CsSpec> {
+    pub fn flip(&mut self) -> FlipW<CtlSpec> {
         FlipW::new(self, 8)
     }
     #[doc = "Bits 9:10 - MASH control, stage count"]
     #[inline(always)]
     #[must_use]
-    pub fn mash(&mut self) -> MashW<CsSpec> {
+    pub fn mash(&mut self) -> MashW<CtlSpec> {
         MashW::new(self, 9)
     }
     #[doc = "Bits 24:31 - Password. Always 0x5a"]
     #[inline(always)]
     #[must_use]
-    pub fn passwd(&mut self) -> PasswdW<CsSpec> {
+    pub fn passwd(&mut self) -> PasswdW<CtlSpec> {
         PasswdW::new(self, 24)
     }
 }
-#[doc = "Control / Status\n\nYou can [`read`](crate::Reg::read) this register and get [`cs::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cs::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CsSpec;
-impl crate::RegisterSpec for CsSpec {
+#[doc = "Control\n\nYou can [`read`](crate::Reg::read) this register and get [`ctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CtlSpec;
+impl crate::RegisterSpec for CtlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`cs::R`](R) reader structure"]
-impl crate::Readable for CsSpec {}
-#[doc = "`write(|w| ..)` method takes [`cs::W`](W) writer structure"]
-impl crate::Writable for CsSpec {
+#[doc = "`read()` method returns [`ctl::R`](R) reader structure"]
+impl crate::Readable for CtlSpec {}
+#[doc = "`write(|w| ..)` method takes [`ctl::W`](W) writer structure"]
+impl crate::Writable for CtlSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CS to value 0"]
-impl crate::Resettable for CsSpec {
+#[doc = "`reset()` method sets CTL to value 0"]
+impl crate::Resettable for CtlSpec {
     const RESET_VALUE: u32 = 0;
 }
